@@ -1700,3 +1700,156 @@ main {
     transform: none !important;
   }
 }
+
+/* —— BeatOnStep project page —— */
+.bos-hero-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 0.85rem;
+}
+
+.bos-hero-brand img {
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: 0.75rem;
+  object-fit: cover;
+  outline: 1px solid rgba(243, 239, 230, 0.25);
+}
+
+.bos-hero-brand .hero-brand {
+  margin: 0;
+}
+
+.store-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.35rem;
+}
+
+.store-badges a {
+  display: block;
+  line-height: 0;
+}
+
+.store-badges img {
+  height: 2.6rem;
+  width: auto;
+}
+
+.bos-steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+  counter-reset: bos;
+}
+
+.bos-steps li {
+  counter-increment: bos;
+  display: grid;
+  gap: 0.25rem;
+  padding: 1rem 0 1rem 3rem;
+  border-top: 1px solid var(--line);
+  position: relative;
+}
+
+.bos-steps li::before {
+  content: counter(bos);
+  position: absolute;
+  left: 0;
+  top: 1rem;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.bos-steps strong {
+  font-family: var(--display);
+  font-size: 1.1rem;
+}
+
+.bos-steps span {
+  color: var(--ink-soft);
+}
+
+.bos-modes {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.bos-modes article {
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.bos-modes h3 {
+  margin: 0 0 0.5rem;
+  font-family: var(--display);
+  font-size: 1.25rem;
+}
+
+.bos-modes p {
+  margin: 0;
+  color: var(--ink-soft);
+}
+
+.bos-note {
+  margin: 1.25rem 0 0;
+}
+
+.bos-sources {
+  grid-template-columns: 1fr;
+}
+
+.bos-shots {
+  display: grid;
+  gap: 1.25rem;
+  justify-items: center;
+}
+
+.bos-shots figure {
+  margin: 0;
+  max-width: 16rem;
+}
+
+.bos-shots img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  outline: 1px solid var(--line);
+  background: #111;
+}
+
+.bos-shots figcaption {
+  margin-top: 0.55rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+@media (min-width: 720px) {
+  .bos-modes {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .bos-sources {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .bos-shots {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+  }
+}
