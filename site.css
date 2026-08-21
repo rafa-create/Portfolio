@@ -583,6 +583,10 @@ main {
   max-width: 18rem;
 }
 
+.diploma-reveal-wide {
+  max-width: min(100%, 28rem);
+}
+
 .diploma-reveal-img img {
   display: block;
   width: 100%;
