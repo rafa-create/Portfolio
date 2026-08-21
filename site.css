@@ -690,6 +690,32 @@ main {
   color: #1a4a8a;
 }
 
+.edu-ensem-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.edu-ensem-logo {
+  display: block;
+  width: auto;
+  height: 2.85rem;
+  max-width: min(100%, 12rem);
+  object-fit: contain;
+  border-radius: 0.3rem;
+  flex-shrink: 0;
+}
+
+.edu-ensem-head .edu-uc-kicker {
+  margin-bottom: 0.25rem;
+}
+
+.edu-ensem-head h3 {
+  margin: 0;
+}
+
 .edu-block-copy h3 {
   margin: 0 0 0.45rem;
   font-family: var(--display);
