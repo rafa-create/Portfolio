@@ -1,0 +1,10 @@
+# Keep root PDFs local; publish only /cv
+*.pdf
+!cv/
+!cv/*.pdf
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
