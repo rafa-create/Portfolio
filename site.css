@@ -817,6 +817,31 @@ main {
   border-radius: 0.4rem;
 }
 
+.project-app-head {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.85rem;
+}
+
+.project-app-logo {
+  display: block;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 0.85rem;
+  object-fit: cover;
+  flex-shrink: 0;
+  outline: 1px solid rgba(21, 32, 43, 0.08);
+}
+
+.project-app-head .project-kicker {
+  margin-bottom: 0.2rem;
+}
+
+.project-app-head h3 {
+  margin: 0;
+}
+
 .project-bike {
   grid-column: 1 / -1;
   display: grid;
