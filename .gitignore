@@ -12,6 +12,9 @@
 !images/
 !images/**
 
+# Local export scratch
+images/bike-shelter/slides/_raw/
+
 # OS / editor
 .DS_Store
 Thumbs.db

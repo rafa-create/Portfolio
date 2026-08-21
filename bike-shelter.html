@@ -101,6 +101,11 @@
           <h2 data-fr>Le problème, la réponse</h2>
           <h2 data-en>The problem, the answer</h2>
         </div>
+        <div class="project-mark">
+          <img src="./images/bike-shelter/ll-logo.jpg" width="64" height="64" alt="Projet Université de Lorraine / ENSEM" />
+          <p data-fr>Projet Université de Lorraine · ENSEM</p>
+          <p data-en>University of Lorraine · ENSEM project</p>
+        </div>
         <div class="about-grid">
           <div>
             <p data-fr>
@@ -209,28 +214,14 @@
     <figure class="media-band media-band-doc">
       <img
         src="./images/bike-shelter/slides/slide-11.jpg"
-        width="1280"
-        height="720"
-        alt="Website map showing Brabois ingénieur with free spots"
+        width="1400"
+        height="630"
+        alt="Carte des abris vélos avec places libres"
         loading="lazy"
       />
       <figcaption class="rail">
-        <span data-fr>Site : carte interactive, places libres actualisées, lien Google Maps.</span>
-        <span data-en>Website: interactive map, live free spots, Google Maps link.</span>
-      </figcaption>
-    </figure>
-
-    <figure class="media-band media-band-doc">
-      <img
-        src="./images/bike-shelter/explain.jpg"
-        width="1200"
-        height="675"
-        alt="Explanatory sign: how to lock and unlock a bike with the student card"
-        loading="lazy"
-      />
-      <figcaption class="rail">
-        <span data-fr>Panneau d’usage : verrouillage / déverrouillage au badge, LED jaune → verte.</span>
-        <span data-en>Usage sign: lock / unlock with badge, yellow → green LED.</span>
+        <span data-fr>Sur le téléphone : la carte, l’abri le plus proche, les places libres.</span>
+        <span data-en>On the phone: the map, nearest shelter, free spots.</span>
       </figcaption>
     </figure>
 
@@ -240,13 +231,13 @@
         <div class="section-head">
           <p class="eyebrow" data-fr>05 · Système</p>
           <p class="eyebrow" data-en>05 · System</p>
-          <h2 data-fr>Architecture générale</h2>
-          <h2 data-en>General architecture</h2>
+          <h2 data-fr>Du verrou au site</h2>
+          <h2 data-en>From lock to website</h2>
           <p class="lede tight" data-fr>
-            Le schéma clé : verrou → Arduino → XBee → Raspberry Pi → site / BDD / vérification CSN.
+            Chaîne complète : serrure, Arduino, radio XBee, Raspberry Pi, puis vérification CSN et mise à jour des places.
           </p>
           <p class="lede tight" data-en>
-            The key diagram: lock → Arduino → XBee → Raspberry Pi → website / DB / CSN check.
+            Full chain: lock, Arduino, XBee radio, Raspberry Pi, then CSN check and free-spot updates.
           </p>
         </div>
         <ul class="stack-row">
@@ -263,29 +254,15 @@
       <a href="./images/bike-shelter/slides/slide-13.jpg" target="_blank" rel="noopener noreferrer">
         <img
           src="./images/bike-shelter/slides/slide-13.jpg"
-          width="1600"
-          height="900"
-          alt="Architecture générale — Verrou, Arduino, XBee, Raspberry Pi, site et vérification CSN"
+          width="1400"
+          height="630"
+          alt="Architecture : verrou, Arduino, XBee, Raspberry Pi, site et vérification CSN"
           loading="lazy"
         />
       </a>
       <figcaption class="rail">
-        <span data-fr>Slide 13 — Architecture générale (partie informatique). Cliquer pour agrandir.</span>
-        <span data-en>Slide 13 — General architecture (IT). Click to enlarge.</span>
-      </figcaption>
-    </figure>
-
-    <figure class="media-band">
-      <img
-        src="./images/bike-shelter/slides/slide-10.jpg"
-        width="1280"
-        height="720"
-        alt="General system diagram: solar, Pi, XBee modules, web server"
-        loading="lazy"
-      />
-      <figcaption class="rail">
-        <span data-fr>Diagramme général : énergie, Pi, modules, serveur web.</span>
-        <span data-en>System diagram: power, Pi, modules, web server.</span>
+        <span data-fr>Schéma d’architecture — cliquer pour agrandir.</span>
+        <span data-en>Architecture diagram — click to enlarge.</span>
       </figcaption>
     </figure>
 
@@ -298,10 +275,10 @@
           <h2 data-fr>Sous le capot</h2>
           <h2 data-en>Under the hood</h2>
           <p class="lede tight" data-fr>
-            Procédure de sécurisation, logiques Pi / Arduino, prototype matériel.
+            Procédure badge, puis le banc de test matériel.
           </p>
           <p class="lede tight" data-en>
-            Lock procedure, Pi / Arduino logic, hardware prototype.
+            Badge procedure, then the hardware test bench.
           </p>
         </div>
       </div>
@@ -309,7 +286,7 @@
         <div class="slide-stage">
           <button type="button" class="slide-nav slide-prev" data-slide-prev aria-label="Previous">‹</button>
           <figure class="slide-frame">
-            <img data-slide-img src="./images/bike-shelter/slides/slide-12.jpg" width="1280" height="720" alt="" />
+            <img data-slide-img src="./images/bike-shelter/slides/slide-12.jpg" width="1400" height="630" alt="" />
             <figcaption><span data-slide-cap></span></figcaption>
           </figure>
           <button type="button" class="slide-nav slide-next" data-slide-next aria-label="Next">›</button>
@@ -317,20 +294,6 @@
         <div class="slide-dots" data-slide-dots role="tablist" aria-label="Tech slides"></div>
       </div>
     </section>
-
-    <figure class="media-band">
-      <img
-        src="./images/bike-shelter/logic.jpg"
-        width="1400"
-        height="787"
-        alt="Flowcharts: Raspberry Pi coordinator and Arduino XBee routers"
-        loading="lazy"
-      />
-      <figcaption class="rail">
-        <span data-fr>Logique détaillée : Pi (CSN, places, site) et Arduino (LED, buzzer, éjection).</span>
-        <span data-en>Detailed logic: Pi (CSN, spots, site) and Arduino (LED, buzzer, eject).</span>
-      </figcaption>
-    </figure>
 
     <div class="rail">
       <section class="section" id="hardware">
@@ -392,13 +355,54 @@
     </div>
 
     <div class="rail">
-      <section class="section contact">
+      <section class="section contact" id="more">
         <div class="section-head">
-          <p class="eyebrow" data-fr>Liens</p>
-          <p class="eyebrow" data-en>Links</p>
+          <p class="eyebrow" data-fr>Annexe</p>
+          <p class="eyebrow" data-en>Appendix</p>
           <h2 data-fr>Aller plus loin</h2>
           <h2 data-en>Go further</h2>
+          <p class="lede tight" data-fr>
+            Schémas détaillés, diagramme système et panneau d’instructions — pour qui veut creuser.
+          </p>
+          <p class="lede tight" data-en>
+            Detailed flowcharts, system diagram and instruction sign — for those who want to dig deeper.
+          </p>
         </div>
+      </section>
+    </div>
+
+    <div class="more-docs">
+      <article class="more-doc">
+        <h3 data-fr>Logique Pi &amp; Arduino</h3>
+        <h3 data-en>Pi &amp; Arduino logic</h3>
+        <p data-fr>Organigrammes coordinateur et routeurs : CSN, LED, buzzer, places libres.</p>
+        <p data-en>Coordinator and router flowcharts: CSN, LED, buzzer, free spots.</p>
+        <a href="./images/bike-shelter/logic.jpg" target="_blank" rel="noopener noreferrer">
+          <img src="./images/bike-shelter/logic.jpg" width="1400" height="787" alt="Organigrammes Raspberry Pi et Arduino" loading="lazy" />
+        </a>
+      </article>
+      <article class="more-doc">
+        <h3 data-fr>Diagramme système</h3>
+        <h3 data-en>System diagram</h3>
+        <p data-fr>Énergie solaire, Pi, modules XBee, APIs et téléphone.</p>
+        <p data-en>Solar power, Pi, XBee modules, APIs and phone.</p>
+        <a href="./images/bike-shelter/slides/slide-10.jpg" target="_blank" rel="noopener noreferrer">
+          <img src="./images/bike-shelter/slides/slide-10.jpg" width="1400" height="630" alt="Diagramme système complet" loading="lazy" />
+        </a>
+      </article>
+      <article class="more-doc">
+        <h3 data-fr>Panneau d’instructions</h3>
+        <h3 data-en>Instruction sign</h3>
+        <p data-fr>Texte affiché à l’abri : verrouiller / déverrouiller au badge.</p>
+        <p data-en>On-shelter copy: lock / unlock with the badge.</p>
+        <a href="./images/bike-shelter/explain.jpg" target="_blank" rel="noopener noreferrer">
+          <img src="./images/bike-shelter/explain.jpg" width="1200" height="675" alt="Panneau explicatif verrouillage" loading="lazy" />
+        </a>
+      </article>
+    </div>
+
+    <div class="rail">
+      <section class="section">
         <div class="contact-row">
           <a class="contact-item" href="https://www.youtube.com/watch?v=XbfNqrZFiaw" rel="noopener noreferrer" target="_blank" data-fr>Vidéo</a>
           <a class="contact-item" href="https://www.youtube.com/watch?v=XbfNqrZFiaw" rel="noopener noreferrer" target="_blank" data-en>Video</a>
@@ -425,14 +429,14 @@
     (function () {
       var sets = {
         design: [
-          { src: "./images/bike-shelter/slides/slide-03.jpg", fr: "Structure globale", en: "Overall structure" },
-          { src: "./images/bike-shelter/slides/slide-04.jpg", fr: "Structure in situ", en: "Structure on site" },
-          { src: "./images/bike-shelter/slides/slide-05.jpg", fr: "Rangement double niveau", en: "Two-tier storage" },
-          { src: "./images/bike-shelter/slides/slide-06.jpg", fr: "Système de verrouillage", en: "Locking system" },
-          { src: "./images/bike-shelter/slides/slide-07.jpg", fr: "Plan · 16 vélos · 594 × 390 cm", en: "Plan · 16 bikes · 594 × 390 cm" }
+          { src: "./images/bike-shelter/slides/slide-03.jpg", fr: "L’abri Brabois — structure bois et panneaux solaires", en: "Brabois shelter — timber structure and solar panels" },
+          { src: "./images/bike-shelter/slides/slide-04.jpg", fr: "Implanté sur le campus", en: "Sited on campus" },
+          { src: "./images/bike-shelter/slides/slide-05.jpg", fr: "Racks double niveau", en: "Two-tier racks" },
+          { src: "./images/bike-shelter/slides/slide-06.jpg", fr: "Mécanisme de verrouillage", en: "Locking mechanism" },
+          { src: "./images/bike-shelter/slides/slide-07.jpg", fr: "Emprise · 16 places · 594 × 390 cm", en: "Footprint · 16 spots · 594 × 390 cm" }
         ],
         tech: [
-          { src: "./images/bike-shelter/slides/slide-12.jpg", fr: "Procédure de sécurisation", en: "Lock / unlock procedure" }
+          { src: "./images/bike-shelter/slides/slide-12.jpg", fr: "Badge : verrouiller, puis déverrouiller", en: "Badge: lock, then unlock" }
         ]
       };
 
@@ -485,7 +489,7 @@
           if (e.isIntersecting) e.target.classList.add("in");
         });
       }, { threshold: 0.08 });
-      document.querySelectorAll(".section, .media-band, .gallery, .slides-section, .video-section").forEach(function (el) {
+      document.querySelectorAll(".section, .media-band, .gallery, .slides-section, .video-section, .more-docs, .arch-feature").forEach(function (el) {
         el.classList.add("reveal");
         io.observe(el);
       });
