@@ -1126,6 +1126,30 @@ main {
   text-transform: uppercase;
 }
 
+.project-no-ai {
+  margin: 0.65rem 0 0.85rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--ink);
+  max-width: 40rem;
+}
+
+.project-no-ai-on-dark {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem 0.85rem;
+  margin-top: 0.35rem;
+}
+
+.project-actions .project-link {
+  margin: 0;
+}
+
 @media (min-width: 720px) {
   .project-bike {
     grid-template-columns: 1.1fr 1fr;
