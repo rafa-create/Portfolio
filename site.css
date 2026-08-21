@@ -737,11 +737,11 @@ main {
 .doc-card > summary {
   list-style: none;
   cursor: pointer;
-  display: grid;
-  grid-template-columns: 4.5rem 1fr;
-  gap: 0.9rem;
-  align-items: center;
-  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.95rem 1rem;
   user-select: none;
 }
 
@@ -749,41 +749,26 @@ main {
   display: none;
 }
 
-.doc-thumb {
-  display: block;
-  width: 4.5rem;
-  height: 5.75rem;
-  object-fit: cover;
-  object-position: top center;
-  border-radius: 0.2rem;
-  background: #fff;
-  outline: 1px solid var(--line);
-}
-
-.doc-card-text {
-  display: grid;
-  gap: 0.25rem;
-  min-width: 0;
-}
-
-.doc-card-text strong {
+.doc-card > summary strong {
   font-family: var(--display);
   font-size: 1.05rem;
   font-weight: 700;
+  margin-right: auto;
 }
 
-.doc-card-text span {
-  font-size: 0.82rem;
+.doc-card > summary > span {
+  font-size: 0.8rem;
   font-weight: 600;
+  letter-spacing: 0.06em;
   color: var(--ink-soft);
 }
 
 .doc-card > summary::after {
   content: "+";
-  justify-self: end;
   font-weight: 700;
   color: var(--accent-deep);
   font-size: 1.1rem;
+  flex-shrink: 0;
 }
 
 .doc-card[open] > summary::after {
