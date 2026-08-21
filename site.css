@@ -947,9 +947,10 @@ main {
   width: 3.5rem;
   height: 3.5rem;
   border-radius: 0.85rem;
-  object-fit: contain;
+  object-fit: cover;
   flex-shrink: 0;
   background: transparent;
+  outline: 1px solid rgba(21, 32, 43, 0.08);
 }
 
 .project-app-head .project-kicker {
