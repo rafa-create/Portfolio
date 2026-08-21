@@ -408,6 +408,10 @@ main {
   background: transparent;
 }
 
+.job-logo-solid {
+  outline: 1px solid var(--line);
+}
+
 .job-org {
   margin: 0;
   font-family: var(--display);
