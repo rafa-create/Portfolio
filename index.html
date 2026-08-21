@@ -11,7 +11,35 @@
   <meta property="og:description" content="Logiciel scientifique, embarqué et full-stack. ENSEM &amp; Cincinnati. Stilog — Safran." />
   <meta property="og:url" content="https://rafa-create.github.io/Portfolio/" />
   <meta property="og:image" content="https://rafa-create.github.io/Portfolio/images/portrait.png" />
-  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Rafael Orset — Ingénieur logiciel" />
+  <meta name="twitter:description" content="Logiciel scientifique, embarqué et full-stack. ENSEM &amp; Cincinnati. Stilog — Safran." />
+  <meta name="twitter:image" content="https://rafa-create.github.io/Portfolio/images/portrait.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Rafael Orset",
+    "url": "https://rafa-create.github.io/Portfolio/",
+    "image": "https://rafa-create.github.io/Portfolio/images/portrait.png",
+    "jobTitle": "Software engineer",
+    "email": "mailto:orsetrafael@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Arles",
+      "addressCountry": "FR"
+    },
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "ENSEM — Université de Lorraine" },
+      { "@type": "CollegeOrUniversity", "name": "University of Cincinnati" }
+    ],
+    "worksFor": { "@type": "Organization", "name": "Stilog I.S.T." },
+    "sameAs": [
+      "https://www.linkedin.com/in/rafael-orset/",
+      "https://github.com/rafa-create"
+    ]
+  }
+  </script>
   <meta name="theme-color" content="#1a2332" />
   <link rel="icon" href="./favicon.ico" sizes="any" />
   <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
@@ -42,18 +70,25 @@
 
   <header class="top">
     <a class="wordmark" href="#main">Rafael Orset</a>
-    <nav class="nav" aria-label="Sections">
+    <nav class="nav" id="site-nav" aria-label="Sections">
       <a href="#experience" data-fr>Expérience</a>
       <a href="#experience" data-en>Experience</a>
       <a href="#projects" data-fr>Projets</a>
       <a href="#projects" data-en>Projects</a>
       <a href="#education" data-fr>Formation</a>
       <a href="#education" data-en>Education</a>
+      <a href="#skills" data-fr>Compétences</a>
+      <a href="#skills" data-en>Skills</a>
       <a href="#downloads" data-fr>Docs</a>
       <a href="#downloads" data-en>Docs</a>
       <a href="#contact">Contact</a>
     </nav>
     <div class="top-actions">
+      <button type="button" class="nav-toggle" aria-controls="site-nav" aria-expanded="false">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+        <span class="visually-hidden" data-fr>Menu</span>
+        <span class="visually-hidden" data-en>Menu</span>
+      </button>
       <div class="lang" role="group" aria-label="Language">
         <button type="button" data-set="fr">FR</button>
         <button type="button" data-set="en">EN</button>
@@ -184,6 +219,25 @@
 
         <li class="job">
           <div class="job-meta">
+            <p class="job-org" data-fr>Freelance</p>
+            <p class="job-org" data-en>Freelance</p>
+            <p class="job-dates" data-fr>janv. 2024 — aujourd’hui · 2 j / semaine</p>
+            <p class="job-dates" data-en>Jan 2024 — present · 2 days / week</p>
+          </div>
+          <div class="job-body">
+            <h3 data-fr>Développement logiciel</h3>
+            <h3 data-en>Software development</h3>
+            <p data-fr>
+              Missions en parallèle de Stilog : apps mobiles, sites et outillage sur mesure.
+            </p>
+            <p data-en>
+              Side work alongside Stilog: mobile apps, websites and custom tooling.
+            </p>
+          </div>
+        </li>
+
+        <li class="job">
+          <div class="job-meta">
             <div class="job-org-row">
               <img class="job-logo" src="./images/companies/alten.png" width="300" height="300" alt="" loading="lazy" />
               <p class="job-org">Alten</p>
@@ -303,8 +357,8 @@
               <img class="job-logo job-logo-solid" src="./images/companies/ensem-conseil.png" width="300" height="300" alt="" loading="lazy" />
               <p class="job-org">ENSEM Conseil</p>
             </div>
-            <p class="job-dates" data-fr>janv. 2022 — déc. 2022 · 6 mois · remote</p>
-            <p class="job-dates" data-en>Jan 2022 — Dec 2022 · 6 mos · remote</p>
+            <p class="job-dates" data-fr>janv. 2022 — déc. 2022 · remote</p>
+            <p class="job-dates" data-en>Jan 2022 — Dec 2022 · remote</p>
           </div>
           <div class="job-body">
             <h3 data-fr>Développeur full-stack — flin BOOST</h3>
@@ -395,8 +449,8 @@
           <div class="git-badge-row">
             <a class="git-badge" href="https://github.com/rafa-create/beatonstep-website" rel="noopener noreferrer" target="_blank">
               <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-              <span data-fr>Code public</span>
-              <span data-en>Public code</span>
+              <span data-fr>Site (GitHub)</span>
+              <span data-en>Site (GitHub)</span>
             </a>
           </div>
           <a class="project-link" href="./beatonstep.html" data-fr>Voir le projet →</a>
@@ -717,8 +771,7 @@
         <div>
           <h3 data-fr>Mobile</h3>
           <h3 data-en>Mobile</h3>
-          <p data-fr>iOS · Android · Expo Go · TypeScript</p>
-          <p data-en>iOS · Android · Expo Go · TypeScript</p>
+          <p>Flutter · Dart · Expo Go · TypeScript · iOS · Android</p>
         </div>
         <div>
           <h3 data-fr>Embarqué</h3>
@@ -728,7 +781,8 @@
         <div>
           <h3 data-fr>IA</h3>
           <h3 data-en>AI</h3>
-          <p>Cursor</p>
+          <p data-fr>Cursor · NanoEdge AI Studio · matching PPM / BPM</p>
+          <p data-en>Cursor · NanoEdge AI Studio · SPM / BPM matching</p>
         </div>
         <div>
           <h3 data-fr>Langues parlées</h3>

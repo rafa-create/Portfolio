@@ -40,8 +40,8 @@
   <div class="scroll-progress" aria-hidden="true"></div>
 
   <header class="top">
-    <a class="wordmark" href="#main">ENSEM Conseil</a>
-    <nav class="nav" aria-label="Sections">
+    <a class="wordmark" href="./#experience">ENSEM Conseil</a>
+    <nav class="nav" id="site-nav" aria-label="Sections">
       <a href="#overview" data-fr>Mission</a>
       <a href="#overview" data-en>Mission</a>
       <a href="#product" data-fr>Produit</a>
@@ -52,12 +52,17 @@
       <a href="#tech" data-en>Tech</a>
     </nav>
     <div class="top-actions">
+      <button type="button" class="nav-toggle" aria-controls="site-nav" aria-expanded="false">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+        <span class="visually-hidden" data-fr>Menu</span>
+        <span class="visually-hidden" data-en>Menu</span>
+      </button>
       <div class="lang" role="group" aria-label="Language">
         <button type="button" data-set="fr">FR</button>
         <button type="button" data-set="en">EN</button>
       </div>
-      <a class="btn btn-ghost" href="./#experience" data-fr>← Expérience</a>
-      <a class="btn btn-ghost" href="./#experience" data-en>← Experience</a>
+      <a class="btn btn-ghost back-home" href="./#experience" data-fr>← Expérience</a>
+      <a class="btn btn-ghost back-home" href="./#experience" data-en>← Experience</a>
     </div>
   </header>
 
@@ -85,11 +90,11 @@
         <h1 data-fr>Full-stack,<br /><em>junior entreprise</em></h1>
         <h1 data-en>Full-stack,<br /><em>junior enterprise</em></h1>
         <p class="lede" data-fr>
-          Janvier 2022 — décembre 2022 · 6 mois. Site SaaS pour un particulier :
+          Janvier 2022 — décembre 2022. Site SaaS pour un particulier :
           abonnement payant, puis accès à l’application de prospection.
         </p>
         <p class="lede" data-en>
-          January 2022 — December 2022 · 6 months. SaaS site for a private client:
+          January 2022 — December 2022. SaaS site for a private client:
           paid subscription, then access to the prospecting application.
         </p>
         <div class="cta-row">
@@ -259,8 +264,8 @@
     </div>
   </main>
 
-  <footer class="foot">
-    <p>� <span id="y"></span> Rafael Orset</p>
+    <footer class="foot">
+    <p>© <span id="y"></span> Rafael Orset</p>
   </footer>
 
   <script>

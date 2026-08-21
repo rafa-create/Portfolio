@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rafa-create.github.io/Portfolio/sitemap.xml

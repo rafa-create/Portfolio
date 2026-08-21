@@ -40,8 +40,8 @@
   <div class="scroll-progress" aria-hidden="true"></div>
 
   <header class="top">
-    <a class="wordmark" href="#main">Insolem</a>
-    <nav class="nav" aria-label="Sections">
+    <a class="wordmark" href="./#experience">Insolem</a>
+    <nav class="nav" id="site-nav" aria-label="Sections">
       <a href="#overview" data-fr>Stage</a>
       <a href="#overview" data-en>Internship</a>
       <a href="#projects" data-fr>Projets</a>
@@ -50,12 +50,17 @@
       <a href="#hardware" data-en>Hardware</a>
     </nav>
     <div class="top-actions">
+      <button type="button" class="nav-toggle" aria-controls="site-nav" aria-expanded="false">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+        <span class="visually-hidden" data-fr>Menu</span>
+        <span class="visually-hidden" data-en>Menu</span>
+      </button>
       <div class="lang" role="group" aria-label="Language">
         <button type="button" data-set="fr">FR</button>
         <button type="button" data-set="en">EN</button>
       </div>
-      <a class="btn btn-ghost" href="./#experience" data-fr>← Expérience</a>
-      <a class="btn btn-ghost" href="./#experience" data-en>← Experience</a>
+      <a class="btn btn-ghost back-home" href="./#experience" data-fr>← Expérience</a>
+      <a class="btn btn-ghost back-home" href="./#experience" data-en>← Experience</a>
     </div>
   </header>
 
@@ -200,8 +205,8 @@
     </div>
   </main>
 
-  <footer class="foot">
-    <p>� <span id="y"></span> Rafael Orset</p>
+    <footer class="foot">
+    <p>© <span id="y"></span> Rafael Orset</p>
   </footer>
 
   <script>

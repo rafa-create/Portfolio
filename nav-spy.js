@@ -94,6 +94,32 @@
     init();
   }
 
+  (function navToggle() {
+    var top = document.querySelector(".top");
+    var toggle = document.querySelector(".nav-toggle");
+    var nav = document.querySelector(".nav");
+    if (!top || !toggle || !nav) return;
+
+    function setOpen(open) {
+      top.classList.toggle("is-nav-open", open);
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    }
+
+    toggle.addEventListener("click", function () {
+      setOpen(!top.classList.contains("is-nav-open"));
+    });
+
+    nav.querySelectorAll("a").forEach(function (a) {
+      a.addEventListener("click", function () {
+        setOpen(false);
+      });
+    });
+
+    window.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") setOpen(false);
+    });
+  })();
+
   (function scrollProgress() {
     var bar = document.querySelector(".scroll-progress");
     if (!bar) return;

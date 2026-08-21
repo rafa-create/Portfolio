@@ -25,6 +25,11 @@
     document.querySelectorAll(".lang button").forEach(function (b) {
       b.setAttribute("aria-pressed", b.getAttribute("data-set") === lang ? "true" : "false");
     });
+    try {
+      var url = new URL(location.href);
+      url.searchParams.set("lang", lang);
+      history.replaceState(null, "", url.pathname + url.search + url.hash);
+    } catch (e) {}
   }
 
   var lang = readLang();

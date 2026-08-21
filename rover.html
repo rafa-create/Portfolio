@@ -40,8 +40,8 @@
   <div class="scroll-progress" aria-hidden="true"></div>
 
   <header class="top">
-    <a class="wordmark" href="#main">SAMI</a>
-    <nav class="nav" aria-label="Sections">
+    <a class="wordmark" href="./#projects">SAMI</a>
+    <nav class="nav" id="site-nav" aria-label="Sections">
       <a href="#overview" data-fr>Projet</a>
       <a href="#overview" data-en>Project</a>
       <a href="#stack" data-fr>Moyens</a>
@@ -54,12 +54,17 @@
       <a href="#code" data-en>Code</a>
     </nav>
     <div class="top-actions">
+      <button type="button" class="nav-toggle" aria-controls="site-nav" aria-expanded="false">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+        <span class="visually-hidden" data-fr>Menu</span>
+        <span class="visually-hidden" data-en>Menu</span>
+      </button>
       <div class="lang" role="group" aria-label="Language">
         <button type="button" data-set="fr">FR</button>
         <button type="button" data-set="en">EN</button>
       </div>
-      <a class="btn btn-ghost" href="./#projects" data-fr>← Projets</a>
-      <a class="btn btn-ghost" href="./#projects" data-en>← Projects</a>
+      <a class="btn btn-ghost back-home" href="./#projects" data-fr>← Projets</a>
+      <a class="btn btn-ghost back-home" href="./#projects" data-en>← Projects</a>
     </div>
   </header>
 
@@ -305,8 +310,8 @@
     </div>
   </main>
 
-  <footer class="foot">
-    <p>� <span id="y"></span> Rafael Orset</p>
+    <footer class="foot">
+    <p>© <span id="y"></span> Rafael Orset</p>
   </footer>
 
   <script>

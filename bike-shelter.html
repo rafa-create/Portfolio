@@ -40,30 +40,29 @@
   <div class="scroll-progress" aria-hidden="true"></div>
 
   <header class="top">
-    <a class="wordmark" href="#main">Bike Shelter</a>
-    <nav class="nav" aria-label="Sections">
+    <a class="wordmark" href="./#projects">Bike Shelter</a>
+    <nav class="nav" id="site-nav" aria-label="Sections">
       <a href="#overview" data-fr>Vue d’ensemble</a>
       <a href="#overview" data-en>Overview</a>
       <a href="#tasks" data-fr>Tâches</a>
       <a href="#tasks" data-en>Tasks</a>
-      <a href="#video" data-fr>Vidéo</a>
-      <a href="#video" data-en>Video</a>
-      <a href="#design" data-fr>Conception</a>
-      <a href="#design" data-en>Design</a>
-      <a href="#usage" data-fr>Usage</a>
-      <a href="#usage" data-en>Usage</a>
-      <a href="#system" data-fr>Architecture</a>
-      <a href="#system" data-en>Architecture</a>
+      <a href="#video" data-fr>Démo</a>
+      <a href="#video" data-en>Demo</a>
       <a href="#tech" data-fr>Technique</a>
       <a href="#tech" data-en>Tech</a>
     </nav>
     <div class="top-actions">
+      <button type="button" class="nav-toggle" aria-controls="site-nav" aria-expanded="false">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+        <span class="visually-hidden" data-fr>Menu</span>
+        <span class="visually-hidden" data-en>Menu</span>
+      </button>
       <div class="lang" role="group" aria-label="Language">
         <button type="button" data-set="fr">FR</button>
         <button type="button" data-set="en">EN</button>
       </div>
-      <a class="btn btn-ghost" href="./#projects" data-fr>← Projets</a>
-      <a class="btn btn-ghost" href="./#projects" data-en>← Projects</a>
+      <a class="btn btn-ghost back-home" href="./#projects" data-fr>← Projets</a>
+      <a class="btn btn-ghost back-home" href="./#projects" data-en>← Projects</a>
     </div>
   </header>
 
@@ -514,8 +513,8 @@
     </div>
   </main>
 
-  <footer class="foot">
-    <p>� <span id="y"></span> Rafael Orset</p>
+    <footer class="foot">
+    <p>© <span id="y"></span> Rafael Orset</p>
   </footer>
 
   <script>
