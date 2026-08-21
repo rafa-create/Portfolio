@@ -529,6 +529,33 @@ main {
   color: var(--accent-deep);
 }
 
+.edu-uc-verify {
+  margin: 0.85rem 0 0;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.edu-uc-cred {
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+  font-variant-numeric: tabular-nums;
+}
+
+.edu-uc-verify > a {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent-deep);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  width: fit-content;
+}
+
+.edu-uc-verify > a:hover {
+  color: var(--ink);
+}
+
 @media (min-width: 800px) {
   .edu-uc-body {
     grid-template-columns: 1.35fr 0.65fr;
