@@ -496,41 +496,65 @@ main {
   margin-top: 0.75rem;
 }
 
-.edu-uc-diploma {
+.edu-uc-aside {
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+}
+
+.diploma-reveal {
   margin: 0;
-  max-width: 16rem;
 }
 
-.edu-uc-diploma a {
+.diploma-reveal summary {
+  cursor: pointer;
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--accent-deep);
+  border-bottom: 2px solid currentColor;
+  width: fit-content;
+  user-select: none;
+}
+
+.diploma-reveal summary::-webkit-details-marker {
+  display: none;
+}
+
+.diploma-reveal summary::before {
+  content: "+";
+  font-weight: 700;
+  line-height: 1;
+}
+
+.diploma-reveal[open] summary::before {
+  content: "−";
+}
+
+.diploma-reveal summary:hover {
+  color: var(--ink);
+}
+
+.diploma-reveal-img {
   display: block;
-  color: inherit;
-  text-decoration: none;
+  margin-top: 1rem;
+  max-width: 18rem;
 }
 
-.edu-uc-diploma img {
+.diploma-reveal-img img {
   display: block;
   width: 100%;
   height: auto;
-  border: 0;
-  border-radius: 0;
-  background: #fff;
   outline: 1px solid var(--line);
-}
-
-.edu-uc-diploma-hint {
-  display: inline-block;
-  margin-top: 0.55rem;
-  font-size: 0.88rem;
-  font-weight: 600;
-  color: var(--ink-soft);
-}
-
-.edu-uc-diploma a:hover .edu-uc-diploma-hint {
-  color: var(--accent-deep);
+  background: #fff;
 }
 
 .edu-uc-verify {
-  margin: 0.85rem 0 0;
+  margin: 0;
   display: grid;
   gap: 0.35rem;
 }
@@ -617,19 +641,18 @@ main {
   color: var(--ink-soft);
 }
 
-.edu-block .edu-uc-diploma {
-  max-width: 14rem;
+.edu-block .edu-uc-aside {
+  justify-self: start;
 }
 
 @media (min-width: 800px) {
   .edu-block {
     grid-template-columns: 1.35fr 0.65fr;
     gap: 2.5rem;
-    align-items: center;
+    align-items: start;
   }
 
-  .edu-block .edu-uc-diploma {
-    max-width: none;
+  .edu-block .edu-uc-aside {
     justify-self: end;
   }
 }
@@ -684,12 +707,7 @@ main {
   .edu-uc-body {
     grid-template-columns: 1.35fr 0.65fr;
     gap: 2.5rem;
-    align-items: center;
-  }
-
-  .edu-uc-diploma {
-    max-width: none;
-    justify-self: end;
+    align-items: start;
   }
 }
 
