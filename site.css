@@ -708,8 +708,8 @@ main {
   height: 2.85rem;
   max-width: min(100%, 12rem);
   object-fit: contain;
-  border-radius: 0.3rem;
   flex-shrink: 0;
+  background: transparent;
 }
 
 .edu-ensem-head .edu-uc-kicker {
