@@ -1373,6 +1373,74 @@ main {
   display: none;
 }
 
+.git-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0;
+  padding: 0.38rem 0.9rem 0.38rem 0.7rem;
+  font-family: var(--display);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-decoration: none;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(21, 32, 43, 0.18);
+  border-radius: 999px;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+  vertical-align: middle;
+}
+
+.git-badge svg {
+  width: 0.95rem;
+  height: 0.95rem;
+  flex-shrink: 0;
+  fill: currentColor;
+}
+
+.git-badge:hover {
+  transform: translateY(-1px);
+  color: var(--paper);
+  background: var(--ink);
+  border-color: var(--ink);
+  box-shadow: 0 10px 24px rgba(21, 32, 43, 0.18);
+}
+
+.git-badge--on-dark {
+  color: #f3efe6;
+  background: rgba(15, 22, 32, 0.4);
+  border-color: rgba(243, 239, 230, 0.4);
+  backdrop-filter: blur(8px);
+}
+
+.git-badge--on-dark:hover {
+  color: #15202b;
+  background: #f3efe6;
+  border-color: #f3efe6;
+  box-shadow: 0 0 24px rgba(243, 239, 230, 0.28);
+}
+
+.git-badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 0.65rem 0 1rem;
+}
+
+.git-badge-row .ai-badge,
+.git-badge-row .git-badge {
+  margin: 0;
+}
+
+.project-actions .git-badge,
+.cta-row .git-badge {
+  align-self: center;
+}
+
 .project-actions {
   display: flex;
   flex-wrap: wrap;
