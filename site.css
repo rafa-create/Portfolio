@@ -211,8 +211,31 @@ main {
   animation: rise 0.9s ease both;
 }
 
+.hero-intro {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 3vw, 1.75rem);
+  margin-bottom: 1.35rem;
+}
+
+.hero-portrait {
+  display: block;
+  width: clamp(4.75rem, 12vw, 6.5rem);
+  height: clamp(4.75rem, 12vw, 6.5rem);
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 18%;
+  flex-shrink: 0;
+  background: var(--paper);
+  outline: 1px solid var(--line);
+}
+
+.hero-copy {
+  min-width: 0;
+}
+
 .hero-brand {
-  margin: 0 0 1.25rem;
+  margin: 0 0 0.65rem;
   font-family: var(--display);
   font-weight: 700;
   font-size: clamp(2.5rem, 8vw, 4.75rem);
@@ -222,7 +245,7 @@ main {
 }
 
 .hero h1 {
-  margin: 0 0 1.35rem;
+  margin: 0;
   max-width: 22ch;
   font-family: var(--display);
   font-weight: 500;
