@@ -767,3 +767,89 @@ main {
     transform: none !important;
   }
 }
+
+/* —— Project page (Bike Shelter) —— */
+.project-hero {
+  min-height: auto;
+  padding-bottom: 2.5rem;
+}
+
+.bleed-shot {
+  margin: 0 0 1rem;
+  border-radius: 0.35rem;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--paper-2);
+}
+
+.bleed-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.bleed-shot figcaption,
+.diagram figcaption,
+.shot figcaption {
+  margin: 0;
+  padding: 0.7rem 0.15rem 0;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+.stack-list {
+  margin: 1.25rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.stack-list li {
+  padding: 0.55rem 0;
+  border-top: 1px solid var(--line);
+  color: var(--ink-soft);
+  font-size: 0.98rem;
+}
+
+.stack-list strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.diagram {
+  margin: 0;
+}
+
+.diagram img,
+.shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 0.35rem;
+  background: #fff;
+}
+
+.diagram.wide {
+  max-width: 48rem;
+}
+
+.shot-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.shot {
+  margin: 0;
+}
+
+@media (min-width: 800px) {
+  .shot-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .shot:first-child {
+    grid-column: 1 / -1;
+  }
+}
