@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Autonomous Rover — Rafael Orset</title>
+  <meta name="description" content="Robot autonome ENSEM : plus court chemin, asservissement, GUI et client TCP / NatNet." />
+  <link rel="canonical" href="https://rafa-create.github.io/Portfolio/rover.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Autonomous Rover — Rafael Orset" />
+  <meta property="og:description" content="ENSEM autonomous rover: shortest path, feedback control, GUI and TCP / NatNet client." />
+  <meta property="og:url" content="https://rafa-create.github.io/Portfolio/rover.html" />
+  <meta name="theme-color" content="#1a2332" />
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./site.css" />
+  <script>
+    window.PORT_TITLES = {
+      fr: "Robot autonome — Rafael Orset",
+      en: "Autonomous Rover — Rafael Orset"
+    };
+    window.PORT_DESC = {
+      fr: "Robot autonome ENSEM : plus court chemin, asservissement, GUI et client TCP / NatNet.",
+      en: "ENSEM autonomous rover: shortest path, feedback control, GUI and TCP / NatNet client."
+    };
+  </script>
+  <script src="./i18n.js"></script>
+  <script src="./nav-spy.js" defer></script>
+</head>
+<body class="page-project">
+  <a class="skip-link" href="#main" data-fr>Aller au contenu</a>
+  <a class="skip-link" href="#main" data-en>Skip to content</a>
+  <div class="ambient" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <header class="top">
+    <a class="wordmark" href="#main">Rover</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#overview" data-fr>Défi</a>
+      <a href="#overview" data-en>Challenge</a>
+      <a href="#teams" data-fr>Équipes</a>
+      <a href="#teams" data-en>Teams</a>
+      <a href="#tasks" data-fr>Tâches CS</a>
+      <a href="#tasks" data-en>CS tasks</a>
+      <a href="#tech" data-fr>Technique</a>
+      <a href="#tech" data-en>Tech</a>
+    </nav>
+    <div class="top-actions">
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-set="fr">FR</button>
+        <button type="button" data-set="en">EN</button>
+      </div>
+      <a class="btn btn-ghost" href="./#projects" data-fr>← Projets</a>
+      <a class="btn btn-ghost" href="./#projects" data-en>← Projects</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-stage hero-stage-rover" id="main">
+      <div class="hero-stage-media rover-hero-bg" aria-hidden="true"></div>
+      <div class="hero-stage-copy rail">
+        <p class="hero-brand" data-fr>ENSEM · 1ʳᵉ année · OptiTrack</p>
+        <p class="hero-brand" data-en>ENSEM · First year · OptiTrack</p>
+        <h1 data-fr>Robot autonome,<br /><em>plus court chemin</em></h1>
+        <h1 data-en>Autonomous rover,<br /><em>shortest path</em></h1>
+        <p class="lede" data-fr>
+          Projet interdisciplinaire : un robot doit passer par des points donnés
+          en suivant le trajet le plus court.
+        </p>
+        <p class="lede" data-en>
+          Interdisciplinary challenge: an autonomous robot must pass through given
+          points along the shortest path.
+        </p>
+        <p class="project-build-note project-build-note-on-dark" data-fr>Code écrit sans IA.</p>
+        <p class="project-build-note project-build-note-on-dark" data-en>Built without AI.</p>
+        <div class="cta-row">
+          <a class="btn btn-solid" href="#overview" data-fr>Découvrir</a>
+          <a class="btn btn-solid" href="#overview" data-en>Explore</a>
+          <a class="btn btn-line btn-on-dark" href="https://github.com/rafa-create/Rover_Project" rel="noopener noreferrer" target="_blank" data-fr>Code GitHub</a>
+          <a class="btn btn-line btn-on-dark" href="https://github.com/rafa-create/Rover_Project" rel="noopener noreferrer" target="_blank" data-en>GitHub code</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="rail">
+      <section class="section" id="overview">
+        <div class="section-head">
+          <p class="eyebrow" data-fr>01 · Défi</p>
+          <p class="eyebrow" data-en>01 · Challenge</p>
+          <h2 data-fr>Un robot, des points, une trajectoire</h2>
+          <h2 data-en>One robot, waypoints, one trajectory</h2>
+        </div>
+        <p data-fr>
+          En première année à l’ENSEM, ce projet mêlait mathématiques, automatique et
+          informatique. L’objectif : concevoir et implémenter un algorithme pour qu’un
+          robot autonome traverse une série de points en minimisant la distance parcourue,
+          tout en restant fidèle à la trajectoire théorique grâce à l’asservissement et
+          au suivi OptiTrack.
+        </p>
+        <p data-en>
+          In the first year at ENSEM, this project mixed mathematics, control, and
+          computing. The goal: design and implement an algorithm so an autonomous robot
+          visits a set of points while minimizing path length, staying on the theoretical
+          trajectory via feedback control and OptiTrack tracking.
+        </p>
+      </section>
+    </div>
+
+    <div class="rail">
+      <section class="section" id="teams">
+        <div class="section-head">
+          <p class="eyebrow" data-fr>02 · Organisation</p>
+          <p class="eyebrow" data-en>02 · Organisation</p>
+          <h2 data-fr>Trois équipes</h2>
+          <h2 data-en>Three teams</h2>
+        </div>
+        <div class="rover-teams">
+          <article>
+            <h3 data-fr>Mathématiques</h3>
+            <h3 data-en>Mathematics</h3>
+            <p data-fr>
+              Résolution du plus court chemin : algorithme du plus proche voisin combiné
+              à une forme adaptée d’algorithme génétique.
+            </p>
+            <p data-en>
+              Shortest-path solving: nearest neighbor combined with an adapted genetic
+              algorithm.
+            </p>
+          </article>
+          <article>
+            <h3 data-fr>Automatique</h3>
+            <h3 data-en>Feedback control</h3>
+            <p data-fr>
+              Asservissement pour minimiser les écarts à la trajectoire théorique.
+            </p>
+            <p data-en>
+              Feedback control to minimize deviations from the theoretical trajectory.
+            </p>
+          </article>
+          <article>
+            <h3 data-fr>Informatique</h3>
+            <h3 data-en>Computing</h3>
+            <p data-fr>
+              Intégration du travail des deux autres équipes et développement d’une
+              interface.
+            </p>
+            <p data-en>
+              Integration of the other teams’ work and development of an interface.
+            </p>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <div class="rail">
+      <section class="section" id="tasks">
+        <div class="section-head">
+          <p class="eyebrow" data-fr>03 · Équipe CS</p>
+          <p class="eyebrow" data-en>03 · CS team</p>
+          <h2 data-fr>Tâches informatiques</h2>
+          <h2 data-en>Computing tasks</h2>
+        </div>
+        <ul class="project-bullets rover-task-list" data-fr>
+          <li>Intégration des travaux automatique et mathématiques dans le logiciel</li>
+          <li>Conception des interactions entre classes</li>
+          <li>Interface graphique pour suivre le déplacement réel du robot</li>
+          <li>Communication client–serveur avec le robot via TCP, en limitant le code côté serveur</li>
+        </ul>
+        <ul class="project-bullets rover-task-list" data-en>
+          <li>Integrate automatic and mathematical work into the software</li>
+          <li>Design interactions between classes</li>
+          <li>Graphical interface to track real robot movement</li>
+          <li>Client–server communication with the robot via TCP, while minimizing server-side code</li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="rail">
+      <section class="section" id="tech">
+        <div class="section-head">
+          <p class="eyebrow" data-fr>04 · Technique</p>
+          <p class="eyebrow" data-en>04 · Tech</p>
+          <h2 data-fr>Outils &amp; code</h2>
+          <h2 data-en>Tools &amp; code</h2>
+        </div>
+        <p class="rover-stack">
+          Git · MATLAB · Python · Postman · JUnit · REST · Bash · Linux · OptiTrack · TCP/IP · NatNet
+        </p>
+        <p class="project-build-note" data-fr>Code écrit sans IA.</p>
+        <p class="project-build-note" data-en>Built without AI.</p>
+        <div class="cta-row">
+          <a class="btn btn-solid" href="https://github.com/rafa-create/Rover_Project" rel="noopener noreferrer" target="_blank" data-fr>Rover_Project</a>
+          <a class="btn btn-solid" href="https://github.com/rafa-create/Rover_Project" rel="noopener noreferrer" target="_blank" data-en>Rover_Project</a>
+          <a class="btn btn-line" href="https://github.com/rafa-create/SAMI_GITH" rel="noopener noreferrer" target="_blank" data-fr>SAMI_GITH</a>
+          <a class="btn btn-line" href="https://github.com/rafa-create/SAMI_GITH" rel="noopener noreferrer" target="_blank" data-en>SAMI_GITH</a>
+        </div>
+      </section>
+    </div>
+
+    <div class="rail">
+      <section class="section">
+        <div class="contact-row">
+          <a class="contact-item" href="./#projects" data-fr>← Portfolio</a>
+          <a class="contact-item" href="./#projects" data-en>← Portfolio</a>
+          <a class="contact-item" href="https://github.com/rafa-create/Rover_Project" rel="noopener noreferrer" target="_blank">GitHub</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="foot">
+    <p>© <span id="y"></span> Rafael Orset</p>
+    <p>
+      <a href="./">Portfolio</a>
+      <span aria-hidden="true">·</span>
+      <a href="https://github.com/rafa-create/Portfolio" rel="noopener noreferrer" target="_blank">Source</a>
+    </p>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = String(new Date().getFullYear());
+  </script>
+</body>
+</html>
