@@ -684,6 +684,12 @@ main {
   flex-shrink: 0;
 }
 
+.course-note {
+  margin: 0.65rem 0 0;
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
 .edu-dl {
   margin: 0.75rem 0 0;
 }
