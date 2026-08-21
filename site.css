@@ -771,6 +771,34 @@ main {
   color: var(--ink-soft);
 }
 
+.edu-engagement {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+
+.edu-engagement-label {
+  margin: 0 0 0.35rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent-deep);
+}
+
+.edu-engagement h4 {
+  margin: 0 0 0.35rem;
+  font-family: var(--display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.edu-engagement p {
+  margin: 0;
+  font-size: 0.92rem;
+}
+
 .edu-block .edu-uc-aside {
   justify-self: start;
 }
