@@ -4,11 +4,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Smart Bike Shelter — Rafael Orset</title>
-  <meta name="description" content="Abri vélo connecté ENSEM : Raspberry Pi, Arduino, XBee, RFID — site, API et prototype de serrures." />
+  <meta name="description" content="Abri vélo connecté ENSEM : de la vue d’ensemble à l’architecture Raspberry / Arduino / XBee / RFID." />
   <link rel="canonical" href="https://rafa-create.github.io/Portfolio/bike-shelter.html" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Smart Bike Shelter — Rafael Orset" />
-  <meta property="og:description" content="Connected bike shelter: Pi, Arduino, XBee, RFID — web + lock prototype." />
+  <meta property="og:description" content="Connected bike shelter: from overview to Pi / Arduino / XBee / RFID architecture." />
   <meta property="og:url" content="https://rafa-create.github.io/Portfolio/bike-shelter.html" />
   <meta property="og:image" content="https://rafa-create.github.io/Portfolio/images/bike-shelter/hero.jpg" />
   <meta name="theme-color" content="#1a2332" />
@@ -23,8 +23,8 @@
       en: "Smart Bike Shelter — Rafael Orset"
     };
     window.PORT_DESC = {
-      fr: "Abri vélo connecté ENSEM : Raspberry Pi, Arduino, XBee, RFID — site, API et prototype de serrures.",
-      en: "ENSEM connected bike shelter: Raspberry Pi, Arduino, XBee, RFID — website, API and lock prototype."
+      fr: "Abri vélo connecté ENSEM : de la vue d’ensemble à l’architecture Raspberry / Arduino / XBee / RFID.",
+      en: "ENSEM connected bike shelter: from overview to Raspberry / Arduino / XBee / RFID architecture."
     };
   </script>
   <script src="./i18n.js"></script>
@@ -37,16 +37,18 @@
   <header class="top">
     <a class="wordmark" href="./">Rafael Orset</a>
     <nav class="nav" aria-label="Sections">
-      <a href="#system" data-fr>Système</a>
-      <a href="#system" data-en>System</a>
+      <a href="#overview" data-fr>Vue d’ensemble</a>
+      <a href="#overview" data-en>Overview</a>
       <a href="#video" data-fr>Vidéo</a>
       <a href="#video" data-en>Video</a>
-      <a href="#slides" data-fr>Slides</a>
-      <a href="#slides" data-en>Slides</a>
-      <a href="#hardware" data-fr>Matériel</a>
-      <a href="#hardware" data-en>Hardware</a>
+      <a href="#design" data-fr>Conception</a>
+      <a href="#design" data-en>Design</a>
       <a href="#usage" data-fr>Usage</a>
       <a href="#usage" data-en>Usage</a>
+      <a href="#system" data-fr>Système</a>
+      <a href="#system" data-en>System</a>
+      <a href="#tech" data-fr>Technique</a>
+      <a href="#tech" data-en>Tech</a>
     </nav>
     <div class="top-actions">
       <div class="lang" role="group" aria-label="Language">
@@ -59,6 +61,7 @@
   </header>
 
   <main>
+    <!-- 1. Hook -->
     <section class="hero-stage" id="main">
       <div class="hero-stage-media" aria-hidden="true">
         <img
@@ -73,26 +76,73 @@
         <h1 data-fr>Abri vélo connecté,<br /><em>trois continents</em></h1>
         <h1 data-en>Connected bike shelter,<br /><em>three continents</em></h1>
         <p class="lede" data-fr>
-          ENSEM · 2020–2021. Responsable informatique : site + API, prototype Arduino / XBee / Raspberry, RFID.
-          Collaboration Cincinnati &amp; Chongqing.
+          ENSEM · 2020–2021. Un abri sécurisé, modulable, lié à un site : places libres en direct,
+          badge étudiant, serrures connectées.
         </p>
         <p class="lede" data-en>
-          ENSEM · 2020–2021. IT lead: website + API, Arduino / XBee / Raspberry prototype, RFID.
-          Collaboration with Cincinnati &amp; Chongqing.
+          ENSEM · 2020–2021. A secure, modular shelter tied to a website: live free spots,
+          student badge, connected locks.
         </p>
         <div class="cta-row">
-          <a class="btn btn-solid" href="#video" data-fr>Voir la vidéo</a>
-          <a class="btn btn-solid" href="#video" data-en>Watch the video</a>
-          <a class="btn btn-line btn-on-dark" href="https://github.com/rafa-create/Bike-Shelter-GITH" rel="noopener noreferrer" target="_blank">GitHub</a>
+          <a class="btn btn-solid" href="#overview" data-fr>Découvrir</a>
+          <a class="btn btn-solid" href="#overview" data-en>Explore</a>
+          <a class="btn btn-line btn-on-dark" href="#video" data-fr>Vidéo</a>
+          <a class="btn btn-line btn-on-dark" href="#video" data-en>Video</a>
         </div>
       </div>
     </section>
 
+    <!-- 2. Overview -->
+    <div class="rail">
+      <section class="section" id="overview">
+        <div class="section-head">
+          <p class="eyebrow" data-fr>01 · Vue d’ensemble</p>
+          <p class="eyebrow" data-en>01 · Overview</p>
+          <h2 data-fr>Le problème, la réponse</h2>
+          <h2 data-en>The problem, the answer</h2>
+        </div>
+        <div class="about-grid">
+          <div>
+            <p data-fr>
+              L’Université de Lorraine manquait d’abris vélos sur ses campus. L’ENSEM a conçu un abri
+              innovant — bois, panneaux solaires, 16 places — avec des équipes à Cincinnati (États-Unis)
+              et Chongqing (Chine). Réunions hebdomadaires pendant un an.
+            </p>
+            <p data-en>
+              The University of Lorraine needed more bike shelters on campus. ENSEM designed an innovative
+              one — timber, solar panels, 16 spots — with teams in Cincinnati (USA) and Chongqing (China).
+              Weekly meetings for a year.
+            </p>
+          </div>
+          <ul class="pillars">
+            <li>
+              <strong data-fr>Mon rôle</strong>
+              <strong data-en>My role</strong>
+              <span data-fr>Responsable informatique : site, API, prototype des serrures et RFID</span>
+              <span data-en>IT lead: website, API, lock prototype and RFID</span>
+            </li>
+            <li>
+              <strong>16</strong>
+              <span data-fr>places · structure ~594 × 390 cm</span>
+              <span data-en>spots · footprint ~594 × 390 cm</span>
+            </li>
+            <li>
+              <strong data-fr>Livrable</strong>
+              <strong data-en>Deliverable</strong>
+              <span data-fr>Concept mécanique + système connecté + maquette électronique</span>
+              <span data-en>Mechanical concept + connected system + electronics mock-up</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <!-- 3. Video -->
     <section class="video-section" id="video">
       <div class="rail">
         <div class="section-head">
-          <p class="eyebrow" data-fr>Démo</p>
-          <p class="eyebrow" data-en>Demo</p>
+          <p class="eyebrow" data-fr>02 · Démo</p>
+          <p class="eyebrow" data-en>02 · Demo</p>
           <h2 data-fr>En vidéo</h2>
           <h2 data-en>Watch</h2>
         </div>
@@ -109,56 +159,96 @@
       </div>
     </section>
 
-    <section class="slides-section" id="slides">
+    <!-- 4. Design (mechanical, high level) -->
+    <section class="slides-section" id="design">
       <div class="rail">
         <div class="section-head">
-          <p class="eyebrow" data-fr>Présentation</p>
-          <p class="eyebrow" data-en>Presentation</p>
-          <h2 data-fr>Conception &amp; architecture</h2>
-          <h2 data-en>Design &amp; architecture</h2>
+          <p class="eyebrow" data-fr>03 · Conception</p>
+          <p class="eyebrow" data-en>03 · Design</p>
+          <h2 data-fr>La structure, le rangement, les verrous</h2>
+          <h2 data-en>Structure, storage, locks</h2>
           <p class="lede tight" data-fr>
-            Extraits de la présentation — mécanique (structure, rangement, verrous) et informatique (diagramme, site, procédure).
+            Avant l’électronique : l’abri, les doubles niveaux, le plan à 16 vélos.
           </p>
           <p class="lede tight" data-en>
-            Presentation extracts — mechanical (structure, storage, locks) and IT (diagram, website, procedure).
+            Before the electronics: the shelter, two-tier racks, the 16-bike floor plan.
           </p>
         </div>
       </div>
-      <div class="slide-show" data-slideshow>
+      <div class="slide-show" data-slideshow="design">
         <div class="slide-stage">
           <button type="button" class="slide-nav slide-prev" data-slide-prev aria-label="Previous">‹</button>
           <figure class="slide-frame">
-            <img
-              data-slide-img
-              src="./images/bike-shelter/slides/slide-03.jpg"
-              width="1280"
-              height="720"
-              alt=""
-            />
-            <figcaption>
-              <span data-slide-cap></span>
-            </figcaption>
+            <img data-slide-img src="./images/bike-shelter/slides/slide-03.jpg" width="1280" height="720" alt="" />
+            <figcaption><span data-slide-cap></span></figcaption>
           </figure>
           <button type="button" class="slide-nav slide-next" data-slide-next aria-label="Next">›</button>
         </div>
-        <div class="slide-dots" data-slide-dots role="tablist" aria-label="Slides"></div>
+        <div class="slide-dots" data-slide-dots role="tablist" aria-label="Design slides"></div>
       </div>
     </section>
 
+    <!-- 5. Usage -->
+    <div class="rail">
+      <section class="section" id="usage">
+        <div class="section-head">
+          <p class="eyebrow" data-fr>04 · Usage</p>
+          <p class="eyebrow" data-en>04 · Usage</p>
+          <h2 data-fr>Ce que voit le cycliste</h2>
+          <h2 data-en>What the rider sees</h2>
+          <p class="lede tight" data-fr>
+            Trouver un abri sur la carte, vérifier les places libres, verrouiller avec le badge école.
+          </p>
+          <p class="lede tight" data-en>
+            Find a shelter on the map, check free spots, lock with the school badge.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <figure class="media-band media-band-doc">
+      <img
+        src="./images/bike-shelter/slides/slide-11.jpg"
+        width="1280"
+        height="720"
+        alt="Website map showing Brabois ingénieur with free spots"
+        loading="lazy"
+      />
+      <figcaption class="rail">
+        <span data-fr>Site : carte interactive, places libres actualisées, lien Google Maps.</span>
+        <span data-en>Website: interactive map, live free spots, Google Maps link.</span>
+      </figcaption>
+    </figure>
+
+    <figure class="media-band media-band-doc">
+      <img
+        src="./images/bike-shelter/explain.jpg"
+        width="1200"
+        height="675"
+        alt="Explanatory sign: how to lock and unlock a bike with the student card"
+        loading="lazy"
+      />
+      <figcaption class="rail">
+        <span data-fr>Panneau d’usage : verrouillage / déverrouillage au badge, LED jaune → verte.</span>
+        <span data-en>Usage sign: lock / unlock with badge, yellow → green LED.</span>
+      </figcaption>
+    </figure>
+
+    <!-- 6. System (mid-level) -->
     <div class="rail">
       <section class="section" id="system">
         <div class="section-head">
-          <p class="eyebrow" data-fr>Architecture</p>
-          <p class="eyebrow" data-en>Architecture</p>
-          <h2 data-fr>Pi coordinateur, Arduino en routeurs</h2>
-          <h2 data-en>Pi as coordinator, Arduinos as routers</h2>
+          <p class="eyebrow" data-fr>05 · Système</p>
+          <p class="eyebrow" data-en>05 · System</p>
+          <h2 data-fr>Comment ça s’articule</h2>
+          <h2 data-en>How it fits together</h2>
           <p class="lede tight" data-fr>
-            Chaque module parle au Raspberry via XBee. Le Pi vérifie le CSN, associe carte ↔ serrure,
-            pilote LED / buzzer, et publie les places libres sur le site.
+            Un Raspberry Pi central, des modules Arduino par groupe de places, radio XBee,
+            badge RFID, site + API Université de Lorraine.
           </p>
           <p class="lede tight" data-en>
-            Each module talks to the Raspberry over XBee. The Pi checks the CSN, maps card ↔ lock,
-            drives LED / buzzer, and publishes free spots to the website.
+            A central Raspberry Pi, Arduino modules per spot group, XBee radio,
+            RFID badge, University of Lorraine website + API.
           </p>
         </div>
         <ul class="stack-row">
@@ -173,6 +263,49 @@
 
     <figure class="media-band">
       <img
+        src="./images/bike-shelter/slides/slide-10.jpg"
+        width="1280"
+        height="720"
+        alt="General system diagram: solar, Pi, XBee modules, web server"
+        loading="lazy"
+      />
+      <figcaption class="rail">
+        <span data-fr>Diagramme général : énergie, Pi, modules, serveur web.</span>
+        <span data-en>System diagram: power, Pi, modules, web server.</span>
+      </figcaption>
+    </figure>
+
+    <!-- 7. Deep tech -->
+    <section class="slides-section" id="tech">
+      <div class="rail">
+        <div class="section-head">
+          <p class="eyebrow" data-fr>06 · Technique</p>
+          <p class="eyebrow" data-en>06 · Technical</p>
+          <h2 data-fr>Sous le capot</h2>
+          <h2 data-en>Under the hood</h2>
+          <p class="lede tight" data-fr>
+            Logique CSN, chaînes LED / buzzer, architecture logicielle, prototype matériel.
+          </p>
+          <p class="lede tight" data-en>
+            CSN logic, LED / buzzer chains, software architecture, hardware prototype.
+          </p>
+        </div>
+      </div>
+      <div class="slide-show" data-slideshow="tech">
+        <div class="slide-stage">
+          <button type="button" class="slide-nav slide-prev" data-slide-prev aria-label="Previous">‹</button>
+          <figure class="slide-frame">
+            <img data-slide-img src="./images/bike-shelter/slides/slide-12.jpg" width="1280" height="720" alt="" />
+            <figcaption><span data-slide-cap></span></figcaption>
+          </figure>
+          <button type="button" class="slide-nav slide-next" data-slide-next aria-label="Next">›</button>
+        </div>
+        <div class="slide-dots" data-slide-dots role="tablist" aria-label="Tech slides"></div>
+      </div>
+    </section>
+
+    <figure class="media-band">
+      <img
         src="./images/bike-shelter/logic.jpg"
         width="1400"
         height="787"
@@ -180,18 +313,24 @@
         loading="lazy"
       />
       <figcaption class="rail">
-        <span data-fr>Logique Pi (CSN, places, site) et logique Arduino (LED, buzzer, éjection).</span>
-        <span data-en>Pi logic (CSN, spots, site) and Arduino logic (LED, buzzer, eject).</span>
+        <span data-fr>Logique détaillée : Pi (CSN, places, site) et Arduino (LED, buzzer, éjection).</span>
+        <span data-en>Detailed logic: Pi (CSN, spots, site) and Arduino (LED, buzzer, eject).</span>
       </figcaption>
     </figure>
 
     <div class="rail">
       <section class="section" id="hardware">
         <div class="section-head">
-          <p class="eyebrow" data-fr>Prototype</p>
-          <p class="eyebrow" data-en>Prototype</p>
-          <h2 data-fr>Matériel</h2>
-          <h2 data-en>Hardware</h2>
+          <p class="eyebrow" data-fr>07 · Prototype</p>
+          <p class="eyebrow" data-en>07 · Prototype</p>
+          <h2 data-fr>Le banc de test</h2>
+          <h2 data-en>The test bench</h2>
+          <p class="lede tight" data-fr>
+            Maquette : Pi + XBee, Arduino, RFID PN532, relais et serrures solénoïdes.
+          </p>
+          <p class="lede tight" data-en>
+            Mock-up: Pi + XBee, Arduino, PN532 RFID, relays and solenoid locks.
+          </p>
         </div>
       </section>
     </div>
@@ -239,33 +378,6 @@
     </div>
 
     <div class="rail">
-      <section class="section" id="usage">
-        <div class="section-head">
-          <p class="eyebrow" data-fr>Expérience</p>
-          <p class="eyebrow" data-en>Experience</p>
-          <h2 data-fr>Verrouiller / déverrouiller</h2>
-          <h2 data-en>Lock / unlock</h2>
-          <p class="lede tight" data-fr>
-            Panneau du prototype : badge école, LED jaune → verte, timeout, refus si déjà une place.
-          </p>
-          <p class="lede tight" data-en>
-            Prototype signage: school badge, yellow → green LED, timeout, reject if a spot is already held.
-          </p>
-        </div>
-      </section>
-    </div>
-
-    <figure class="media-band media-band-doc">
-      <img
-        src="./images/bike-shelter/explain.jpg"
-        width="1200"
-        height="675"
-        alt="Explanatory sign: how to lock and unlock a bike with the student card"
-        loading="lazy"
-      />
-    </figure>
-
-    <div class="rail">
       <section class="section contact">
         <div class="section-head">
           <p class="eyebrow" data-fr>Liens</p>
@@ -297,98 +409,61 @@
     document.getElementById("y").textContent = String(new Date().getFullYear());
 
     (function () {
-      var slides = [
-        {
-          src: "./images/bike-shelter/slides/slide-03.jpg",
-          fr: "3 — Structure globale (mécanique)",
-          en: "3 — Overall structure (mechanical)"
-        },
-        {
-          src: "./images/bike-shelter/slides/slide-04.jpg",
-          fr: "4 — Structure in situ",
-          en: "4 — Structure on site"
-        },
-        {
-          src: "./images/bike-shelter/slides/slide-05.jpg",
-          fr: "5 — Rangement des vélos (double niveau)",
-          en: "5 — Bike storage (two-tier)"
-        },
-        {
-          src: "./images/bike-shelter/slides/slide-06.jpg",
-          fr: "6 — Système de verrouillage",
-          en: "6 — Locking system"
-        },
-        {
-          src: "./images/bike-shelter/slides/slide-07.jpg",
-          fr: "7 — Plan : 16 vélos · 594 × 390 cm",
-          en: "7 — Floor plan: 16 bikes · 594 × 390 cm"
-        },
-        {
-          src: "./images/bike-shelter/slides/slide-10.jpg",
-          fr: "10 — Diagramme général (informatique)",
-          en: "10 — System diagram (IT)"
-        },
-        {
-          src: "./images/bike-shelter/slides/slide-11.jpg",
-          fr: "11 — Site internet & carte des abris",
-          en: "11 — Website & shelter map"
-        },
-        {
-          src: "./images/bike-shelter/slides/slide-12.jpg",
-          fr: "12 — Procédure de sécurisation",
-          en: "12 — Lock / unlock procedure"
-        },
-        {
-          src: "./images/bike-shelter/slides/slide-13.jpg",
-          fr: "13 — Architecture générale (identifiants masqués)",
-          en: "13 — General architecture (credentials redacted)"
+      var sets = {
+        design: [
+          { src: "./images/bike-shelter/slides/slide-03.jpg", fr: "Structure globale", en: "Overall structure" },
+          { src: "./images/bike-shelter/slides/slide-04.jpg", fr: "Structure in situ", en: "Structure on site" },
+          { src: "./images/bike-shelter/slides/slide-05.jpg", fr: "Rangement double niveau", en: "Two-tier storage" },
+          { src: "./images/bike-shelter/slides/slide-06.jpg", fr: "Système de verrouillage", en: "Locking system" },
+          { src: "./images/bike-shelter/slides/slide-07.jpg", fr: "Plan · 16 vélos · 594 × 390 cm", en: "Plan · 16 bikes · 594 × 390 cm" }
+        ],
+        tech: [
+          { src: "./images/bike-shelter/slides/slide-12.jpg", fr: "Procédure de sécurisation", en: "Lock / unlock procedure" },
+          { src: "./images/bike-shelter/slides/slide-13.jpg", fr: "Architecture (identifiants masqués)", en: "Architecture (credentials redacted)" }
+        ]
+      };
+
+      function bind(root, slides) {
+        var img = root.querySelector("[data-slide-img]");
+        var cap = root.querySelector("[data-slide-cap]");
+        var dots = root.querySelector("[data-slide-dots]");
+        var i = 0;
+
+        function lang() {
+          return document.documentElement.lang === "en" ? "en" : "fr";
         }
-      ];
 
-      var root = document.querySelector("[data-slideshow]");
-      if (!root) return;
-      var img = root.querySelector("[data-slide-img]");
-      var cap = root.querySelector("[data-slide-cap]");
-      var dots = root.querySelector("[data-slide-dots]");
-      var i = 0;
+        function show(n) {
+          i = (n + slides.length) % slides.length;
+          var s = slides[i];
+          img.src = s.src;
+          img.alt = s[lang()];
+          cap.textContent = s[lang()];
+          dots.querySelectorAll("button").forEach(function (b, idx) {
+            b.setAttribute("aria-selected", idx === i ? "true" : "false");
+          });
+        }
 
-      function lang() {
-        return document.documentElement.lang === "en" ? "en" : "fr";
-      }
-
-      function show(n) {
-        i = (n + slides.length) % slides.length;
-        var s = slides[i];
-        img.src = s.src;
-        img.alt = s[lang()];
-        cap.textContent = s[lang()];
-        dots.querySelectorAll("button").forEach(function (b, idx) {
-          b.setAttribute("aria-selected", idx === i ? "true" : "false");
+        slides.forEach(function (_, idx) {
+          var b = document.createElement("button");
+          b.type = "button";
+          b.setAttribute("aria-label", "Slide " + (idx + 1));
+          b.addEventListener("click", function () { show(idx); });
+          dots.appendChild(b);
         });
+
+        root.querySelector("[data-slide-prev]").addEventListener("click", function () { show(i - 1); });
+        root.querySelector("[data-slide-next]").addEventListener("click", function () { show(i + 1); });
+        document.querySelectorAll(".lang button").forEach(function (b) {
+          b.addEventListener("click", function () { show(i); });
+        });
+        show(0);
       }
 
-      slides.forEach(function (_, idx) {
-        var b = document.createElement("button");
-        b.type = "button";
-        b.setAttribute("aria-label", "Slide " + (idx + 1));
-        b.addEventListener("click", function () { show(idx); });
-        dots.appendChild(b);
+      document.querySelectorAll("[data-slideshow]").forEach(function (root) {
+        var key = root.getAttribute("data-slideshow");
+        if (sets[key]) bind(root, sets[key]);
       });
-
-      root.querySelector("[data-slide-prev]").addEventListener("click", function () { show(i - 1); });
-      root.querySelector("[data-slide-next]").addEventListener("click", function () { show(i + 1); });
-
-      document.querySelectorAll(".lang button").forEach(function (b) {
-        b.addEventListener("click", function () { show(i); });
-      });
-
-      document.addEventListener("keydown", function (e) {
-        if (!root.contains(document.activeElement) && !root.matches(":hover")) return;
-        if (e.key === "ArrowLeft") show(i - 1);
-        if (e.key === "ArrowRight") show(i + 1);
-      });
-
-      show(0);
     })();
 
     if ("IntersectionObserver" in window) {
