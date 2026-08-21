@@ -29,7 +29,7 @@
   </script>
   <script src="./i18n.js"></script>
 </head>
-<body>
+<body class="page-project">
   <a class="skip-link" href="#main" data-fr>Aller au contenu</a>
   <a class="skip-link" href="#main" data-en>Skip to content</a>
   <div class="ambient" aria-hidden="true"></div>
@@ -54,168 +54,173 @@
     </div>
   </header>
 
-  <main id="main">
-    <section class="hero project-hero">
-      <p class="hero-brand">Smart Bike Shelter</p>
-      <h1 data-fr>Abri vélo connecté,<br /><em>trois continents</em></h1>
-      <h1 data-en>Connected bike shelter,<br /><em>three continents</em></h1>
-      <p class="lede" data-fr>
-        Projet Université de Lorraine / ENSEM (2020–2021). Responsable informatique :
-        site + API des places libres, prototype de 16 serrures (Arduino, XBee, Raspberry), lecteurs RFID.
-        Collaboration hebdomadaire avec Cincinnati et Chongqing.
-      </p>
-      <p class="lede" data-en>
-        University of Lorraine / ENSEM project (2020–2021). IT lead:
-        website + free-spot API, prototype of 16 locks (Arduino, XBee, Raspberry), RFID readers.
-        Weekly collaboration with Cincinnati and Chongqing.
-      </p>
-      <div class="cta-row">
-        <a class="btn btn-solid" href="https://youtu.be/2SxQt4GDp0o" rel="noopener noreferrer" target="_blank" data-fr>Voir la vidéo</a>
-        <a class="btn btn-solid" href="https://youtu.be/2SxQt4GDp0o" rel="noopener noreferrer" target="_blank" data-en>Watch the video</a>
-        <a class="btn btn-line" href="https://github.com/rafa-create/Bike-Shelter-GITH" rel="noopener noreferrer" target="_blank">GitHub</a>
+  <main>
+    <section class="hero-stage" id="main">
+      <div class="hero-stage-media" aria-hidden="true">
+        <img
+          src="./images/bike-shelter/hero.jpg"
+          width="1400"
+          height="836"
+          alt=""
+        />
       </div>
-      <p class="hero-meta">HTML · CSS · JS · PHP · Python · Arduino · Raspberry Pi · XBee · RFID</p>
+      <div class="hero-stage-copy rail">
+        <p class="hero-brand">Smart Bike Shelter</p>
+        <h1 data-fr>Abri vélo connecté,<br /><em>trois continents</em></h1>
+        <h1 data-en>Connected bike shelter,<br /><em>three continents</em></h1>
+        <p class="lede" data-fr>
+          ENSEM · 2020–2021. Responsable informatique : site + API, prototype Arduino / XBee / Raspberry, RFID.
+          Collaboration Cincinnati &amp; Chongqing.
+        </p>
+        <p class="lede" data-en>
+          ENSEM · 2020–2021. IT lead: website + API, Arduino / XBee / Raspberry prototype, RFID.
+          Collaboration with Cincinnati &amp; Chongqing.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-solid" href="https://youtu.be/2SxQt4GDp0o" rel="noopener noreferrer" target="_blank" data-fr>Voir la vidéo</a>
+          <a class="btn btn-solid" href="https://youtu.be/2SxQt4GDp0o" rel="noopener noreferrer" target="_blank" data-en>Watch the video</a>
+          <a class="btn btn-line btn-on-dark" href="https://github.com/rafa-create/Bike-Shelter-GITH" rel="noopener noreferrer" target="_blank">GitHub</a>
+        </div>
+      </div>
     </section>
 
-    <figure class="bleed-shot">
+    <div class="rail">
+      <section class="section" id="system">
+        <div class="section-head">
+          <p class="eyebrow" data-fr>Architecture</p>
+          <p class="eyebrow" data-en>Architecture</p>
+          <h2 data-fr>Pi coordinateur, Arduino en routeurs</h2>
+          <h2 data-en>Pi as coordinator, Arduinos as routers</h2>
+          <p class="lede tight" data-fr>
+            Chaque module parle au Raspberry via XBee. Le Pi vérifie le CSN, associe carte ↔ serrure,
+            pilote LED / buzzer, et publie les places libres sur le site.
+          </p>
+          <p class="lede tight" data-en>
+            Each module talks to the Raspberry over XBee. The Pi checks the CSN, maps card ↔ lock,
+            drives LED / buzzer, and publishes free spots to the website.
+          </p>
+        </div>
+        <ul class="stack-row">
+          <li>Raspberry Pi</li>
+          <li>Arduino UNO ×4</li>
+          <li>XBee S2C</li>
+          <li>PN532 RFID</li>
+          <li>PHP API</li>
+        </ul>
+      </section>
+    </div>
+
+    <figure class="media-band">
       <img
-        src="./images/bike-shelter/hero.jpg"
+        src="./images/bike-shelter/logic.jpg"
         width="1400"
-        height="836"
-        alt="Raspberry Pi with touchscreen running FinalPi.py and Digi XBee module"
+        height="787"
+        alt="Flowcharts: Raspberry Pi coordinator and Arduino XBee routers"
+        loading="lazy"
       />
-      <figcaption data-fr>Hub Raspberry Pi + écran tactile, code Python (FinalPi.py) et module XBee.</figcaption>
-      <figcaption data-en>Raspberry Pi hub + touchscreen, Python (FinalPi.py) and XBee module.</figcaption>
+      <figcaption class="rail">
+        <span data-fr>Logique Pi (CSN, places, site) et logique Arduino (LED, buzzer, éjection).</span>
+        <span data-en>Pi logic (CSN, spots, site) and Arduino logic (LED, buzzer, eject).</span>
+      </figcaption>
     </figure>
 
-    <section class="section" id="system">
-      <div class="section-head">
-        <p class="eyebrow" data-fr>Architecture</p>
-        <p class="eyebrow" data-en>Architecture</p>
-        <h2 data-fr>Pi coordinateur, Arduino en routeurs</h2>
-        <h2 data-en>Pi as coordinator, Arduinos as routers</h2>
-      </div>
-      <div class="about-grid">
-        <div>
-          <p data-fr>
-            Chaque module de places parle au Raspberry via XBee. Le Pi vérifie le CSN de la carte étudiante,
-            associe carte ↔ serrure, pilote LED / buzzer, et publie le nombre de places libres sur le site.
-            Batteries remontées périodiquement vers le web.
-          </p>
-          <p data-en>
-            Each spot module talks to the Raspberry over XBee. The Pi checks the student card CSN,
-            maps card ↔ lock, drives LED / buzzer feedback, and publishes free spots to the website.
-            Battery status is pushed to the web on a schedule.
-          </p>
-          <ul class="stack-list">
-            <li><strong>Raspberry Pi</strong> — coordination, BDD, HTTP</li>
-            <li><strong>Arduino UNO ×4</strong> — serrures / locks par module</li>
-            <li><strong>XBee S2C</strong> — liaison sans fil</li>
-            <li><strong>PN532 RFID</strong> — badge étudiant 13,56&nbsp;MHz</li>
-            <li><strong>Site + PHP API</strong> — carte, places libres</li>
-          </ul>
+    <div class="rail">
+      <section class="section" id="hardware">
+        <div class="section-head">
+          <p class="eyebrow" data-fr>Prototype</p>
+          <p class="eyebrow" data-en>Prototype</p>
+          <h2 data-fr>Matériel</h2>
+          <h2 data-en>Hardware</h2>
         </div>
-        <figure class="diagram">
-          <a href="./images/bike-shelter/logic.jpg" target="_blank" rel="noopener noreferrer">
-            <img
-              src="./images/bike-shelter/logic.jpg"
-              width="1400"
-              height="787"
-              alt="Flowcharts: Raspberry Pi coordinator and Arduino XBee routers"
-              loading="lazy"
-            />
-          </a>
-          <figcaption data-fr>Logique Pi (CSN, places, site) et logique Arduino (LED, buzzer, éjection).</figcaption>
-          <figcaption data-en>Pi logic (CSN, spots, site) and Arduino logic (LED, buzzer, eject).</figcaption>
-        </figure>
-      </div>
-    </section>
+      </section>
+    </div>
 
-    <section class="section" id="hardware">
-      <div class="section-head">
-        <p class="eyebrow" data-fr>Prototype</p>
-        <p class="eyebrow" data-en>Prototype</p>
-        <h2 data-fr>Matériel</h2>
-        <h2 data-en>Hardware</h2>
-      </div>
-      <div class="shot-grid">
-        <figure class="shot">
-          <img
-            src="./images/bike-shelter/locks.jpg"
-            width="1400"
-            height="1244"
-            alt="Arduino with XBee, 4-channel relay and four solenoid locks"
-            loading="lazy"
-          />
-          <figcaption data-fr>Module : Arduino + XBee, relais 4 voies, 4 serrures solénoïdes.</figcaption>
-          <figcaption data-en>Module: Arduino + XBee, 4-channel relay, four solenoid locks.</figcaption>
-        </figure>
-        <figure class="shot">
-          <img
-            src="./images/bike-shelter/rfid.jpg"
-            width="1200"
-            height="900"
-            alt="Adafruit PN532 RFID shield with breadboard, LED and buzzer"
-            loading="lazy"
-          />
-          <figcaption data-fr>Lecteur RFID/NFC Adafruit PN532, LED et buzzer de feedback.</figcaption>
-          <figcaption data-en>Adafruit PN532 RFID/NFC reader, LED and feedback buzzer.</figcaption>
-        </figure>
-        <figure class="shot">
-          <img
-            src="./images/bike-shelter/pi-xbee.jpg"
-            width="1200"
-            height="793"
-            alt="Back of Raspberry Pi 4 with HDMI, USB-C and Digi XBee S2C"
-            loading="lazy"
-          />
-          <figcaption data-fr>Raspberry Pi 4 Model B et coordinateur XBee Digi S2C.</figcaption>
-          <figcaption data-en>Raspberry Pi 4 Model B and Digi XBee S2C coordinator.</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="section" id="usage">
-      <div class="section-head">
-        <p class="eyebrow" data-fr>Expérience</p>
-        <p class="eyebrow" data-en>Experience</p>
-        <h2 data-fr>Verrouiller / déverrouiller</h2>
-        <h2 data-en>Lock / unlock</h2>
-        <p class="lede tight" data-fr>
-          Panneau explicatif du prototype : badge école, LED jaune → verte, timeout et refus si déjà une place.
-        </p>
-        <p class="lede tight" data-en>
-          Prototype signage: school badge, yellow → green LED, timeout, and reject if a spot is already held.
-        </p>
-      </div>
-      <figure class="diagram wide">
-        <a href="./images/bike-shelter/explain.jpg" target="_blank" rel="noopener noreferrer">
-          <img
-            src="./images/bike-shelter/explain.jpg"
-            width="1200"
-            height="675"
-            alt="Explanatory sign: how to lock and unlock a bike with the student card"
-            loading="lazy"
-          />
-        </a>
+    <div class="gallery">
+      <figure class="gallery-main">
+        <img
+          src="./images/bike-shelter/locks.jpg"
+          width="1400"
+          height="1244"
+          alt="Arduino with XBee, 4-channel relay and four solenoid locks"
+          loading="lazy"
+        />
+        <figcaption>
+          <span data-fr>Module : Arduino + XBee, relais, 4 serrures solénoïdes</span>
+          <span data-en>Module: Arduino + XBee, relay, four solenoid locks</span>
+        </figcaption>
       </figure>
-    </section>
+      <figure>
+        <img
+          src="./images/bike-shelter/rfid.jpg"
+          width="1200"
+          height="900"
+          alt="Adafruit PN532 RFID shield with breadboard, LED and buzzer"
+          loading="lazy"
+        />
+        <figcaption>
+          <span data-fr>Lecteur RFID/NFC PN532</span>
+          <span data-en>PN532 RFID/NFC reader</span>
+        </figcaption>
+      </figure>
+      <figure>
+        <img
+          src="./images/bike-shelter/pi-xbee.jpg"
+          width="1200"
+          height="793"
+          alt="Back of Raspberry Pi 4 with Digi XBee S2C"
+          loading="lazy"
+        />
+        <figcaption>
+          <span data-fr>Raspberry Pi 4 + XBee Digi S2C</span>
+          <span data-en>Raspberry Pi 4 + Digi XBee S2C</span>
+        </figcaption>
+      </figure>
+    </div>
 
-    <section class="section contact">
-      <div class="section-head">
-        <p class="eyebrow" data-fr>Liens</p>
-        <p class="eyebrow" data-en>Links</p>
-        <h2 data-fr>Aller plus loin</h2>
-        <h2 data-en>Go further</h2>
-      </div>
-      <div class="contact-row">
-        <a class="contact-item" href="https://youtu.be/2SxQt4GDp0o" rel="noopener noreferrer" target="_blank" data-fr>Vidéo</a>
-        <a class="contact-item" href="https://youtu.be/2SxQt4GDp0o" rel="noopener noreferrer" target="_blank" data-en>Video</a>
-        <a class="contact-item" href="https://github.com/rafa-create/Bike-Shelter-GITH" rel="noopener noreferrer" target="_blank">GitHub</a>
-        <a class="contact-item" href="./#projects" data-fr>← Portfolio</a>
-        <a class="contact-item" href="./#projects" data-en>← Portfolio</a>
-      </div>
-    </section>
+    <div class="rail">
+      <section class="section" id="usage">
+        <div class="section-head">
+          <p class="eyebrow" data-fr>Expérience</p>
+          <p class="eyebrow" data-en>Experience</p>
+          <h2 data-fr>Verrouiller / déverrouiller</h2>
+          <h2 data-en>Lock / unlock</h2>
+          <p class="lede tight" data-fr>
+            Panneau du prototype : badge école, LED jaune → verte, timeout, refus si déjà une place.
+          </p>
+          <p class="lede tight" data-en>
+            Prototype signage: school badge, yellow → green LED, timeout, reject if a spot is already held.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <figure class="media-band media-band-doc">
+      <img
+        src="./images/bike-shelter/explain.jpg"
+        width="1200"
+        height="675"
+        alt="Explanatory sign: how to lock and unlock a bike with the student card"
+        loading="lazy"
+      />
+    </figure>
+
+    <div class="rail">
+      <section class="section contact">
+        <div class="section-head">
+          <p class="eyebrow" data-fr>Liens</p>
+          <p class="eyebrow" data-en>Links</p>
+          <h2 data-fr>Aller plus loin</h2>
+          <h2 data-en>Go further</h2>
+        </div>
+        <div class="contact-row">
+          <a class="contact-item" href="https://youtu.be/2SxQt4GDp0o" rel="noopener noreferrer" target="_blank" data-fr>Vidéo</a>
+          <a class="contact-item" href="https://youtu.be/2SxQt4GDp0o" rel="noopener noreferrer" target="_blank" data-en>Video</a>
+          <a class="contact-item" href="https://github.com/rafa-create/Bike-Shelter-GITH" rel="noopener noreferrer" target="_blank">GitHub</a>
+          <a class="contact-item" href="./#projects" data-fr>← Portfolio</a>
+          <a class="contact-item" href="./#projects" data-en>← Portfolio</a>
+        </div>
+      </section>
+    </div>
   </main>
 
   <footer class="foot">
@@ -234,8 +239,8 @@
         entries.forEach(function (e) {
           if (e.isIntersecting) e.target.classList.add("in");
         });
-      }, { threshold: 0.12 });
-      document.querySelectorAll(".section, .bleed-shot, .shot").forEach(function (el) {
+      }, { threshold: 0.08 });
+      document.querySelectorAll(".section, .media-band, .gallery").forEach(function (el) {
         el.classList.add("reveal");
         io.observe(el);
       });
