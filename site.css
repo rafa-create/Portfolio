@@ -1121,16 +1121,36 @@ main {
     linear-gradient(155deg, #15202b 0%, #1a2f38 45%, #0f1a22 100%);
 }
 
-.rover-hero-bg::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(243, 239, 230, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(243, 239, 230, 0.04) 1px, transparent 1px);
-  background-size: 48px 48px;
-  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.55), transparent 85%);
-  pointer-events: none;
+.rover-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.28;
+  mix-blend-mode: luminosity;
+}
+
+.rover-diagram {
+  margin: 1rem 0 0;
+}
+
+.rover-diagram img {
+  display: block;
+  width: 100%;
+  max-width: 36rem;
+  height: auto;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.rover-diagram-wide img {
+  max-width: 42rem;
+}
+
+.rover-diagram figcaption {
+  margin-top: 0.45rem;
+  font-size: 0.88rem;
+  color: var(--ink-soft);
 }
 
 .hero-stage-rover {

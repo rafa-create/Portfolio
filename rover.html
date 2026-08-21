@@ -3,13 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Autonomous Rover — Rafael Orset</title>
-  <meta name="description" content="Robot autonome ENSEM : plus court chemin, asservissement, GUI et client TCP / NatNet." />
+  <title>Robot SAMI — Rafael Orset</title>
+  <meta name="description" content="Robot SAMI (ENSEM) : plus court chemin, OptiTrack / NatNet, GUI Tkinter et client TCP." />
   <link rel="canonical" href="https://rafa-create.github.io/Portfolio/rover.html" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Autonomous Rover — Rafael Orset" />
-  <meta property="og:description" content="ENSEM autonomous rover: shortest path, feedback control, GUI and TCP / NatNet client." />
+  <meta property="og:title" content="Robot SAMI — Rafael Orset" />
+  <meta property="og:description" content="ENSEM Robot SAMI: shortest path, OptiTrack / NatNet, Tkinter GUI and TCP client." />
   <meta property="og:url" content="https://rafa-create.github.io/Portfolio/rover.html" />
+  <meta property="og:image" content="https://rafa-create.github.io/Portfolio/images/rover/architecture-comm.jpg" />
   <meta name="theme-color" content="#1a2332" />
   <link rel="icon" href="./favicon.ico" sizes="any" />
   <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
@@ -21,12 +22,12 @@
   <link rel="stylesheet" href="./site.css" />
   <script>
     window.PORT_TITLES = {
-      fr: "Robot autonome — Rafael Orset",
-      en: "Autonomous Rover — Rafael Orset"
+      fr: "Robot SAMI — Rafael Orset",
+      en: "Robot SAMI — Rafael Orset"
     };
     window.PORT_DESC = {
-      fr: "Robot autonome ENSEM : plus court chemin, asservissement, GUI et client TCP / NatNet.",
-      en: "ENSEM autonomous rover: shortest path, feedback control, GUI and TCP / NatNet client."
+      fr: "Robot SAMI (ENSEM) : plus court chemin, OptiTrack / NatNet, GUI Tkinter et client TCP.",
+      en: "ENSEM Robot SAMI: shortest path, OptiTrack / NatNet, Tkinter GUI and TCP client."
     };
   </script>
   <script src="./i18n.js"></script>
@@ -39,16 +40,18 @@
   <div class="scroll-progress" aria-hidden="true"></div>
 
   <header class="top">
-    <a class="wordmark" href="#main">Rover</a>
+    <a class="wordmark" href="#main">SAMI</a>
     <nav class="nav" aria-label="Sections">
-      <a href="#overview" data-fr>Défi</a>
-      <a href="#overview" data-en>Challenge</a>
+      <a href="#overview" data-fr>Projet</a>
+      <a href="#overview" data-en>Project</a>
+      <a href="#stack" data-fr>Moyens</a>
+      <a href="#stack" data-en>Stack</a>
       <a href="#teams" data-fr>Équipes</a>
       <a href="#teams" data-en>Teams</a>
-      <a href="#tasks" data-fr>Tâches CS</a>
-      <a href="#tasks" data-en>CS tasks</a>
-      <a href="#tech" data-fr>Technique</a>
-      <a href="#tech" data-en>Tech</a>
+      <a href="#architecture" data-fr>Architecture</a>
+      <a href="#architecture" data-en>Architecture</a>
+      <a href="#code" data-fr>Code</a>
+      <a href="#code" data-en>Code</a>
     </nav>
     <div class="top-actions">
       <div class="lang" role="group" aria-label="Language">
@@ -62,19 +65,24 @@
 
   <main>
     <section class="hero-stage hero-stage-rover" id="main">
-      <div class="hero-stage-media rover-hero-bg" aria-hidden="true"></div>
+      <div class="hero-stage-media rover-hero-bg" aria-hidden="true">
+        <img
+          src="./images/rover/architecture-comm.jpg"
+          width="506"
+          height="370"
+          alt=""
+        />
+      </div>
       <div class="hero-stage-copy rail">
-        <p class="hero-brand" data-fr>ENSEM · 1ʳᵉ année · OptiTrack</p>
-        <p class="hero-brand" data-en>ENSEM · First year · OptiTrack</p>
-        <h1 data-fr>Robot autonome,<br /><em>plus court chemin</em></h1>
-        <h1 data-en>Autonomous rover,<br /><em>shortest path</em></h1>
+        <p class="hero-brand" data-fr>Développeur logiciel embarqué · cadre scolaire</p>
+        <p class="hero-brand" data-en>Embedded software developer · academic project</p>
+        <h1 data-fr>Robot SAMI<br /><em>plus court chemin</em></h1>
+        <h1 data-en>Robot SAMI<br /><em>shortest path</em></h1>
         <p class="lede" data-fr>
-          Projet interdisciplinaire : un robot doit passer par des points donnés
-          en suivant le trajet le plus court.
+          Mai 2022 — déc. 2022 · 8 mois. Projet de première année d’école d’ingénieur (ENSEM).
         </p>
         <p class="lede" data-en>
-          Interdisciplinary challenge: an autonomous robot must pass through given
-          points along the shortest path.
+          May 2022 — Dec 2022 · 8 months. First-year engineering school project (ENSEM).
         </p>
         <span class="ai-badge ai-badge--without ai-badge--on-dark" data-fr>Sans IA</span>
         <span class="ai-badge ai-badge--without ai-badge--on-dark" data-en>Without AI</span>
@@ -92,65 +100,105 @@
         <div class="section-head">
           <p class="eyebrow" data-fr>01 · Défi</p>
           <p class="eyebrow" data-en>01 · Challenge</p>
-          <h2 data-fr>Un robot, des points, une trajectoire</h2>
-          <h2 data-en>One robot, waypoints, one trajectory</h2>
+          <h2 data-fr>Un défi interdisciplinaire</h2>
+          <h2 data-en>An interdisciplinary challenge</h2>
         </div>
         <p data-fr>
-          En première année à l’ENSEM, ce projet mêlait mathématiques, automatique et
-          informatique. L’objectif : concevoir et implémenter un algorithme pour qu’un
-          robot autonome traverse une série de points en minimisant la distance parcourue,
-          tout en restant fidèle à la trajectoire théorique grâce à l’asservissement et
-          au suivi OptiTrack.
+          Ce projet de première année d’école d’ingénieur a été un défi interdisciplinaire
+          stimulant. Nous devions concevoir et réaliser un algorithme pour un robot autonome
+          de sorte qu’il soit capable de passer par plusieurs points donnés en prenant le
+          chemin le plus court à chaque fois.
         </p>
         <p data-en>
-          In the first year at ENSEM, this project mixed mathematics, control, and
-          computing. The goal: design and implement an algorithm so an autonomous robot
-          visits a set of points while minimizing path length, staying on the theoretical
-          trajectory via feedback control and OptiTrack tracking.
+          This first-year engineering school project was a stimulating interdisciplinary
+          challenge. We had to design and implement an algorithm for an autonomous robot so
+          that it could pass through given points while taking the shortest path each time.
         </p>
+      </section>
+    </div>
+
+    <div class="rail">
+      <section class="section" id="stack">
+        <div class="section-head">
+          <p class="eyebrow" data-fr>02 · Moyens</p>
+          <p class="eyebrow" data-en>02 · Means</p>
+          <h2 data-fr>Nous avons utilisé</h2>
+          <h2 data-en>What we used</h2>
+        </div>
+        <ul class="project-bullets rover-task-list" data-fr>
+          <li>
+            Un robot avec des capteurs, des sphères réfléchissantes à disposition géométrique
+            3D unique, et le protocole NatNet.
+          </li>
+          <li>
+            OptiTrack — capture de mouvement : caméra Prime × 22 (localisation et cartographie
+            simultanées) avec NatNet pour connaître la position réelle du robot.
+          </li>
+          <li>
+            TCP — connexion au serveur du robot depuis le programme client créé pour afficher
+            l’interface.
+          </li>
+        </ul>
+        <ul class="project-bullets rover-task-list" data-en>
+          <li>
+            A robot with sensors, reflective spheres in a unique 3D geometric layout, and the
+            NatNet protocol.
+          </li>
+          <li>
+            OptiTrack motion capture: Prime × 22 cameras (simultaneous localization and mapping)
+            with NatNet to know the robot’s real position.
+          </li>
+          <li>
+            TCP — connect to the robot server from the client program we built to display the
+            interface.
+          </li>
+        </ul>
       </section>
     </div>
 
     <div class="rail">
       <section class="section" id="teams">
         <div class="section-head">
-          <p class="eyebrow" data-fr>02 · Organisation</p>
-          <p class="eyebrow" data-en>02 · Organisation</p>
-          <h2 data-fr>Trois équipes</h2>
-          <h2 data-en>Three teams</h2>
+          <p class="eyebrow" data-fr>03 · Équipes</p>
+          <p class="eyebrow" data-en>03 · Teams</p>
+          <h2 data-fr>Trois pôles</h2>
+          <h2 data-en>Three tracks</h2>
         </div>
         <div class="rover-teams">
           <article>
             <h3 data-fr>Mathématiques</h3>
             <h3 data-en>Mathematics</h3>
             <p data-fr>
-              Résolution du plus court chemin : algorithme du plus proche voisin combiné
-              à une forme adaptée d’algorithme génétique.
+              Résolution de problèmes : combinaison de deux méthodes — algorithme du plus
+              proche voisin et forme adaptée de l’algorithme génétique.
             </p>
             <p data-en>
-              Shortest-path solving: nearest neighbor combined with an adapted genetic
-              algorithm.
+              Problem solving: combination of two methods — nearest neighbor and an adapted
+              genetic algorithm.
             </p>
           </article>
           <article>
             <h3 data-fr>Automatique</h3>
-            <h3 data-en>Feedback control</h3>
+            <h3 data-en>Control</h3>
             <p data-fr>
-              Asservissement pour minimiser les écarts à la trajectoire théorique.
+              Contrôle par rétroaction, minimisation des déviations par rapport à la
+              trajectoire théorique.
             </p>
             <p data-en>
-              Feedback control to minimize deviations from the theoretical trajectory.
+              Feedback control, minimizing deviations from the theoretical trajectory.
             </p>
           </article>
           <article>
-            <h3 data-fr>Informatique</h3>
-            <h3 data-en>Computing</h3>
+            <h3 data-fr>CS (mon équipe)</h3>
+            <h3 data-en>CS (my team)</h3>
             <p data-fr>
-              Intégration du travail des deux autres équipes et développement d’une
-              interface.
+              Intégrer le travail des deux autres équipes : interactions entre classes,
+              communication client–serveur pour envoyer les mouvements au robot, et affichage
+              des mouvements sur notre interface.
             </p>
             <p data-en>
-              Integration of the other teams’ work and development of an interface.
+              Integrate the other teams’ work: class interactions, client–server communication
+              to send motions to the robot, and display performed motions on our interface.
             </p>
           </article>
         </div>
@@ -158,46 +206,68 @@
     </div>
 
     <div class="rail">
-      <section class="section" id="tasks">
+      <section class="section" id="architecture">
         <div class="section-head">
-          <p class="eyebrow" data-fr>03 · Équipe CS</p>
-          <p class="eyebrow" data-en>03 · CS team</p>
-          <h2 data-fr>Tâches informatiques</h2>
-          <h2 data-en>Computing tasks</h2>
+          <p class="eyebrow" data-fr>04 · Système</p>
+          <p class="eyebrow" data-en>04 · System</p>
+          <h2 data-fr>Communication entre composants</h2>
+          <h2 data-en>Communication between components</h2>
         </div>
-        <ul class="project-bullets rover-task-list" data-fr>
-          <li>Intégration des travaux automatique et mathématiques dans le logiciel</li>
-          <li>Conception des interactions entre classes</li>
-          <li>Interface graphique pour suivre le déplacement réel du robot</li>
-          <li>Communication client–serveur avec le robot via TCP, en limitant le code côté serveur</li>
-        </ul>
-        <ul class="project-bullets rover-task-list" data-en>
-          <li>Integrate automatic and mathematical work into the software</li>
-          <li>Design interactions between classes</li>
-          <li>Graphical interface to track real robot movement</li>
-          <li>Client–server communication with the robot via TCP, while minimizing server-side code</li>
-        </ul>
+        <p data-fr>
+          OptiTrack / NatNet pour la position, winSCP &amp; PuTTY vers le robot, interface
+          utilisateur en Tkinter.
+        </p>
+        <p data-en>
+          OptiTrack / NatNet for position, winSCP &amp; PuTTY to the robot, user interface in
+          Tkinter.
+        </p>
+        <figure class="rover-diagram">
+          <a href="./images/rover/architecture-comm.jpg" target="_blank" rel="noopener noreferrer">
+            <img
+              src="./images/rover/architecture-comm.jpg"
+              width="506"
+              height="370"
+              alt="Schéma de communication : OptiTrack, NatNet, robot, interface Tkinter"
+              loading="lazy"
+            />
+          </a>
+          <figcaption data-fr>Communication entre les différents composants</figcaption>
+          <figcaption data-en>Communication between the different components</figcaption>
+        </figure>
       </section>
     </div>
 
     <div class="rail">
-      <section class="section" id="tech">
+      <section class="section" id="code">
         <div class="section-head">
-          <p class="eyebrow" data-fr>04 · Technique</p>
-          <p class="eyebrow" data-en>04 · Tech</p>
-          <h2 data-fr>Outils &amp; code</h2>
-          <h2 data-en>Tools &amp; code</h2>
+          <p class="eyebrow" data-fr>05 · Logiciel</p>
+          <p class="eyebrow" data-en>05 · Software</p>
+          <h2 data-fr>Architecture de notre code</h2>
+          <h2 data-en>Our code architecture</h2>
         </div>
+        <figure class="rover-diagram rover-diagram-wide">
+          <a href="./images/rover/architecture-code.jpg" target="_blank" rel="noopener noreferrer">
+            <img
+              src="./images/rover/architecture-code.jpg"
+              width="679"
+              height="608"
+              alt="Architecture logicielle : Robot Manager, Interface, maths, serveur robot"
+              loading="lazy"
+            />
+          </a>
+          <figcaption data-fr>Architecture de notre code</figcaption>
+          <figcaption data-en>Our code architecture</figcaption>
+        </figure>
         <p class="rover-stack">
-          Git · MATLAB · Python · Postman · JUnit · REST · Bash · Linux · OptiTrack · TCP/IP · NatNet
+          Git · MATLAB · Python · Tkinter · Postman · JUnit · REST · Bash · Linux · OptiTrack · NatNet · TCP/IP · winSCP · PuTTY
         </p>
         <span class="ai-badge ai-badge--without" data-fr>Sans IA</span>
         <span class="ai-badge ai-badge--without" data-en>Without AI</span>
         <div class="cta-row">
-          <a class="btn btn-solid" href="https://github.com/rafa-create/Rover_Project" rel="noopener noreferrer" target="_blank" data-fr>Rover_Project</a>
-          <a class="btn btn-solid" href="https://github.com/rafa-create/Rover_Project" rel="noopener noreferrer" target="_blank" data-en>Rover_Project</a>
-          <a class="btn btn-line" href="https://github.com/rafa-create/SAMI_GITH" rel="noopener noreferrer" target="_blank" data-fr>SAMI_GITH</a>
-          <a class="btn btn-line" href="https://github.com/rafa-create/SAMI_GITH" rel="noopener noreferrer" target="_blank" data-en>SAMI_GITH</a>
+          <a class="btn btn-solid" href="https://github.com/rafa-create/Rover_Project" rel="noopener noreferrer" target="_blank">Rover_Project</a>
+          <a class="btn btn-line" href="https://github.com/rafa-create/SAMI_GITH" rel="noopener noreferrer" target="_blank">SAMI_GITH</a>
+          <a class="btn btn-line" href="./docs/dossier-competences.pdf" target="_blank" rel="noopener noreferrer" data-fr>Dossier PDF</a>
+          <a class="btn btn-line" href="./docs/dossier-competences.pdf" target="_blank" rel="noopener noreferrer" data-en>Competence PDF</a>
         </div>
       </section>
     </div>
