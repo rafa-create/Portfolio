@@ -669,19 +669,37 @@ main {
 }
 
 .course-list li {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 0.4rem 0;
+  display: grid;
+  gap: 0.25rem;
+  padding: 0.55rem 0;
   border-top: 1px solid var(--line);
   font-size: 0.92rem;
   color: var(--ink-soft);
 }
 
-.course-list span {
+.course-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: baseline;
+}
+
+.course-title {
+  color: var(--ink-soft);
+}
+
+.course-grade {
   font-weight: 700;
   color: var(--accent-deep);
   flex-shrink: 0;
+}
+
+.course-desc {
+  margin: 0;
+  font-size: 0.86rem;
+  line-height: 1.4;
+  color: var(--ink-soft);
+  max-width: 42rem;
 }
 
 .course-note {
