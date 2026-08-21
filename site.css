@@ -1057,6 +1057,47 @@ main {
   margin-top: 0.25rem;
 }
 
+.project-rover {
+  grid-column: 1 / -1;
+}
+
+.project-subhead {
+  margin: 1rem 0 0.4rem;
+  font-family: var(--display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.project-bullets {
+  margin: 0 0 0.75rem;
+  padding-left: 1.15rem;
+  color: var(--ink-soft);
+  max-width: 44rem;
+}
+
+.project-bullets li {
+  margin: 0.3rem 0;
+  line-height: 1.45;
+}
+
+.project-tools {
+  margin: 0.85rem 0 0;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  max-width: 44rem;
+}
+
+.project-tools-label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+  color: var(--accent-deep);
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
 @media (min-width: 720px) {
   .project-bike {
     grid-template-columns: 1.1fr 1fr;
