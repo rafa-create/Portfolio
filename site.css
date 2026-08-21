@@ -556,6 +556,130 @@ main {
   color: var(--ink);
 }
 
+.course-list {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.course-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.4rem 0;
+  border-top: 1px solid var(--line);
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+}
+
+.course-list span {
+  font-weight: 700;
+  color: var(--accent-deep);
+  flex-shrink: 0;
+}
+
+.edu-dl {
+  margin: 0.75rem 0 0;
+}
+
+.edu-dl a {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent-deep);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+
+.edu-block {
+  display: grid;
+  gap: 1.5rem;
+  margin: 0 0 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+  align-items: start;
+}
+
+.edu-kicker-ensem {
+  color: #1a4a8a;
+}
+
+.edu-block-copy h3 {
+  margin: 0 0 0.45rem;
+  font-family: var(--display);
+  font-size: 1.35rem;
+  letter-spacing: -0.02em;
+}
+
+.edu-block-copy p {
+  margin: 0 0 0.45rem;
+  color: var(--ink-soft);
+}
+
+.edu-block .edu-uc-diploma {
+  max-width: 14rem;
+}
+
+@media (min-width: 800px) {
+  .edu-block {
+    grid-template-columns: 1.35fr 0.65fr;
+    gap: 2.5rem;
+    align-items: center;
+  }
+
+  .edu-block .edu-uc-diploma {
+    max-width: none;
+    justify-self: end;
+  }
+}
+
+.dl-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0;
+}
+
+.dl-list li {
+  border-top: 1px solid var(--line);
+}
+
+.dl-list a {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+  color: inherit;
+  text-decoration: none;
+}
+
+.dl-list a:hover strong {
+  color: var(--accent-deep);
+}
+
+.dl-list strong {
+  font-family: var(--display);
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.dl-list span {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--ink-soft);
+}
+
+@media (min-width: 720px) {
+  .dl-list {
+    grid-template-columns: 1fr 1fr;
+    gap: 0 2rem;
+  }
+}
+
 @media (min-width: 800px) {
   .edu-uc-body {
     grid-template-columns: 1.35fr 0.65fr;

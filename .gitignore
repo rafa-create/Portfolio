@@ -1,7 +1,16 @@
-# Keep root PDFs local; publish only /cv
-*.pdf
+# Keep loose root sources local
+/*.pdf
+/*.jpg
+/*.JPG
+/*.png
+
+# Publish curated folders
 !cv/
-!cv/*.pdf
+!cv/**
+!docs/
+!docs/**
+!images/
+!images/**
 
 # OS / editor
 .DS_Store
