@@ -78,6 +78,19 @@ html[lang="en"] [data-fr] {
   display: none !important;
 }
 
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  z-index: 50;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  pointer-events: none;
+}
+
 .top {
   position: sticky;
   top: 0;
@@ -1805,6 +1818,10 @@ main {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  .scroll-progress {
+    display: none;
   }
 
   .hero,

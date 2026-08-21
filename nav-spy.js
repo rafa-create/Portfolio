@@ -93,4 +93,20 @@
   } else {
     init();
   }
+
+  (function scrollProgress() {
+    var bar = document.querySelector(".scroll-progress");
+    if (!bar) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    function progress() {
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      var p = max > 0 ? window.scrollY / max : 0;
+      bar.style.transform = "scaleX(" + Math.min(1, Math.max(0, p)) + ")";
+    }
+
+    progress();
+    window.addEventListener("scroll", progress, { passive: true });
+    window.addEventListener("resize", progress);
+  })();
 })();
