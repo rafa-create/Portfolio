@@ -351,15 +351,35 @@ main {
   gap: 0.85rem;
 }
 
+.job-org-row {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.job-logo {
+  display: block;
+  width: 2.6rem;
+  height: 2.6rem;
+  object-fit: contain;
+  flex-shrink: 0;
+  border-radius: 0.4rem;
+}
+
+.job-logo-solid {
+  outline: 1px solid var(--line);
+}
+
 .job-org {
   margin: 0;
   font-family: var(--display);
   font-weight: 700;
   font-size: 1.2rem;
+  line-height: 1.2;
 }
 
 .job-dates {
-  margin: 0.2rem 0 0;
+  margin: 0.35rem 0 0;
   font-size: 0.9rem;
   color: var(--ink-soft);
 }
@@ -949,7 +969,7 @@ main {
   }
 
   .job {
-    grid-template-columns: 13rem 1fr;
+    grid-template-columns: 15rem 1fr;
     gap: 2rem;
   }
 
