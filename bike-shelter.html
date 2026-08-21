@@ -45,8 +45,8 @@
       <a href="#design" data-en>Design</a>
       <a href="#usage" data-fr>Usage</a>
       <a href="#usage" data-en>Usage</a>
-      <a href="#system" data-fr>Système</a>
-      <a href="#system" data-en>System</a>
+      <a href="#system" data-fr>Architecture</a>
+      <a href="#system" data-en>Architecture</a>
       <a href="#tech" data-fr>Technique</a>
       <a href="#tech" data-en>Tech</a>
     </nav>
@@ -234,21 +234,19 @@
       </figcaption>
     </figure>
 
-    <!-- 6. System (mid-level) -->
+    <!-- 6. System — slide 13 featured -->
     <div class="rail">
       <section class="section" id="system">
         <div class="section-head">
           <p class="eyebrow" data-fr>05 · Système</p>
           <p class="eyebrow" data-en>05 · System</p>
-          <h2 data-fr>Comment ça s’articule</h2>
-          <h2 data-en>How it fits together</h2>
+          <h2 data-fr>Architecture générale</h2>
+          <h2 data-en>General architecture</h2>
           <p class="lede tight" data-fr>
-            Un Raspberry Pi central, des modules Arduino par groupe de places, radio XBee,
-            badge RFID, site + API Université de Lorraine.
+            Le schéma clé : verrou → Arduino → XBee → Raspberry Pi → site / BDD / vérification CSN.
           </p>
           <p class="lede tight" data-en>
-            A central Raspberry Pi, Arduino modules per spot group, XBee radio,
-            RFID badge, University of Lorraine website + API.
+            The key diagram: lock → Arduino → XBee → Raspberry Pi → website / DB / CSN check.
           </p>
         </div>
         <ul class="stack-row">
@@ -260,6 +258,22 @@
         </ul>
       </section>
     </div>
+
+    <figure class="arch-feature" id="architecture">
+      <a href="./images/bike-shelter/slides/slide-13.jpg" target="_blank" rel="noopener noreferrer">
+        <img
+          src="./images/bike-shelter/slides/slide-13.jpg"
+          width="1600"
+          height="900"
+          alt="Architecture générale — Verrou, Arduino, XBee, Raspberry Pi, site et vérification CSN"
+          loading="lazy"
+        />
+      </a>
+      <figcaption class="rail">
+        <span data-fr>Slide 13 — Architecture générale (partie informatique). Cliquer pour agrandir.</span>
+        <span data-en>Slide 13 — General architecture (IT). Click to enlarge.</span>
+      </figcaption>
+    </figure>
 
     <figure class="media-band">
       <img
@@ -284,10 +298,10 @@
           <h2 data-fr>Sous le capot</h2>
           <h2 data-en>Under the hood</h2>
           <p class="lede tight" data-fr>
-            Logique CSN, chaînes LED / buzzer, architecture logicielle, prototype matériel.
+            Procédure de sécurisation, logiques Pi / Arduino, prototype matériel.
           </p>
           <p class="lede tight" data-en>
-            CSN logic, LED / buzzer chains, software architecture, hardware prototype.
+            Lock procedure, Pi / Arduino logic, hardware prototype.
           </p>
         </div>
       </div>
@@ -418,8 +432,7 @@
           { src: "./images/bike-shelter/slides/slide-07.jpg", fr: "Plan · 16 vélos · 594 × 390 cm", en: "Plan · 16 bikes · 594 × 390 cm" }
         ],
         tech: [
-          { src: "./images/bike-shelter/slides/slide-12.jpg", fr: "Procédure de sécurisation", en: "Lock / unlock procedure" },
-          { src: "./images/bike-shelter/slides/slide-13.jpg", fr: "Architecture (identifiants masqués)", en: "Architecture (credentials redacted)" }
+          { src: "./images/bike-shelter/slides/slide-12.jpg", fr: "Procédure de sécurisation", en: "Lock / unlock procedure" }
         ]
       };
 

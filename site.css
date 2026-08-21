@@ -1225,10 +1225,30 @@ main {
   padding-top: 1.1rem;
 }
 
-.media-band {
-  margin: 0;
-  background: #fff;
+.arch-feature {
+  margin: 0 0 1.5rem;
+  background: #f7f1d8;
   border-block: 1px solid var(--line);
+}
+
+.arch-feature a {
+  display: block;
+}
+
+.arch-feature img {
+  display: block;
+  width: min(100%, 72rem);
+  margin: 0 auto;
+  height: auto;
+  padding: clamp(0.75rem, 2.5vw, 1.5rem) var(--pad) 0;
+}
+
+.arch-feature figcaption {
+  margin: 0;
+  padding: 0.85rem var(--pad) 1.35rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--ink-soft);
 }
 
 .media-band img {
