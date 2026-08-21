@@ -470,8 +470,23 @@ main {
 }
 
 /* —— Unified media —— */
-.job-shot {
-  margin: 1.35rem 0 0;
+.job-preview {
+  margin-top: 1.1rem;
+}
+
+.job-preview .job-shot {
+  margin-top: 1rem;
+}
+
+.job-preview .job-shot img {
+  outline: 1px solid var(--line);
+}
+
+.job-preview .job-shot-hint {
+  display: block;
+  margin-top: 0.45rem;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
 }
 
 .job-shot a {
