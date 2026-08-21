@@ -1,5 +1,16 @@
 (function () {
-  var sectionIds = ["experience", "volunteering", "projects", "education", "downloads", "contact"];
+  function sectionIdsFromNav() {
+    var ids = [];
+    var seen = {};
+    document.querySelectorAll(".nav a[href^='#']").forEach(function (a) {
+      var id = (a.getAttribute("href") || "").replace(/^#/, "");
+      if (id && !seen[id] && document.getElementById(id)) {
+        seen[id] = true;
+        ids.push(id);
+      }
+    });
+    return ids;
+  }
 
   function linksFor(id) {
     return document.querySelectorAll('.nav a[href="#' + id + '"]');
@@ -18,6 +29,7 @@
   }
 
   function init() {
+    var sectionIds = sectionIdsFromNav();
     var sections = sectionIds
       .map(function (id) {
         return document.getElementById(id);
@@ -53,16 +65,14 @@
           return;
         }
 
-        // Near bottom of page: force contact
         var scrollBottom = window.scrollY + window.innerHeight;
         var docHeight = document.documentElement.scrollHeight;
-        if (docHeight - scrollBottom < 80) {
-          setActive("contact");
+        if (docHeight - scrollBottom < 120) {
+          setActive(sectionIds[sectionIds.length - 1]);
         }
       },
       {
         root: null,
-        // Favor the section sitting under the sticky header
         rootMargin: "-18% 0px -62% 0px",
         threshold: [0, 0.1, 0.25, 0.5, 0.75, 1]
       }
@@ -72,7 +82,6 @@
       observer.observe(section);
     });
 
-    // Initial state from hash or first visible section
     var hash = (location.hash || "").replace(/^#/, "");
     if (sectionIds.indexOf(hash) !== -1) {
       setActive(hash);
