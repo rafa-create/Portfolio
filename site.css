@@ -1314,64 +1314,58 @@ main {
 .ai-badge {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  margin: 0.7rem 0 0.95rem;
-  padding: 0.38rem 0.75rem 0.38rem 0.65rem;
+  gap: 0;
+  margin: 0.75rem 0 1rem;
+  padding: 0.32rem 0.85rem;
   font-family: var(--display);
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  line-height: 1;
-  color: var(--ink);
-  background: rgba(255, 255, 255, 0.55);
-  border: 1px solid rgba(21, 32, 43, 0.16);
-  border-radius: 0.2rem;
+  line-height: 1.2;
+  border-radius: 999px;
+  border: 1px solid transparent;
   box-shadow: none;
+  vertical-align: middle;
 }
 
 .ai-badge::before {
-  content: "";
-  width: 0.35rem;
-  height: 0.35rem;
-  flex-shrink: 0;
-  border-radius: 1px;
-  background: currentColor;
+  display: none;
+}
+
+/* Solid accent chip — BeatOnStep .tag energy */
+.ai-badge--with {
+  color: #f3efe6;
+  background: var(--accent-deep);
+  border-color: var(--accent-deep);
+  box-shadow: 0 0 0 1px rgba(13, 110, 110, 0.12), 0 8px 22px rgba(13, 110, 110, 0.22);
 }
 
 .ai-badge--without {
   color: var(--accent-deep);
-  border-color: rgba(10, 79, 79, 0.28);
-  background: rgba(13, 110, 110, 0.08);
+  background: rgba(255, 255, 255, 0.72);
+  border-color: rgba(13, 110, 110, 0.35);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4);
 }
 
-.ai-badge--without::before {
-  background: var(--accent);
+.ai-badge--on-dark.ai-badge--with {
+  color: #15202b;
+  background: #f3efe6;
+  border-color: #f3efe6;
+  box-shadow: 0 0 24px rgba(243, 239, 230, 0.28);
 }
 
-.ai-badge--with {
-  color: var(--ink-soft);
-  border-color: rgba(21, 32, 43, 0.18);
-  background: rgba(21, 32, 43, 0.04);
+.ai-badge--on-dark.ai-badge--without {
+  color: #f3efe6;
+  background: rgba(15, 22, 32, 0.35);
+  border-color: rgba(243, 239, 230, 0.45);
+  backdrop-filter: blur(8px);
+  box-shadow: inset 0 0 0 1px rgba(243, 239, 230, 0.08);
 }
 
-.ai-badge--with::before {
-  background: var(--ink-soft);
-}
-
-.ai-badge--on-dark {
-  color: rgba(243, 239, 230, 0.92);
-  border-color: rgba(243, 239, 230, 0.28);
-  background: rgba(15, 22, 32, 0.4);
-  backdrop-filter: blur(6px);
-}
-
-.ai-badge--on-dark.ai-badge--without::before {
-  background: #5ec4c0;
-}
-
+.ai-badge--on-dark.ai-badge--without::before,
 .ai-badge--on-dark.ai-badge--with::before {
-  background: rgba(243, 239, 230, 0.75);
+  display: none;
 }
 
 .project-actions {
