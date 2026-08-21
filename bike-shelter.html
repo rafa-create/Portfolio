@@ -41,6 +41,8 @@
       <a href="#system" data-en>System</a>
       <a href="#video" data-fr>Vidéo</a>
       <a href="#video" data-en>Video</a>
+      <a href="#slides" data-fr>Slides</a>
+      <a href="#slides" data-en>Slides</a>
       <a href="#hardware" data-fr>Matériel</a>
       <a href="#hardware" data-en>Hardware</a>
       <a href="#usage" data-fr>Usage</a>
@@ -104,6 +106,42 @@
           loading="lazy"
           referrerpolicy="strict-origin-when-cross-origin"
         ></iframe>
+      </div>
+    </section>
+
+    <section class="slides-section" id="slides">
+      <div class="rail">
+        <div class="section-head">
+          <p class="eyebrow" data-fr>Présentation</p>
+          <p class="eyebrow" data-en>Presentation</p>
+          <h2 data-fr>Conception &amp; architecture</h2>
+          <h2 data-en>Design &amp; architecture</h2>
+          <p class="lede tight" data-fr>
+            Extraits de la présentation — mécanique (structure, rangement, verrous) et informatique (diagramme, site, procédure).
+          </p>
+          <p class="lede tight" data-en>
+            Presentation extracts — mechanical (structure, storage, locks) and IT (diagram, website, procedure).
+          </p>
+        </div>
+      </div>
+      <div class="slide-show" data-slideshow>
+        <div class="slide-stage">
+          <button type="button" class="slide-nav slide-prev" data-slide-prev aria-label="Previous">‹</button>
+          <figure class="slide-frame">
+            <img
+              data-slide-img
+              src="./images/bike-shelter/slides/slide-03.jpg"
+              width="1280"
+              height="720"
+              alt=""
+            />
+            <figcaption>
+              <span data-slide-cap></span>
+            </figcaption>
+          </figure>
+          <button type="button" class="slide-nav slide-next" data-slide-next aria-label="Next">›</button>
+        </div>
+        <div class="slide-dots" data-slide-dots role="tablist" aria-label="Slides"></div>
       </div>
     </section>
 
@@ -257,13 +295,109 @@
 
   <script>
     document.getElementById("y").textContent = String(new Date().getFullYear());
+
+    (function () {
+      var slides = [
+        {
+          src: "./images/bike-shelter/slides/slide-03.jpg",
+          fr: "3 — Structure globale (mécanique)",
+          en: "3 — Overall structure (mechanical)"
+        },
+        {
+          src: "./images/bike-shelter/slides/slide-04.jpg",
+          fr: "4 — Structure in situ",
+          en: "4 — Structure on site"
+        },
+        {
+          src: "./images/bike-shelter/slides/slide-05.jpg",
+          fr: "5 — Rangement des vélos (double niveau)",
+          en: "5 — Bike storage (two-tier)"
+        },
+        {
+          src: "./images/bike-shelter/slides/slide-06.jpg",
+          fr: "6 — Système de verrouillage",
+          en: "6 — Locking system"
+        },
+        {
+          src: "./images/bike-shelter/slides/slide-07.jpg",
+          fr: "7 — Plan : 16 vélos · 594 × 390 cm",
+          en: "7 — Floor plan: 16 bikes · 594 × 390 cm"
+        },
+        {
+          src: "./images/bike-shelter/slides/slide-10.jpg",
+          fr: "10 — Diagramme général (informatique)",
+          en: "10 — System diagram (IT)"
+        },
+        {
+          src: "./images/bike-shelter/slides/slide-11.jpg",
+          fr: "11 — Site internet & carte des abris",
+          en: "11 — Website & shelter map"
+        },
+        {
+          src: "./images/bike-shelter/slides/slide-12.jpg",
+          fr: "12 — Procédure de sécurisation",
+          en: "12 — Lock / unlock procedure"
+        },
+        {
+          src: "./images/bike-shelter/slides/slide-13.jpg",
+          fr: "13 — Architecture générale (identifiants masqués)",
+          en: "13 — General architecture (credentials redacted)"
+        }
+      ];
+
+      var root = document.querySelector("[data-slideshow]");
+      if (!root) return;
+      var img = root.querySelector("[data-slide-img]");
+      var cap = root.querySelector("[data-slide-cap]");
+      var dots = root.querySelector("[data-slide-dots]");
+      var i = 0;
+
+      function lang() {
+        return document.documentElement.lang === "en" ? "en" : "fr";
+      }
+
+      function show(n) {
+        i = (n + slides.length) % slides.length;
+        var s = slides[i];
+        img.src = s.src;
+        img.alt = s[lang()];
+        cap.textContent = s[lang()];
+        dots.querySelectorAll("button").forEach(function (b, idx) {
+          b.setAttribute("aria-selected", idx === i ? "true" : "false");
+        });
+      }
+
+      slides.forEach(function (_, idx) {
+        var b = document.createElement("button");
+        b.type = "button";
+        b.setAttribute("aria-label", "Slide " + (idx + 1));
+        b.addEventListener("click", function () { show(idx); });
+        dots.appendChild(b);
+      });
+
+      root.querySelector("[data-slide-prev]").addEventListener("click", function () { show(i - 1); });
+      root.querySelector("[data-slide-next]").addEventListener("click", function () { show(i + 1); });
+
+      document.querySelectorAll(".lang button").forEach(function (b) {
+        b.addEventListener("click", function () { show(i); });
+      });
+
+      document.addEventListener("keydown", function (e) {
+        if (!root.contains(document.activeElement) && !root.matches(":hover")) return;
+        if (e.key === "ArrowLeft") show(i - 1);
+        if (e.key === "ArrowRight") show(i + 1);
+      });
+
+      show(0);
+    })();
+
     if ("IntersectionObserver" in window) {
       var io = new IntersectionObserver(function (entries) {
         entries.forEach(function (e) {
           if (e.isIntersecting) e.target.classList.add("in");
         });
       }, { threshold: 0.08 });
-      document.querySelectorAll(".section, .media-band, .gallery").forEach(function (el) {
+      document.querySelectorAll(".section, .media-band, .gallery, .slides-section, .video-section").forEach(function (el) {
         el.classList.add("reveal");
         io.observe(el);
       });
