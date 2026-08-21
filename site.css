@@ -842,6 +842,15 @@ main {
   margin: 0;
 }
 
+.project-ul-logo {
+  border-radius: 50%;
+  outline: none;
+}
+
+.project-bike-copy .project-app-head {
+  margin-bottom: 0.75rem;
+}
+
 .project-bike {
   grid-column: 1 / -1;
   display: grid;
@@ -1347,6 +1356,11 @@ main {
   height: 2.75rem;
   max-width: min(100%, 11rem);
   object-fit: contain;
+}
+
+.uni-partners .uni-logo-ul {
+  height: 3rem;
+  max-width: min(100%, 14rem);
 }
 
 .project-mark-label {
