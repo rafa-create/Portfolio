@@ -112,10 +112,29 @@ html[lang="en"] [data-fr] {
   text-decoration: none;
   font-size: 0.92rem;
   font-weight: 500;
+  position: relative;
+  padding-bottom: 0.15rem;
+  transition: color 0.2s ease;
 }
 
 .nav a:hover {
   color: var(--accent-deep);
+}
+
+.nav a.is-active {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.nav a.is-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.15rem;
+  height: 2px;
+  background: var(--accent-deep);
+  border-radius: 1px;
 }
 
 .top-actions {
