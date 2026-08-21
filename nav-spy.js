@@ -1,5 +1,5 @@
 (function () {
-  var sectionIds = ["experience", "projects", "education", "downloads", "contact"];
+  var sectionIds = ["experience", "volunteering", "projects", "education", "downloads", "contact"];
 
   function linksFor(id) {
     return document.querySelectorAll('.nav a[href="#' + id + '"]');
