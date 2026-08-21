@@ -699,6 +699,100 @@ main {
   }
 }
 
+.doc-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.doc-card {
+  margin: 0;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 0.35rem;
+  overflow: hidden;
+}
+
+.doc-card > summary {
+  list-style: none;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 4.5rem 1fr;
+  gap: 0.9rem;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  user-select: none;
+}
+
+.doc-card > summary::-webkit-details-marker {
+  display: none;
+}
+
+.doc-thumb {
+  display: block;
+  width: 4.5rem;
+  height: 5.75rem;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 0.2rem;
+  background: #fff;
+  outline: 1px solid var(--line);
+}
+
+.doc-card-text {
+  display: grid;
+  gap: 0.25rem;
+  min-width: 0;
+}
+
+.doc-card-text strong {
+  font-family: var(--display);
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.doc-card-text span {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+.doc-card > summary::after {
+  content: "+";
+  justify-self: end;
+  font-weight: 700;
+  color: var(--accent-deep);
+  font-size: 1.1rem;
+}
+
+.doc-card[open] > summary::after {
+  content: "−";
+}
+
+.doc-card > summary:hover strong {
+  color: var(--accent-deep);
+}
+
+.doc-card-body {
+  display: grid;
+  gap: 1rem;
+  justify-items: start;
+  padding: 0 1rem 1.15rem;
+  border-top: 1px solid var(--line);
+  padding-top: 1rem;
+}
+
+.doc-card-body img {
+  display: block;
+  width: 100%;
+  max-width: 28rem;
+  height: auto;
+  background: #fff;
+  outline: 1px solid var(--line);
+}
+
 .dl-list {
   list-style: none;
   margin: 0;
@@ -739,6 +833,11 @@ main {
 }
 
 @media (min-width: 720px) {
+  .doc-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 1.25rem;
+  }
+
   .dl-list {
     grid-template-columns: 1fr 1fr;
     gap: 0 2rem;
