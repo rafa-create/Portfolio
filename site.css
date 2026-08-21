@@ -226,8 +226,7 @@ main {
   object-fit: cover;
   object-position: center 18%;
   flex-shrink: 0;
-  background: var(--paper);
-  outline: 1px solid var(--line);
+  background: transparent;
 }
 
 .hero-copy {
@@ -387,10 +386,7 @@ main {
   object-fit: contain;
   flex-shrink: 0;
   border-radius: 0.4rem;
-}
-
-.job-logo-solid {
-  outline: 1px solid var(--line);
+  background: transparent;
 }
 
 .job-org {
@@ -829,9 +825,9 @@ main {
   width: 3.5rem;
   height: 3.5rem;
   border-radius: 0.85rem;
-  object-fit: cover;
+  object-fit: contain;
   flex-shrink: 0;
-  outline: 1px solid rgba(21, 32, 43, 0.08);
+  background: transparent;
 }
 
 .project-app-head .project-kicker {
