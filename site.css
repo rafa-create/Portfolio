@@ -448,21 +448,21 @@ main {
   margin: 0 0 2.75rem;
 }
 
-.edu-uc-campus {
+.edu-uc-banner {
   margin: 0 calc(50% - 50vw) 1.75rem;
   width: 100vw;
   max-width: 100vw;
-  overflow: hidden;
-  background: #1a2332;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(1.5rem, 5vw, 3rem) var(--pad);
 }
 
-.edu-uc-campus img {
+.edu-uc-banner img {
   display: block;
-  width: 100%;
+  width: min(100%, 36rem);
   height: auto;
-  aspect-ratio: 21 / 7;
-  object-fit: cover;
-  object-position: center 42%;
 }
 
 .edu-uc-body {
