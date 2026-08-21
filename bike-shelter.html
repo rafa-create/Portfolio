@@ -44,6 +44,8 @@
     <nav class="nav" aria-label="Sections">
       <a href="#overview" data-fr>Vue d’ensemble</a>
       <a href="#overview" data-en>Overview</a>
+      <a href="#tasks" data-fr>Tâches</a>
+      <a href="#tasks" data-en>Tasks</a>
       <a href="#video" data-fr>Vidéo</a>
       <a href="#video" data-en>Video</a>
       <a href="#design" data-fr>Conception</a>
@@ -77,22 +79,23 @@
         />
       </div>
       <div class="hero-stage-copy rail">
-        <p class="hero-brand">Smart Bike Shelter</p>
-        <h1 data-fr>Abri vélo connecté,<br /><em>trois continents</em></h1>
-        <h1 data-en>Connected bike shelter,<br /><em>three continents</em></h1>
+        <p class="hero-brand" data-fr>Responsable de la partie informatique</p>
+        <p class="hero-brand" data-en>IT lead</p>
+        <h1 data-fr>Abri vélos intelligent,<br /><em>Université de Lorraine</em></h1>
+        <h1 data-en>Smart bike shelter,<br /><em>University of Lorraine</em></h1>
         <p class="lede" data-fr>
-          ENSEM · 2020–2021. Un abri sécurisé, modulable, lié à un site : places libres en direct,
-          badge étudiant, serrures connectées.
+          Mai 2022 — déc. 2022 · 8 mois. Abri innovant, connecté, modulable et sécurisé —
+          avec Cincinnati (USA) et Chongqing (Chine).
         </p>
         <p class="lede" data-en>
-          ENSEM · 2020–2021. A secure, modular shelter tied to a website: live free spots,
-          student badge, connected locks.
+          May 2022 — Dec 2022 · 8 months. An innovative, connected, modular and secure shelter —
+          with Cincinnati (USA) and Chongqing (China).
         </p>
         <span class="ai-badge ai-badge--without ai-badge--on-dark" data-fr>Sans IA</span>
         <span class="ai-badge ai-badge--without ai-badge--on-dark" data-en>Without AI</span>
         <div class="cta-row">
-          <a class="btn btn-solid" href="#overview" data-fr>Découvrir</a>
-          <a class="btn btn-solid" href="#overview" data-en>Explore</a>
+          <a class="btn btn-solid" href="#tasks" data-fr>Mes tâches</a>
+          <a class="btn btn-solid" href="#tasks" data-en>My tasks</a>
           <a class="btn btn-line btn-on-dark" href="#video" data-fr>Vidéo</a>
           <a class="btn btn-line btn-on-dark" href="#video" data-en>Video</a>
           <a class="btn btn-line btn-on-dark" href="https://github.com/rafa-create/Bike-Shelter-GITH" rel="noopener noreferrer" target="_blank" data-fr>Code GitHub</a>
@@ -120,35 +123,103 @@
         <div class="about-grid">
           <div>
             <p data-fr>
-              L’Université de Lorraine manquait d’abris vélos sur ses campus. L’ENSEM a conçu un abri
-              innovant — bois, panneaux solaires, 16 places — avec des équipes à Cincinnati (États-Unis)
-              et Chongqing (Chine). Réunions hebdomadaires pendant un an.
+              Le projet « Bike Shelter! » a été lancé par l’Université de Lorraine pour remédier
+              au manque d’abris pour vélos sur ses différents campus. L’ENSEM a été sollicité pour
+              créer un abri innovant, connecté, modulable et sécurisé. Ce projet a impliqué des
+              étudiants de l’Université de Cincinnati (États-Unis) et de Chongqing (Chine), malgré
+              les défis de la distance et de la langue.
             </p>
             <p data-en>
-              The University of Lorraine needed more bike shelters on campus. ENSEM designed an innovative
-              one — timber, solar panels, 16 spots — with teams in Cincinnati (USA) and Chongqing (China).
-              Weekly meetings for a year.
+              The “Bike Shelter!” project was launched by the University of Lorraine to address the
+              lack of bike shelters on its campuses. ENSEM was asked to create an innovative,
+              connected, modular and secure shelter. The project involved students from the
+              University of Cincinnati (USA) and Chongqing (China), despite distance and language
+              challenges.
             </p>
           </div>
           <ul class="pillars">
             <li>
               <strong data-fr>Mon rôle</strong>
               <strong data-en>My role</strong>
-              <span data-fr>Responsable informatique : site, API, prototype des serrures et RFID</span>
-              <span data-en>IT lead: website, API, lock prototype and RFID</span>
+              <span data-fr>Responsable de la partie informatique</span>
+              <span data-en>IT lead</span>
             </li>
             <li>
               <strong>16</strong>
-              <span data-fr>places · structure ~594 × 390 cm</span>
-              <span data-en>spots · footprint ~594 × 390 cm</span>
+              <span data-fr>serrures · 4 Arduinos · 4 lecteurs RFID</span>
+              <span data-en>locks · 4 Arduinos · 4 RFID readers</span>
             </li>
             <li>
-              <strong data-fr>Livrable</strong>
-              <strong data-en>Deliverable</strong>
-              <span data-fr>Concept mécanique + système connecté + maquette électronique</span>
-              <span data-en>Mechanical concept + connected system + electronics mock-up</span>
+              <strong data-fr>Période</strong>
+              <strong data-en>Period</strong>
+              <span data-fr>Mai 2022 — déc. 2022 (8 mois)</span>
+              <span data-en>May 2022 — Dec 2022 (8 months)</span>
             </li>
           </ul>
+        </div>
+      </section>
+    </div>
+
+    <!-- Tasks from competence dossier -->
+    <div class="rail">
+      <section class="section" id="tasks">
+        <div class="section-head">
+          <p class="eyebrow" data-fr>02 · Tâches</p>
+          <p class="eyebrow" data-en>02 · Tasks</p>
+          <h2 data-fr>Ce que j’ai réalisé</h2>
+          <h2 data-en>What I delivered</h2>
+        </div>
+        <div class="bike-tasks">
+          <article>
+            <h3 data-fr>Site web &amp; API</h3>
+            <h3 data-en>Website &amp; API</h3>
+            <p data-fr>
+              Développement d’un site web en HTML / CSS / JS avec une API PHP pour obtenir le
+              nombre de places disponibles, mis à jour depuis un Raspberry sur le serveur.
+            </p>
+            <p data-en>
+              Website in HTML / CSS / JS with a PHP API for available spots, updated from a
+              Raspberry Pi on the server.
+            </p>
+            <figure>
+              <a href="./images/bike-shelter/phone-site.jpg" target="_blank" rel="noopener noreferrer">
+                <img
+                  src="./images/bike-shelter/phone-site.jpg"
+                  width="375"
+                  height="537"
+                  alt="Capture du site Abri vélos sur smartphone — places libres Brabois"
+                  loading="lazy"
+                />
+              </a>
+              <figcaption data-fr>Capture du site depuis un smartphone</figcaption>
+              <figcaption data-en>Website capture from a smartphone</figcaption>
+            </figure>
+          </article>
+          <article>
+            <h3 data-fr>Serrures &amp; RFID</h3>
+            <h3 data-en>Locks &amp; RFID</h3>
+            <p data-fr>
+              Conception et prototypage des 16 serrures de l’abri avec 4 Arduinos et 4 lecteurs
+              RFID. Les Arduinos sont connectés sans fil par XBee au Raspberry.
+            </p>
+            <p data-en>
+              Design and prototyping of the 16 shelter locks with 4 Arduinos and 4 RFID readers.
+              Arduinos connect wirelessly via XBee to the Raspberry Pi.
+            </p>
+            <figure>
+              <a href="./images/bike-shelter/locks-module.jpg" target="_blank" rel="noopener noreferrer">
+                <img
+                  src="./images/bike-shelter/locks-module.jpg"
+                  width="593"
+                  height="440"
+                  alt="Montage test : module de quatre verrous solénoïdes"
+                  loading="lazy"
+                />
+              </a>
+              <figcaption data-fr>Montage test pour un module de quatre verrous</figcaption>
+              <figcaption data-en>Test setup for a four-lock module</figcaption>
+            </figure>
+          </article>
         </div>
       </section>
     </div>
@@ -157,15 +228,15 @@
     <section class="video-section" id="video">
       <div class="rail">
         <div class="section-head">
-          <p class="eyebrow" data-fr>02 · Démo</p>
-          <p class="eyebrow" data-en>02 · Demo</p>
-          <h2 data-fr>En vidéo</h2>
-          <h2 data-en>Watch</h2>
+          <p class="eyebrow" data-fr>03 · Démo</p>
+          <p class="eyebrow" data-en>03 · Demo</p>
+          <h2 data-fr>Vidéo de présentation</h2>
+          <h2 data-en>Presentation video</h2>
         </div>
       </div>
       <div class="video-embed">
         <iframe
-          src="https://www.youtube-nocookie.com/embed/XbfNqrZFiaw"
+          src="https://www.youtube-nocookie.com/embed/2SxQt4GDp0o"
           title="Smart Bike Shelter"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen
@@ -179,8 +250,8 @@
     <section class="slides-section" id="design">
       <div class="rail">
         <div class="section-head">
-          <p class="eyebrow" data-fr>03 · Conception</p>
-          <p class="eyebrow" data-en>03 · Design</p>
+          <p class="eyebrow" data-fr>04 · Conception</p>
+          <p class="eyebrow" data-en>04 · Design</p>
           <h2 data-fr>La structure, le rangement, les verrous</h2>
           <h2 data-en>Structure, storage, locks</h2>
           <p class="lede tight" data-fr>
@@ -208,8 +279,8 @@
     <div class="rail">
       <section class="section" id="usage">
         <div class="section-head">
-          <p class="eyebrow" data-fr>04 · Usage</p>
-          <p class="eyebrow" data-en>04 · Usage</p>
+          <p class="eyebrow" data-fr>05 · Usage</p>
+          <p class="eyebrow" data-en>05 · Usage</p>
           <h2 data-fr>Ce que voit le cycliste</h2>
           <h2 data-en>What the rider sees</h2>
           <p class="lede tight" data-fr>
@@ -240,8 +311,8 @@
     <div class="rail">
       <section class="section" id="system">
         <div class="section-head">
-          <p class="eyebrow" data-fr>05 · Système</p>
-          <p class="eyebrow" data-en>05 · System</p>
+          <p class="eyebrow" data-fr>06 · Système</p>
+          <p class="eyebrow" data-en>06 · System</p>
           <h2 data-fr>Du verrou au site</h2>
           <h2 data-en>From lock to website</h2>
           <p class="lede tight" data-fr>
@@ -281,8 +352,8 @@
     <section class="slides-section" id="tech">
       <div class="rail">
         <div class="section-head">
-          <p class="eyebrow" data-fr>06 · Technique</p>
-          <p class="eyebrow" data-en>06 · Technical</p>
+          <p class="eyebrow" data-fr>07 · Technique</p>
+          <p class="eyebrow" data-en>07 · Technical</p>
           <h2 data-fr>Sous le capot</h2>
           <h2 data-en>Under the hood</h2>
           <p class="lede tight" data-fr>
@@ -309,8 +380,8 @@
     <div class="rail">
       <section class="section" id="hardware">
         <div class="section-head">
-          <p class="eyebrow" data-fr>07 · Prototype</p>
-          <p class="eyebrow" data-en>07 · Prototype</p>
+          <p class="eyebrow" data-fr>08 · Prototype</p>
+          <p class="eyebrow" data-en>08 · Prototype</p>
           <h2 data-fr>Le banc de test</h2>
           <h2 data-en>The test bench</h2>
           <p class="lede tight" data-fr>
@@ -325,6 +396,19 @@
 
     <div class="gallery">
       <figure class="gallery-main">
+        <img
+          src="./images/bike-shelter/locks-module.jpg"
+          width="593"
+          height="440"
+          alt="Montage test pour un module de quatre verrous"
+          loading="lazy"
+        />
+        <figcaption>
+          <span data-fr>Montage test : module de quatre verrous (dossier de compétences)</span>
+          <span data-en>Test setup: four-lock module (competence dossier)</span>
+        </figcaption>
+      </figure>
+      <figure>
         <img
           src="./images/bike-shelter/locks.jpg"
           width="1400"
@@ -415,8 +499,8 @@
     <div class="rail">
       <section class="section">
         <div class="contact-row">
-          <a class="contact-item" href="https://www.youtube.com/watch?v=XbfNqrZFiaw" rel="noopener noreferrer" target="_blank" data-fr>Vidéo</a>
-          <a class="contact-item" href="https://www.youtube.com/watch?v=XbfNqrZFiaw" rel="noopener noreferrer" target="_blank" data-en>Video</a>
+          <a class="contact-item" href="https://www.youtube.com/watch?v=2SxQt4GDp0o" rel="noopener noreferrer" target="_blank" data-fr>Vidéo</a>
+          <a class="contact-item" href="https://www.youtube.com/watch?v=2SxQt4GDp0o" rel="noopener noreferrer" target="_blank" data-en>Video</a>
           <a class="contact-item" href="https://github.com/rafa-create/Bike-Shelter-GITH" rel="noopener noreferrer" target="_blank">GitHub</a>
           <a class="contact-item" href="./#projects" data-fr>← Portfolio</a>
           <a class="contact-item" href="./#projects" data-en>← Portfolio</a>

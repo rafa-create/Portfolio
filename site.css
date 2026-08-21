@@ -1955,6 +1955,55 @@ main {
   color: var(--ink-soft);
 }
 
+.bike-tasks {
+  display: grid;
+  gap: 2rem;
+}
+
+.bike-tasks article h3 {
+  margin: 0 0 0.45rem;
+  font-family: var(--display);
+  font-size: 1.2rem;
+  color: var(--ink);
+}
+
+.bike-tasks article p {
+  margin: 0 0 0.9rem;
+  color: var(--ink-soft);
+  max-width: 36rem;
+}
+
+.bike-tasks figure {
+  margin: 0;
+}
+
+.bike-tasks img {
+  display: block;
+  width: 100%;
+  max-width: 22rem;
+  height: auto;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.bike-tasks figcaption {
+  margin-top: 0.4rem;
+  font-size: 0.86rem;
+  color: var(--ink-soft);
+}
+
+@media (min-width: 800px) {
+  .bike-tasks {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 2.5rem;
+    align-items: start;
+  }
+
+  .bike-tasks img {
+    max-width: none;
+  }
+}
+
 .media-band img {
   display: block;
   width: min(100%, 72rem);
