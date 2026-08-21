@@ -977,47 +977,6 @@ main {
   gap: 1.25rem;
 }
 
-.more-projects {
-  margin: 1.75rem 0 0;
-}
-
-.more-projects > summary {
-  cursor: pointer;
-  list-style: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-family: var(--display);
-  font-weight: 700;
-  font-size: 1.05rem;
-  color: var(--accent-deep);
-  border-bottom: 2px solid currentColor;
-  width: fit-content;
-  user-select: none;
-}
-
-.more-projects > summary::-webkit-details-marker {
-  display: none;
-}
-
-.more-projects > summary::before {
-  content: "+";
-  font-weight: 700;
-  line-height: 1;
-}
-
-.more-projects[open] > summary::before {
-  content: "−";
-}
-
-.more-projects > summary:hover {
-  color: var(--ink);
-}
-
-.more-projects-list {
-  margin-top: 1.1rem;
-}
-
 .project {
   padding: 1.5rem 0;
   border-top: 1px solid var(--line);
