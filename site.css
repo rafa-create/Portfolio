@@ -1198,16 +1198,67 @@ main {
   text-transform: uppercase;
 }
 
-.project-build-note {
-  margin: 0.65rem 0 0.85rem;
-  font-size: 0.88rem;
+.ai-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.7rem 0 0.95rem;
+  padding: 0.38rem 0.75rem 0.38rem 0.65rem;
+  font-family: var(--display);
+  font-size: 0.7rem;
   font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 1;
   color: var(--ink);
-  max-width: 40rem;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(21, 32, 43, 0.16);
+  border-radius: 0.2rem;
+  box-shadow: none;
 }
 
-.project-build-note-on-dark {
-  color: rgba(255, 255, 255, 0.88);
+.ai-badge::before {
+  content: "";
+  width: 0.35rem;
+  height: 0.35rem;
+  flex-shrink: 0;
+  border-radius: 1px;
+  background: currentColor;
+}
+
+.ai-badge--without {
+  color: var(--accent-deep);
+  border-color: rgba(10, 79, 79, 0.28);
+  background: rgba(13, 110, 110, 0.08);
+}
+
+.ai-badge--without::before {
+  background: var(--accent);
+}
+
+.ai-badge--with {
+  color: var(--ink-soft);
+  border-color: rgba(21, 32, 43, 0.18);
+  background: rgba(21, 32, 43, 0.04);
+}
+
+.ai-badge--with::before {
+  background: var(--ink-soft);
+}
+
+.ai-badge--on-dark {
+  color: rgba(243, 239, 230, 0.92);
+  border-color: rgba(243, 239, 230, 0.28);
+  background: rgba(15, 22, 32, 0.4);
+  backdrop-filter: blur(6px);
+}
+
+.ai-badge--on-dark.ai-badge--without::before {
+  background: #5ec4c0;
+}
+
+.ai-badge--on-dark.ai-badge--with::before {
+  background: rgba(243, 239, 230, 0.75);
 }
 
 .project-actions {
