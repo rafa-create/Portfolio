@@ -574,6 +574,42 @@ main {
   color: var(--accent-deep) !important;
 }
 
+/* ── Team photo block ── */
+.job-team-photo {
+  margin: 1.25rem 0 0;
+  border-radius: 0.6rem;
+  overflow: hidden;
+}
+
+.job-team-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.6rem;
+}
+
+.job-team-photo figcaption {
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  margin-top: 0.4rem;
+  font-style: italic;
+}
+
+.job-team-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 4rem;
+  border-radius: 0.6rem;
+  border: 1.5px dashed var(--line);
+  background: rgba(21, 32, 43, 0.025);
+  font-size: 0.78rem;
+  color: var(--ink-muted, color-mix(in srgb, var(--ink-soft) 55%, transparent));
+  font-style: italic;
+  user-select: none;
+}
+
 .job-link a,
 .project-link {
   color: var(--accent-deep);
@@ -2545,5 +2581,85 @@ main {
   .bos-shots {
     grid-template-columns: repeat(3, 1fr);
     align-items: start;
+  }
+}
+
+/* ── Interests page ── */
+.interests-hero {
+  padding-bottom: 0;
+}
+
+.interests-block {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  gap: 0 1.5rem;
+  align-items: start;
+  padding-top: 3rem;
+  border-top: 1px solid var(--line);
+}
+
+.interests-icon {
+  font-size: 1.6rem;
+  line-height: 1;
+  padding-top: 0.15rem;
+  user-select: none;
+}
+
+.interests-head {
+  margin-bottom: 1rem;
+}
+
+.interests-head h2 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.interests-content p {
+  color: var(--ink-soft);
+  margin: 0 0 0.85rem;
+  line-height: 1.65;
+}
+
+.interests-content .btn {
+  margin-top: 0.25rem;
+}
+
+.interests-facts {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.interests-facts li {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  padding-left: 1rem;
+  position: relative;
+}
+
+.interests-facts li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--accent-deep);
+  font-weight: 600;
+}
+
+.interests-facts strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+@media (min-width: 720px) {
+  .interests-block {
+    grid-template-columns: 3rem 1fr;
+    gap: 0 2rem;
+  }
+
+  .interests-icon {
+    font-size: 2rem;
   }
 }
