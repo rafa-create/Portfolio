@@ -2261,6 +2261,19 @@ main {
   max-width: 36rem;
 }
 
+.edu-photo-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+@media (min-width: 720px) {
+  .edu-photo-grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
+
 .ensem-conseil-shot {
   margin: 0;
 }
