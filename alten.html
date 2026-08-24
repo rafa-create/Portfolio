@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alten — maintenance prédictive — Rafael Orset</title>
+  <meta name="description" content="Mission Alten pour Airbus : maintenance prédictive d’un outil de perçage avec STM32, vibration et NanoEdge AI Studio." />
+  <link rel="canonical" href="https://rafa-create.github.io/Portfolio/alten.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Alten — maintenance prédictive — Rafael Orset" />
+  <meta property="og:description" content="Embedded AI on STM32 for predictive maintenance using vibration signals and NanoEdge AI Studio." />
+  <meta property="og:url" content="https://rafa-create.github.io/Portfolio/alten.html" />
+  <meta property="og:image" content="https://rafa-create.github.io/Portfolio/images/alten/predictive-maintenance.png" />
+  <meta name="theme-color" content="#1a2332" />
+  <link rel="icon" href="./favicon.ico" sizes="any" />
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="./favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png" sizes="180x180" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./site.css" />
+  <script>
+    window.PORT_TITLES = {
+      fr: "Alten — maintenance prédictive — Rafael Orset",
+      en: "Alten — predictive maintenance — Rafael Orset"
+    };
+    window.PORT_DESC = {
+      fr: "Mission Alten pour Airbus : maintenance prédictive d’un outil de perçage avec STM32, vibration et NanoEdge AI Studio.",
+      en: "Alten mission for Airbus: predictive maintenance for a drilling tool with STM32, vibration, and NanoEdge AI Studio."
+    };
+  </script>
+  <script src="./i18n.js"></script>
+  <script src="./nav-spy.js" defer></script>
+</head>
+<body class="page-project">
+  <a class="skip-link" href="#main" data-fr>Aller au contenu</a>
+  <a class="skip-link" href="#main" data-en>Skip to content</a>
+  <div class="ambient" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <header class="top">
+    <a class="wordmark" href="./#experience">Alten</a>
+    <nav class="nav" id="site-nav" aria-label="Sections">
+      <a href="#overview" data-fr>Mission</a>
+      <a href="#overview" data-en>Mission</a>
+      <a href="#approach" data-fr>Approche</a>
+      <a href="#approach" data-en>Approach</a>
+      <a href="#gallery" data-fr>Visuels</a>
+      <a href="#gallery" data-en>Visuals</a>
+      <a href="#demo" data-fr>Démo</a>
+      <a href="#demo" data-en>Demo</a>
+      <a href="#tech" data-fr>Technique</a>
+      <a href="#tech" data-en>Tech</a>
+    </nav>
+    <div class="top-actions">
+      <button type="button" class="nav-toggle" aria-controls="site-nav" aria-expanded="false">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+        <span class="visually-hidden" data-fr>Menu</span>
+        <span class="visually-hidden" data-en>Menu</span>
+      </button>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-set="fr">FR</button>
+        <button type="button" data-set="en">EN</button>
+      </div>
+      <a class="btn btn-ghost back-home" href="./#experience" data-fr>← Expérience</a>
+      <a class="btn btn-ghost back-home" href="./#experience" data-en>← Experience</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero-stage hero-stage-alten">
+      <div class="hero-stage-media alten-hero-bg" aria-hidden="true">
+        <img
+          src="./images/alten/alten-banner.jpg"
+          width="1600"
+          height="900"
+          alt=""
+        />
+      </div>
+      <div class="hero-stage-copy rail">
+        <div class="insolem-hero-brand">
+          <img
+            class="job-logo"
+            src="./images/companies/alten.png"
+            width="300"
+            height="300"
+            alt=""
+          />
+          <p class="hero-brand">Alten · Airbus</p>
+        </div>
+        <h1 data-fr>Maintenance prédictive,<br /><em>STM32 + vibration + IA</em></h1>
+        <h1 data-en>Predictive maintenance,<br /><em>STM32 + vibration + AI</em></h1>
+        <div class="git-badge-row">
+          <span class="ai-badge ai-badge--with ai-badge--on-dark" data-fr>Avec IA</span>
+          <span class="ai-badge ai-badge--with ai-badge--on-dark" data-en>With AI</span>
+        </div>
+        <p class="lede" data-fr>
+          Septembre 2023 — décembre 2023. Projet Airbus autour de la maintenance prédictive
+          d’un outil de perçage sur mâts A320 / A350, via analyse vibratoire et NanoEdge AI Studio.
+        </p>
+        <p class="lede" data-en>
+          September 2023 — December 2023. Airbus project focused on predictive maintenance
+          for a drilling tool on A320 / A350 pylons, using vibration analysis and NanoEdge AI Studio.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-solid" href="#demo" data-fr>Voir la démo publique</a>
+          <a class="btn btn-solid" href="#demo" data-en>Watch the public demo</a>
+          <a class="btn btn-line btn-on-dark" href="#overview" data-fr>Lire la mission</a>
+          <a class="btn btn-line btn-on-dark" href="#overview" data-en>Read the mission</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="rail">
+      <section class="section" id="overview">
+        <div class="section-head">
+          <p class="eyebrow" data-fr>01 · Mission</p>
+          <p class="eyebrow" data-en>01 · Mission</p>
+          <h2 data-fr>Foret instrumenté, maintenance prédictive</h2>
+          <h2 data-en>Instrumented drill, predictive maintenance</h2>
+        </div>
+        <p data-fr>
+          Chez Alten, j’ai contribué à une mission Airbus de maintenance prédictive d’un foret
+          de perceuse utilisé sur des pièces liées aux mâts A320 / A350. L’idée centrale :
+          exploiter le spectre de vibration de la machine pour détecter une dérive d’usure.
+        </p>
+        <p data-en>
+          At Alten, I contributed to an Airbus mission on predictive maintenance for a drilling bit
+          used on parts related to A320 / A350 pylons. The core idea was to use the machine’s
+          vibration spectrum to detect wear drift early.
+        </p>
+        <p data-fr>
+          Mon périmètre portait sur le logiciel embarqué autour du STM32, la batterie de la carte
+          et la remontée des sorties IA vers une interface web.
+        </p>
+        <p data-en>
+          My scope focused on the STM32 embedded software, the board battery drivers,
+          and streaming AI outputs back to a web interface.
+        </p>
+      </section>
+    </div>
+
+    <div class="rail">
+      <section class="section" id="approach">
+        <div class="section-head">
+          <p class="eyebrow" data-fr>02 · Approche</p>
+          <p class="eyebrow" data-en>02 · Approach</p>
+          <h2 data-fr>Chaîne technique</h2>
+          <h2 data-en>Technical flow</h2>
+        </div>
+        <div class="ensem-conseil-points">
+          <article>
+            <h3 data-fr>Acquisition</h3>
+            <h3 data-en>Acquisition</h3>
+            <p data-fr>
+              Capturer les vibrations de l’outil dans un cadre suffisamment stable pour distinguer
+              l’état nominal d’une dérive.
+            </p>
+            <p data-en>
+              Capture tool vibrations in a stable enough setup to distinguish nominal behavior
+              from drift.
+            </p>
+          </article>
+          <article>
+            <h3 data-fr>IA embarquée</h3>
+            <h3 data-en>Embedded AI</h3>
+            <p data-fr>
+              Utiliser NanoEdge AI Studio pour générer une brique optimisée STM32 capable
+              d’apprendre le comportement normal puis de détecter l’anomalie.
+            </p>
+            <p data-en>
+              Use NanoEdge AI Studio to generate an STM32-optimized library able to learn
+              normal behavior and then detect anomalies.
+            </p>
+          </article>
+          <article>
+            <h3 data-fr>Restitution</h3>
+            <h3 data-en>Output</h3>
+            <p data-fr>
+              Renvoyer les sorties du modèle vers le web pour visualiser l’état de l’outil
+              et préparer l’action de maintenance.
+            </p>
+            <p data-en>
+              Stream model outputs to the web to visualize the tool state and prepare
+              maintenance actions.
+            </p>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <div class="rail">
+      <section class="section" id="gallery">
+        <div class="section-head">
+          <p class="eyebrow" data-fr>03 · Visuels</p>
+          <p class="eyebrow" data-en>03 · Visuals</p>
+          <h2 data-fr>Références publiques proches du projet</h2>
+          <h2 data-en>Public references close to the project</h2>
+          <p class="lede tight" data-fr>
+            Visuels publics ALTEN / ST utilisés comme contexte métier et technique.
+          </p>
+          <p class="lede tight" data-en>
+            Public ALTEN / ST visuals used as business and technical context.
+          </p>
+        </div>
+        <div class="alten-gallery">
+          <figure class="ensem-conseil-shot">
+            <a href="./images/alten/predictive-maintenance.png" target="_blank" rel="noopener noreferrer">
+              <img
+                src="./images/alten/predictive-maintenance.png"
+                width="1200"
+                height="800"
+                alt="Visuel public de maintenance prédictive industrielle"
+                loading="lazy"
+              />
+            </a>
+            <figcaption data-fr>Visuel public ALTEN sur la maintenance prédictive industrielle</figcaption>
+            <figcaption data-en>Public ALTEN visual about industrial predictive maintenance</figcaption>
+          </figure>
+          <figure class="ensem-conseil-shot">
+            <a href="./images/alten/nanoedge-video.jpg" target="_blank" rel="noopener noreferrer">
+              <img
+                src="./images/alten/nanoedge-video.jpg"
+                width="1280"
+                height="720"
+                alt="Miniature de la démonstration NanoEdge AI Studio"
+                loading="lazy"
+              />
+            </a>
+            <figcaption data-fr>Démo publique ST sur NanoEdge AI Studio et l’anomalie vibratoire</figcaption>
+            <figcaption data-en>Public ST demo on NanoEdge AI Studio and vibration anomaly detection</figcaption>
+          </figure>
+        </div>
+      </section>
+    </div>
+
+    <section class="video-section" id="demo">
+      <div class="rail">
+        <div class="section-head">
+          <p class="eyebrow" data-fr>04 · Démo</p>
+          <p class="eyebrow" data-en>04 · Demo</p>
+          <h2 data-fr>Démo publique du stack NanoEdge</h2>
+          <h2 data-en>Public demo of the NanoEdge stack</h2>
+          <p class="lede tight" data-fr>
+            Cette vidéo n’est pas la démo interne du projet Airbus, mais elle montre une mise en œuvre
+            publique très proche : STM32, capteur vibratoire, apprentissage nominal et détection d’anomalie.
+          </p>
+          <p class="lede tight" data-en>
+            This is not the internal Airbus project demo, but it shows a very close public setup:
+            STM32, vibration sensor, nominal learning, and anomaly detection.
+          </p>
+        </div>
+      </div>
+      <div class="video-frame">
+        <div class="video-embed">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/yXMUv_C5FGk"
+            title="NanoEdge AI Studio anomaly detection demo"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+          ></iframe>
+        </div>
+      </div>
+      <div class="rail">
+        <p class="ensem-conseil-video-link">
+          <a href="https://www.youtube.com/watch?v=yXMUv_C5FGk" rel="noopener noreferrer" target="_blank" data-fr>Ouvrir sur YouTube →</a>
+          <a href="https://www.youtube.com/watch?v=yXMUv_C5FGk" rel="noopener noreferrer" target="_blank" data-en>Open on YouTube →</a>
+        </p>
+      </div>
+    </section>
+
+    <div class="rail">
+      <section class="section" id="tech">
+        <div class="section-head">
+          <p class="eyebrow" data-fr>05 · Technique</p>
+          <p class="eyebrow" data-en>05 · Tech</p>
+          <h2 data-fr>Stack</h2>
+          <h2 data-en>Stack</h2>
+        </div>
+        <p class="rover-stack">
+          C · Python · STM32 · NanoEdge AI Studio · Vibration · Embedded / Web bridge
+        </p>
+        <p data-fr>
+          Points concrets côté implémentation : drivers batterie, acquisition / structuration de données,
+          intégration d’IA embarquée, et socket STM32 ↔ web pour exploiter les résultats.
+        </p>
+        <p data-en>
+          Concrete implementation points: battery drivers, data acquisition / structuring,
+          embedded AI integration, and an STM32 ↔ web socket to use the outputs.
+        </p>
+        <p data-fr>
+          Source publique utilisée pour le contexte : communication ALTEN / ST autour de la maintenance
+          prédictive d’outils de coupe et démo NanoEdge AI Studio.
+        </p>
+        <p data-en>
+          Public sources used for context: ALTEN / ST communication around predictive maintenance
+          for cutting tools and the NanoEdge AI Studio demo.
+        </p>
+      </section>
+    </div>
+
+    <div class="rail">
+      <section class="section">
+        <div class="contact-row">
+          <a class="contact-item" href="./#experience" data-fr>← Expérience</a>
+          <a class="contact-item" href="./#experience" data-en>← Experience</a>
+          <a class="contact-item" href="https://alten.com.cn/en/newsroom/press-center/alten-stmicroelectronics-join-forces-to-boost-your-smart-iot-deployment-on-a-large-scale" rel="noopener noreferrer" target="_blank" data-fr>Source ALTEN</a>
+          <a class="contact-item" href="https://alten.com.cn/en/newsroom/press-center/alten-stmicroelectronics-join-forces-to-boost-your-smart-iot-deployment-on-a-large-scale" rel="noopener noreferrer" target="_blank" data-en>ALTEN source</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="foot">
+    <p>© <span id="y"></span> Rafael Orset</p>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = String(new Date().getFullYear());
+  </script>
+</body>
+</html>

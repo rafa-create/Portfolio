@@ -497,6 +497,72 @@ main {
   font-size: 0.98rem;
 }
 
+.journey-timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.journey-timeline::after {
+  content: "";
+  position: absolute;
+  top: 0.35rem;
+  right: 0.55rem;
+  bottom: 0.35rem;
+  width: 2px;
+  background: linear-gradient(to bottom, rgba(21, 32, 43, 0.12), rgba(21, 32, 43, 0.35), rgba(21, 32, 43, 0.12));
+}
+
+.journey-step {
+  position: relative;
+  padding: 1.15rem 2.6rem 1.15rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.journey-step::after {
+  content: "";
+  position: absolute;
+  top: 1.35rem;
+  right: 0.15rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 999px;
+  background: var(--paper);
+  border: 2px solid var(--accent-deep);
+  box-shadow: 0 0 0 0.35rem rgba(16, 79, 77, 0.08);
+}
+
+.journey-step-current::after {
+  background: var(--accent-deep);
+}
+
+.journey-dates {
+  margin: 0 0 0.35rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--accent-deep);
+}
+
+.journey-step h3 {
+  margin: 0 0 0.55rem;
+  font-family: var(--display);
+  font-size: 1.18rem;
+}
+
+.journey-step p:not(.journey-dates) {
+  margin: 0 0 0.75rem;
+  color: var(--ink-soft);
+}
+
+.journey-step .project-actions {
+  margin-top: 0.25rem;
+}
+
 .timeline {
   list-style: none;
   margin: 0;
@@ -675,6 +741,45 @@ main {
   border-bottom-color: currentColor;
 }
 
+.home-lite-grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.home-lite-card {
+  padding: 1.15rem;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.38);
+}
+
+.home-lite-card .job-org {
+  font-size: 1.05rem;
+}
+
+.home-lite-card p {
+  margin: 0.45rem 0 0;
+  color: var(--ink-soft);
+}
+
+.home-lite-card .job-shot {
+  margin: 0 0 0.9rem;
+}
+
+.home-lite-card .project-actions {
+  margin-top: 0.85rem;
+}
+
+.home-lite-card .edu-ensem-logo {
+  width: min(100%, 12rem);
+  height: auto;
+}
+
+@media (min-width: 820px) {
+  .home-lite-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 .insolem-more {
   margin-top: 1rem;
 }
@@ -722,6 +827,18 @@ main {
 }
 
 @media (min-width: 720px) {
+  .journey-step {
+    padding-right: 3.4rem;
+  }
+
+  .journey-timeline::after {
+    right: 0.85rem;
+  }
+
+  .journey-step::after {
+    right: 0.45rem;
+  }
+
   .insolem-more-shots {
     grid-template-columns: 1fr 1fr;
     align-items: start;
@@ -2653,6 +2770,79 @@ main {
   font-weight: 600;
 }
 
+.interests-media-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.interests-media-card {
+  margin: 0;
+}
+
+.interests-media-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.8rem;
+  border: 1px solid var(--line);
+  background: #111;
+}
+
+.interests-media-card figcaption {
+  margin-top: 0.45rem;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+
+.interests-media-placeholder,
+.interests-video-placeholder {
+  margin: 0;
+}
+
+.interests-media-placeholder div,
+.interests-video-placeholder div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 11rem;
+  border: 1.5px dashed var(--line);
+  border-radius: 0.8rem;
+  background: rgba(21, 32, 43, 0.035);
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.interests-video-placeholder div {
+  min-height: 16rem;
+  aspect-ratio: 16 / 9;
+}
+
+.interests-media-placeholder--small {
+  margin-top: 0.75rem;
+  max-width: 18rem;
+}
+
+.interests-media-placeholder--small img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.8rem;
+  border: 1px solid var(--line);
+}
+
+.interests-media-placeholder--small div {
+  min-height: 8.5rem;
+}
+
+.interests-media-placeholder figcaption,
+.interests-video-placeholder figcaption {
+  margin-top: 0.45rem;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+
 @media (min-width: 720px) {
   .interests-block {
     grid-template-columns: 3rem 1fr;
@@ -2661,5 +2851,34 @@ main {
 
   .interests-icon {
     font-size: 2rem;
+  }
+
+  .interests-media-grid {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+  }
+}
+
+.alten-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  opacity: 0.32;
+}
+
+.hero-stage-alten {
+  min-height: min(78vh, 36rem);
+}
+
+.alten-gallery {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 900px) {
+  .alten-gallery {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
   }
 }
