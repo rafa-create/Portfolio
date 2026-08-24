@@ -520,6 +520,8 @@ main {
   position: relative;
   padding: 1.15rem 2.6rem 1.15rem 0;
   border-top: 1px solid var(--line);
+  transition: transform 0.24s ease, border-color 0.24s ease;
+  cursor: pointer;
 }
 
 .journey-step::after {
@@ -533,10 +535,11 @@ main {
   background: var(--paper);
   border: 2px solid var(--accent-deep);
   box-shadow: 0 0 0 0.35rem rgba(16, 79, 77, 0.08);
+  transition: transform 0.24s ease, background 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease;
 }
 
 .journey-step-current::after {
-  background: var(--accent-deep);
+  border-color: var(--ink);
 }
 
 .journey-dates {
@@ -561,6 +564,90 @@ main {
 
 .journey-step .project-actions {
   margin-top: 0.25rem;
+}
+
+.journey-step.is-past {
+  border-top-color: rgba(16, 79, 77, 0.28);
+}
+
+.journey-step.is-past::after {
+  background: rgba(16, 79, 77, 0.16);
+  border-color: var(--accent-deep);
+  box-shadow: 0 0 0 0.25rem rgba(16, 79, 77, 0.06);
+}
+
+.journey-preview {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  margin: 0;
+  transition: grid-template-rows 0.28s ease, opacity 0.2s ease, margin 0.2s ease;
+}
+
+.journey-preview-inner {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.journey-preview-shot {
+  margin: 0 0 0.65rem;
+  max-width: min(100%, 22rem);
+}
+
+.journey-preview-shot img,
+.journey-preview-shots img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 14rem;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 0.35rem;
+  outline: 1px solid var(--line);
+  background: #fff;
+}
+
+.journey-preview-shots {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  max-width: min(100%, 28rem);
+  margin: 0 0 0.65rem;
+}
+
+.journey-preview-note {
+  margin: 0 0 0.7rem;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+}
+
+.journey-preview .project-actions {
+  margin: 0;
+}
+
+.journey-step:hover .journey-preview,
+.journey-step:focus-within .journey-preview,
+.journey-step.is-open .journey-preview {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  margin-top: 0.85rem;
+}
+
+.journey-step.is-active {
+  transform: none;
+}
+
+.journey-step.is-active::after {
+  transform: scale(1.24);
+  background: var(--accent-deep);
+  border-color: var(--accent-deep);
+  box-shadow: 0 0 0 0.45rem rgba(16, 79, 77, 0.14);
+}
+
+.journey-step-current.is-active::after {
+  background: var(--ink);
+  border-color: var(--ink);
+  box-shadow: 0 0 0 0.45rem rgba(21, 32, 43, 0.12);
 }
 
 .timeline {
@@ -1824,6 +1911,42 @@ main {
   color: var(--accent-deep);
 }
 
+.social-icons {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  color: var(--ink-soft);
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.social-icon svg {
+  width: 0.95rem;
+  height: 0.95rem;
+  fill: currentColor;
+}
+
+.social-icon:hover,
+.social-icon:focus-visible {
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.7);
+  border-color: rgba(21, 32, 43, 0.12);
+}
+
+.contact-row .social-icons {
+  align-self: center;
+}
+
 .foot {
   position: relative;
   z-index: 1;
@@ -1833,6 +1956,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
   gap: 0.75rem;
   border-top: 1px solid var(--line);
   font-size: 0.9rem;
@@ -1847,6 +1971,12 @@ main {
 
 .foot a:hover {
   border-bottom-color: currentColor;
+}
+
+.foot .social-icon,
+.foot .social-icon:hover,
+.foot .social-icon:focus-visible {
+  border-bottom-color: transparent;
 }
 
 .reveal {
@@ -2817,6 +2947,13 @@ main {
 .interests-video-placeholder div {
   min-height: 16rem;
   aspect-ratio: 16 / 9;
+}
+
+.interests-content .interests-video {
+  width: 100%;
+  margin: 1rem 0 0.35rem;
+  border-radius: 0.8rem;
+  outline: 1px solid var(--line);
 }
 
 .interests-media-placeholder--small {

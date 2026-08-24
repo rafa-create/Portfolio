@@ -94,6 +94,58 @@
     init();
   }
 
+  (function journeySpy() {
+    var steps = Array.prototype.slice.call(document.querySelectorAll(".journey-step"));
+    if (!steps.length) return;
+
+    function activate(step) {
+      var activeIndex = steps.indexOf(step);
+      if (activeIndex === -1) return;
+
+      steps.forEach(function (item, index) {
+        item.classList.toggle("is-active", index === activeIndex);
+        item.classList.toggle("is-past", index < activeIndex);
+      });
+    }
+
+    function bestStep() {
+      var anchor = window.innerHeight * 0.38;
+      var best = steps[0];
+      var bestDistance = Infinity;
+
+      steps.forEach(function (step) {
+        var rect = step.getBoundingClientRect();
+        var dotY = rect.top + 22;
+        var distance = Math.abs(dotY - anchor);
+        if (distance < bestDistance) {
+          bestDistance = distance;
+          best = step;
+        }
+      });
+
+      return best;
+    }
+
+    function update() {
+      activate(bestStep());
+    }
+
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+
+    steps.forEach(function (step) {
+      step.addEventListener("click", function (e) {
+        if (e.target.closest("a")) return;
+        var open = step.classList.contains("is-open");
+        steps.forEach(function (item) {
+          item.classList.remove("is-open");
+        });
+        if (!open) step.classList.add("is-open");
+      });
+    });
+  })();
+
   (function navToggle() {
     var top = document.querySelector(".top");
     var toggle = document.querySelector(".nav-toggle");

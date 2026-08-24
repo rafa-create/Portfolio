@@ -10,18 +10,18 @@
   <meta property="og:title" content="Rafael Orset — Ingénieur logiciel" />
   <meta property="og:description" content="Logiciel scientifique, embarqué et full-stack. ENSEM &amp; Cincinnati. Stilog — Safran." />
   <meta property="og:url" content="https://rafa-create.github.io/Portfolio/" />
-  <meta property="og:image" content="https://rafa-create.github.io/Portfolio/images/portrait.png" />
+  <meta property="og:image" content="https://rafa-create.github.io/Portfolio/images/site/portrait.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Rafael Orset — Ingénieur logiciel" />
   <meta name="twitter:description" content="Logiciel scientifique, embarqué et full-stack. ENSEM &amp; Cincinnati. Stilog — Safran." />
-  <meta name="twitter:image" content="https://rafa-create.github.io/Portfolio/images/portrait.png" />
+  <meta name="twitter:image" content="https://rafa-create.github.io/Portfolio/images/site/portrait.png" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Rafael Orset",
     "url": "https://rafa-create.github.io/Portfolio/",
-    "image": "https://rafa-create.github.io/Portfolio/images/portrait.png",
+    "image": "https://rafa-create.github.io/Portfolio/images/site/portrait.png",
     "jobTitle": "Software engineer",
     "email": "mailto:orsetrafael@gmail.com",
     "address": {
@@ -42,13 +42,13 @@
   </script>
   <meta name="theme-color" content="#1a2332" />
   <link rel="icon" href="./favicon.ico" sizes="any" />
-  <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
-  <link rel="icon" href="./favicon-32.png" type="image/png" sizes="32x32" />
-  <link rel="apple-touch-icon" href="./apple-touch-icon.png" sizes="180x180" />
+  <link rel="icon" href="./icons/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="./icons/favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" sizes="180x180" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./site.css" />
+  <link rel="stylesheet" href="./css/site.css" />
   <script>
     window.PORT_TITLES = {
       fr: "Rafael Orset — Ingénieur logiciel",
@@ -59,8 +59,8 @@
       en: "Graduate engineer from ENSEM & University of Cincinnati. Scientific, embedded and full-stack software."
     };
   </script>
-  <script src="./i18n.js"></script>
-  <script src="./nav-spy.js" defer></script>
+  <script src="./js/i18n.js"></script>
+  <script src="./js/nav-spy.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main" data-fr>Aller au contenu</a>
@@ -73,17 +73,11 @@
     <nav class="nav" id="site-nav" aria-label="Sections">
       <a href="#experience" data-fr>Parcours</a>
       <a href="#experience" data-en>Journey</a>
-      <a href="#projects" data-fr>Projets</a>
-      <a href="#projects" data-en>Projects</a>
-      <a href="#education" data-fr>Formation</a>
-      <a href="#education" data-en>Education</a>
-      <a href="#skills" data-fr>Compétences</a>
-      <a href="#skills" data-en>Skills</a>
       <a href="#downloads" data-fr>Docs</a>
       <a href="#downloads" data-en>Docs</a>
       <a href="#contact">Contact</a>
-      <a href="./interests.html" data-fr>Autre</a>
-      <a href="./interests.html" data-en>More</a>
+      <a href="./pages/interests.html" data-fr>Autre</a>
+      <a href="./pages/interests.html" data-en>More</a>
     </nav>
     <div class="top-actions">
       <button type="button" class="nav-toggle" aria-controls="site-nav" aria-expanded="false">
@@ -95,7 +89,14 @@
         <button type="button" data-set="fr">FR</button>
         <button type="button" data-set="en">EN</button>
       </div>
-      <a class="btn btn-ghost" href="https://www.linkedin.com/in/rafael-orset/" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+      <nav class="social-icons" aria-label="LinkedIn et GitHub">
+        <a class="social-icon" href="https://www.linkedin.com/in/rafael-orset/" rel="noopener noreferrer" target="_blank" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a class="social-icon" href="https://github.com/rafa-create" rel="noopener noreferrer" target="_blank" aria-label="GitHub">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+        </a>
+      </nav>
     </div>
   </header>
 
@@ -104,8 +105,8 @@
       <div class="hero-intro">
         <img
           class="hero-portrait"
-          src="./images/portrait.png"
-          srcset="./images/portrait-1x.png 1x, ./images/portrait.png 2x"
+          src="./images/site/portrait.png"
+          srcset="./images/site/portrait-1x.png 1x, ./images/site/portrait.png 2x"
           width="800"
           height="800"
           alt="Rafael Orset"
@@ -184,10 +185,10 @@
         <h2 data-fr>Lecture chronologique</h2>
         <h2 data-en>Chronological path</h2>
         <p class="lede tight" data-fr>
-          Formation d’abord, puis missions et projets appliqués, jusqu’à la césure actuelle autour de BeatOnStep.
+          Survolez une étape pour l’aperçu, puis « Voir plus » pour la page dédiée.
         </p>
         <p class="lede tight" data-en>
-          Education first, then applied missions and projects, ending with the current gap year around BeatOnStep.
+          Hover a step for a preview, then “See more” for the dedicated page.
         </p>
       </div>
 
@@ -196,29 +197,38 @@
           <p class="journey-dates">2018 — 2020</p>
           <h3 data-fr>CPGE — bases scientifiques</h3>
           <h3 data-en>Preparatory classes — scientific foundations</h3>
-          <p data-fr>
-            MPSI / PSI à Lyon : maths, physique, rigueur, endurance de travail.
-          </p>
-          <p data-en>
-            MPSI / PSI in Lyon: maths, physics, rigor, and sustained work capacity.
-          </p>
+          <p data-fr>MPSI / PSI à Lyon.</p>
+          <p data-en>MPSI / PSI in Lyon.</p>
+          <div class="journey-preview">
+            <div class="journey-preview-inner">
+              <p class="journey-preview-note" data-fr>Maths, physique, rigueur et rythme de travail. Détail, lieu et classements sur la page formation.</p>
+              <p class="journey-preview-note" data-en>Maths, physics, rigor, and work pace. Location and rankings on the education page.</p>
+              <div class="project-actions">
+                <a class="btn btn-solid" href="./pages/education.html#jean-perrin" data-fr>Voir plus</a>
+                <a class="btn btn-solid" href="./pages/education.html#jean-perrin" data-en>See more</a>
+              </div>
+            </div>
+          </div>
         </li>
 
         <li class="journey-step">
-          <p class="journey-dates">2020 — 2023</p>
-          <h3 data-fr>ENSEM + University of Cincinnati</h3>
-          <h3 data-en>ENSEM + University of Cincinnati</h3>
-          <p data-fr>
-            Double diplôme orienté systèmes numériques, embarqué et software engineering,
-            avec une année à Cincinnati et un GPA de 3.8/4.0.
-          </p>
-          <p data-en>
-            Dual degree focused on digital systems, embedded work, and software engineering,
-            including a full year in Cincinnati and a 3.8/4.0 GPA.
-          </p>
-          <div class="project-actions">
-            <a class="btn btn-line" href="#education" data-fr>Voir la formation</a>
-            <a class="btn btn-line" href="#education" data-en>See education</a>
+          <p class="journey-dates">2020</p>
+          <h3 data-fr>Entrée à l’ENSEM</h3>
+          <h3 data-en>Starting at ENSEM</h3>
+          <p data-fr>Cursus ingénieur en systèmes numériques, à Nancy.</p>
+          <p data-en>Engineering degree in digital systems, in Nancy.</p>
+          <div class="journey-preview">
+            <div class="journey-preview-inner">
+              <figure class="journey-preview-shot">
+                <img src="./images/education/ensem-group.jpg" width="1024" height="768" alt="" loading="lazy" />
+              </figure>
+              <p class="journey-preview-note" data-fr>Campus de Brabois, électronique, automatique, lien industrie.</p>
+              <p class="journey-preview-note" data-en>Brabois campus, electronics, control, and industrial ties.</p>
+              <div class="project-actions">
+                <a class="btn btn-solid" href="./pages/education.html#ensem" data-fr>Voir plus</a>
+                <a class="btn btn-solid" href="./pages/education.html#ensem" data-en>See more</a>
+              </div>
+            </div>
           </div>
         </li>
 
@@ -226,35 +236,103 @@
           <p class="journey-dates">Jun — Jul 2021</p>
           <h3 data-fr>Stage ouvrier — Sofraca</h3>
           <h3 data-en>Worker internship — Sofraca</h3>
-          <p data-fr>
-            Première immersion atelier : préparation de kits, câblage, montage, tests et emballage dans une PME industrielle.
-          </p>
-          <p data-en>
-            First workshop immersion: kit preparation, wiring, assembly, testing, and packaging in an industrial SME.
-          </p>
-          <div class="project-actions">
-            <a class="btn btn-line" href="./stage-ouvrier.html" data-fr>Voir le stage</a>
-            <a class="btn btn-line" href="./stage-ouvrier.html" data-en>See internship</a>
+          <p data-fr>Immersion atelier dans une PME industrielle.</p>
+          <p data-en>Workshop immersion in an industrial SME.</p>
+          <div class="journey-preview">
+            <div class="journey-preview-inner">
+              <figure class="journey-preview-shot">
+                <img src="./images/ouvrier/image23.jpeg" width="1024" height="768" alt="" loading="lazy" />
+              </figure>
+              <p class="journey-preview-note" data-fr>Kits, câblage, montage, tests et observation de la production.</p>
+              <p class="journey-preview-note" data-en>Kits, wiring, assembly, testing, and a close look at production.</p>
+              <div class="project-actions">
+                <a class="btn btn-solid" href="./pages/stage-ouvrier.html" data-fr>Voir plus</a>
+                <a class="btn btn-solid" href="./pages/stage-ouvrier.html" data-en>See more</a>
+              </div>
+            </div>
           </div>
         </li>
 
         <li class="journey-step">
           <p class="journey-dates">2022</p>
-          <h3 data-fr>Premiers projets concrets</h3>
-          <h3 data-en>First concrete projects</h3>
-          <p data-fr>
-            Mission ENSEM Conseil pour un SaaS payant, puis projets école Robot SAMI et Smart Bike Shelter.
-          </p>
-          <p data-en>
-            ENSEM Conseil SaaS mission, followed by school projects Robot SAMI and Smart Bike Shelter.
-          </p>
-          <div class="project-actions">
-            <a class="btn btn-line" href="./ensem-conseil.html" data-fr>ENSEM Conseil</a>
-            <a class="btn btn-line" href="./ensem-conseil.html" data-en>ENSEM Conseil</a>
-            <a class="btn btn-line" href="./bike-shelter.html" data-fr>Bike Shelter</a>
-            <a class="btn btn-line" href="./bike-shelter.html" data-en>Bike Shelter</a>
-            <a class="btn btn-line" href="./rover.html" data-fr>Robot SAMI</a>
-            <a class="btn btn-line" href="./rover.html" data-en>Robot SAMI</a>
+          <h3 data-fr>ENSEM Conseil — SaaS client</h3>
+          <h3 data-en>ENSEM Conseil — client SaaS</h3>
+          <p data-fr>Premier produit livré pour un client : abonnement et accès applicatif.</p>
+          <p data-en>First shipped client product: subscription and app access.</p>
+          <div class="journey-preview">
+            <div class="journey-preview-inner">
+              <figure class="journey-preview-shot">
+                <img src="./images/ensem-conseil/flinboost.jpg" width="1400" height="786" alt="" loading="lazy" />
+              </figure>
+              <p class="journey-preview-note" data-fr>Parcours web filmé : offre, souscription, accès SaaS, prospection.</p>
+              <p class="journey-preview-note" data-en>Filmed web flow: offer, subscription, SaaS access, prospecting.</p>
+              <div class="project-actions">
+                <a class="btn btn-solid" href="./pages/ensem-conseil.html" data-fr>Voir plus</a>
+                <a class="btn btn-solid" href="./pages/ensem-conseil.html" data-en>See more</a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="journey-step">
+          <p class="journey-dates">May — Dec 2022</p>
+          <h3 data-fr>Robot SAMI</h3>
+          <h3 data-en>Robot SAMI</h3>
+          <p data-fr>Plus court chemin, OptiTrack, interface et client TCP.</p>
+          <p data-en>Shortest path, OptiTrack, UI, and TCP client.</p>
+          <div class="journey-preview">
+            <div class="journey-preview-inner">
+              <figure class="journey-preview-shot">
+                <img src="./images/rover/optitrack-prime-x22.jpg" width="1600" height="900" alt="" loading="lazy" />
+              </figure>
+              <p class="journey-preview-note" data-fr>Algo voisin + génétique, NatNet, Tkinter. Code public.</p>
+              <p class="journey-preview-note" data-en>Nearest-neighbor + genetic algo, NatNet, Tkinter. Public code.</p>
+              <div class="project-actions">
+                <a class="btn btn-solid" href="./pages/rover.html" data-fr>Voir plus</a>
+                <a class="btn btn-solid" href="./pages/rover.html" data-en>See more</a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="journey-step">
+          <p class="journey-dates">May — Dec 2022</p>
+          <h3>Smart Bike Shelter</h3>
+          <p data-fr>Abri vélo connecté : site, API, 16 serrures Arduino / XBee / RFID.</p>
+          <p data-en>Connected bike shelter: site, API, 16 Arduino / XBee / RFID locks.</p>
+          <div class="journey-preview">
+            <div class="journey-preview-inner">
+              <figure class="journey-preview-shot">
+                <img src="./images/bike-shelter/hero.jpg" width="700" height="418" alt="" loading="lazy" />
+              </figure>
+              <p class="journey-preview-note" data-fr>Rôle responsable informatique. Code public.</p>
+              <p class="journey-preview-note" data-en>IT lead role. Public code.</p>
+              <div class="project-actions">
+                <a class="btn btn-solid" href="./pages/bike-shelter.html" data-fr>Voir plus</a>
+                <a class="btn btn-solid" href="./pages/bike-shelter.html" data-en>See more</a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="journey-step">
+          <p class="journey-dates">2022 — 2023</p>
+          <h3 data-fr>University of Cincinnati</h3>
+          <h3 data-en>University of Cincinnati</h3>
+          <p data-fr>Année de double diplôme en computer science, GPA 3.8/4.0.</p>
+          <p data-en>Dual-degree year in computer science, 3.8/4.0 GPA.</p>
+          <div class="journey-preview">
+            <div class="journey-preview-inner">
+              <figure class="journey-preview-shot">
+                <img src="./images/education/uc-campus.jpg" width="1400" height="786" alt="" loading="lazy" />
+              </figure>
+              <p class="journey-preview-note" data-fr>Anglais pro, software engineering, cadre US. Détail sur la page formation.</p>
+              <p class="journey-preview-note" data-en>Professional English, software engineering, US setting. Detail on the education page.</p>
+              <div class="project-actions">
+                <a class="btn btn-solid" href="./pages/education.html#uc" data-fr>Voir plus</a>
+                <a class="btn btn-solid" href="./pages/education.html#uc" data-en>See more</a>
+              </div>
+            </div>
           </div>
         </li>
 
@@ -262,15 +340,20 @@
           <p class="journey-dates">Jan — Jul 2023</p>
           <h3 data-fr>Insolem — stage embarqué</h3>
           <h3 data-en>Insolem — embedded internship</h3>
-          <p data-fr>
-            Logiciels pour parafoudres HT et tracker solaire : drivers STM32, SITL, tests et validation matériel.
-          </p>
-          <p data-en>
-            Software for HV surge arresters and a solar tracker: STM32 drivers, SITL, tests, and hardware validation.
-          </p>
-          <div class="project-actions">
-            <a class="btn btn-line" href="./insolem.html" data-fr>Voir la mission</a>
-            <a class="btn btn-line" href="./insolem.html" data-en>See internship</a>
+          <p data-fr>STM32 : parafoudres HT et tracker solaire.</p>
+          <p data-en>STM32: HV surge arresters and a solar tracker.</p>
+          <div class="journey-preview">
+            <div class="journey-preview-inner">
+              <figure class="journey-preview-shot">
+                <img src="./images/insolem/tracker-motor.jpg" width="1600" height="900" alt="" loading="lazy" />
+              </figure>
+              <p class="journey-preview-note" data-fr>Drivers, SITL, tests et validation matériel.</p>
+              <p class="journey-preview-note" data-en>Drivers, SITL, tests, and hardware validation.</p>
+              <div class="project-actions">
+                <a class="btn btn-solid" href="./pages/insolem.html" data-fr>Voir plus</a>
+                <a class="btn btn-solid" href="./pages/insolem.html" data-en>See more</a>
+              </div>
+            </div>
           </div>
         </li>
 
@@ -278,32 +361,57 @@
           <p class="journey-dates">Sep — Dec 2023</p>
           <h3 data-fr>Alten — Airbus, maintenance prédictive</h3>
           <h3 data-en>Alten — Airbus, predictive maintenance</h3>
-          <p data-fr>
-            IA embarquée sur STM32 via vibration pour suivre l’usure d’un outil de perçage aéronautique.
-          </p>
-          <p data-en>
-            Embedded AI on STM32 from vibration data to track wear on an aeronautical drilling tool.
-          </p>
-          <div class="project-actions">
-            <a class="btn btn-line" href="./alten.html" data-fr>Voir la mission</a>
-            <a class="btn btn-line" href="./alten.html" data-en>See mission</a>
+          <p data-fr>IA embarquée sur STM32 pour l’usure d’un outil de perçage.</p>
+          <p data-en>Embedded AI on STM32 for drilling-tool wear.</p>
+          <div class="journey-preview">
+            <div class="journey-preview-inner">
+              <figure class="journey-preview-shot">
+                <img src="./images/alten/predictive-maintenance.png" width="1600" height="900" alt="" loading="lazy" />
+              </figure>
+              <p class="journey-preview-note" data-fr>Vibration, NanoEdge, contexte aéronautique. Page dédiée.</p>
+              <p class="journey-preview-note" data-en>Vibration, NanoEdge, aeronautics context. Dedicated page.</p>
+              <div class="project-actions">
+                <a class="btn btn-solid" href="./pages/alten.html" data-fr>Voir plus</a>
+                <a class="btn btn-solid" href="./pages/alten.html" data-en>See more</a>
+              </div>
+            </div>
           </div>
         </li>
 
         <li class="journey-step">
           <p class="journey-dates" data-fr>2024 — aujourd’hui</p>
           <p class="journey-dates" data-en>2024 — present</p>
-          <h3 data-fr>Stilog + freelance</h3>
-          <h3 data-en>Stilog + freelance</h3>
-          <p data-fr>
-            Logiciel scientifique pour Safran la semaine, missions sur mesure en parallèle.
-          </p>
-          <p data-en>
-            Scientific software for Safran during the week, plus custom freelance work alongside it.
-          </p>
-          <div class="project-actions">
-            <a class="btn btn-line" href="#experience-details" data-fr>Voir le détail</a>
-            <a class="btn btn-line" href="#experience-details" data-en>See details</a>
+          <h3 data-fr>Stilog — logiciel scientifique pour Safran</h3>
+          <h3 data-en>Stilog — scientific software for Safran</h3>
+          <p data-fr>Outils de calcul, visualisation et préparation de données.</p>
+          <p data-en>Computation, visualization, and data-prep tools.</p>
+          <div class="journey-preview">
+            <div class="journey-preview-inner">
+              <figure class="journey-preview-shot">
+                <img src="./images/companies/stilog.png" width="300" height="300" alt="" loading="lazy" />
+              </figure>
+              <p class="journey-preview-note" data-fr>Mission en cours à Arles / Safran. Pas de page publique dédiée.</p>
+              <p class="journey-preview-note" data-en>Ongoing mission in Arles / Safran. No dedicated public page.</p>
+            </div>
+          </div>
+        </li>
+
+        <li class="journey-step">
+          <p class="journey-dates" data-fr>Depuis 2024</p>
+          <p class="journey-dates" data-en>Since 2024</p>
+          <h3 data-fr>Freelance en parallèle</h3>
+          <h3 data-en>Freelance alongside</h3>
+          <p data-fr>Apps, sites et outils sur mesure, à côté du salariat.</p>
+          <p data-en>Custom apps, sites, and tools alongside salaried work.</p>
+          <div class="journey-preview">
+            <div class="journey-preview-inner">
+              <p class="journey-preview-note" data-fr>Missions ciblées, 2 j / semaine. Le détail se discute en conversation.</p>
+              <p class="journey-preview-note" data-en>Focused missions, 2 days / week. Details are for a conversation.</p>
+              <div class="project-actions">
+                <a class="btn btn-solid" href="#contact" data-fr>Me contacter</a>
+                <a class="btn btn-solid" href="#contact" data-en>Get in touch</a>
+              </div>
+            </div>
           </div>
         </li>
 
@@ -312,357 +420,23 @@
           <p class="journey-dates" data-en>Currently</p>
           <h3 data-fr>Césure produit — BeatOnStep</h3>
           <h3 data-en>Product gap year — BeatOnStep</h3>
-          <p data-fr>
-            J’ouvre une parenthèse plus produit : concevoir, lancer et itérer BeatOnStep,
-            une app iOS / Android où la musique suit l’allure de course.
-          </p>
-          <p data-en>
-            I am opening a more product-focused chapter: designing, launching, and iterating on BeatOnStep,
-            an iOS / Android app where music follows running pace.
-          </p>
-          <div class="project-actions">
-            <a class="btn btn-solid" href="./beatonstep.html" data-fr>Voir BeatOnStep</a>
-            <a class="btn btn-solid" href="./beatonstep.html" data-en>See BeatOnStep</a>
+          <p data-fr>App iOS / Android : la musique suit l’allure de course.</p>
+          <p data-en>iOS / Android app: music follows running pace.</p>
+          <div class="journey-preview">
+            <div class="journey-preview-inner">
+              <figure class="journey-preview-shot">
+                <img src="./images/beatonstep/screenshot-home.png" width="1200" height="2400" alt="" loading="lazy" />
+              </figure>
+              <p class="journey-preview-note" data-fr>Matching PPM ↔ BPM, mix intégré, fichiers, YouTube Music, Spotify.</p>
+              <p class="journey-preview-note" data-en>SPM ↔ BPM matching, built-in mix, files, YouTube Music, Spotify.</p>
+              <div class="project-actions">
+                <a class="btn btn-solid" href="./pages/beatonstep.html" data-fr>Voir plus</a>
+                <a class="btn btn-solid" href="./pages/beatonstep.html" data-en>See more</a>
+              </div>
+            </div>
           </div>
         </li>
       </ol>
-    </section>
-
-    <section class="section" id="experience-details">
-      <div class="section-head">
-        <p class="eyebrow" data-fr>Détail</p>
-        <p class="eyebrow" data-en>Details</p>
-        <h2 data-fr>Missions professionnelles</h2>
-        <h2 data-en>Professional work</h2>
-        <p class="lede tight" data-fr>
-          L’essentiel sur la home ; les détails complets restent dans les pages dédiées quand elles existent.
-        </p>
-        <p class="lede tight" data-en>
-          Essentials on the homepage; full details remain in dedicated pages when available.
-        </p>
-      </div>
-      <div class="home-lite-grid">
-        <article class="home-lite-card">
-          <div class="job-org-row">
-            <div>
-              <p class="job-org">Sofraca</p>
-              <p class="job-dates" data-fr>juin — juil. 2021 · Athis-Mons</p>
-              <p class="job-dates" data-en>Jun — Jul 2021 · Athis-Mons</p>
-            </div>
-          </div>
-          <p data-fr>Stage ouvrier en atelier : préparation de kits, câblage, montage, tests et observation directe de la production.</p>
-          <p data-en>Workshop worker internship: kit preparation, wiring, assembly, testing, and direct observation of production.</p>
-          <figure class="job-shot">
-            <a href="./stage-ouvrier.html">
-              <img src="./images/ouvrier/image23.jpeg" width="1024" height="768" alt="Aperçu stage ouvrier Sofraca" loading="lazy" />
-              <figcaption class="job-shot-hint" data-fr>Aperçu du stage ouvrier</figcaption>
-              <figcaption class="job-shot-hint" data-en>Worker internship preview</figcaption>
-            </a>
-          </figure>
-          <div class="project-actions">
-            <a class="btn btn-solid" href="./stage-ouvrier.html" data-fr>Voir plus</a>
-            <a class="btn btn-solid" href="./stage-ouvrier.html" data-en>See more</a>
-          </div>
-        </article>
-
-        <article class="home-lite-card">
-          <div class="job-org-row">
-            <img class="job-logo job-logo-solid" src="./images/companies/ensem-conseil.png" width="300" height="300" alt="" loading="lazy" />
-            <div>
-              <p class="job-org">ENSEM Conseil</p>
-              <p class="job-dates" data-fr>2022 · remote</p>
-              <p class="job-dates" data-en>2022 · remote</p>
-            </div>
-          </div>
-          <p data-fr>SaaS payant pour un client : abonnement, accès applicatif et prospection automatisée.</p>
-          <p data-en>Paid SaaS for a client: subscription flow, app access, and automated prospecting.</p>
-          <figure class="job-shot">
-            <a href="./ensem-conseil.html">
-              <img src="./images/flinboost.jpg" width="1400" height="786" alt="Aperçu flin BOOST" loading="lazy" />
-              <figcaption class="job-shot-hint" data-fr>Aperçu de la mission ENSEM Conseil</figcaption>
-              <figcaption class="job-shot-hint" data-en>ENSEM Conseil mission preview</figcaption>
-            </a>
-          </figure>
-          <div class="project-actions">
-            <a class="btn btn-solid" href="./ensem-conseil.html" data-fr>Voir plus</a>
-            <a class="btn btn-solid" href="./ensem-conseil.html" data-en>See more</a>
-          </div>
-        </article>
-
-        <article class="home-lite-card">
-          <div class="job-org-row">
-            <img class="job-logo" src="./images/companies/insolem.png" width="300" height="300" alt="" loading="lazy" />
-            <div>
-              <p class="job-org">Insolem</p>
-              <p class="job-dates" data-fr>janv. — juil. 2023 · Strasbourg</p>
-              <p class="job-dates" data-en>Jan — Jul 2023 · Strasbourg</p>
-            </div>
-          </div>
-          <p data-fr>Stage embarqué sur STM32 pour parafoudres HT et tracker solaire, entre drivers, SITL et tests.</p>
-          <p data-en>Embedded internship on STM32 for HV surge arresters and a solar tracker, across drivers, SITL, and tests.</p>
-          <div class="project-actions">
-            <a class="btn btn-solid" href="./insolem.html" data-fr>Voir plus</a>
-            <a class="btn btn-solid" href="./insolem.html" data-en>See more</a>
-          </div>
-        </article>
-
-        <article class="home-lite-card">
-          <div class="job-org-row">
-            <img class="job-logo" src="./images/companies/alten.png" width="300" height="300" alt="" loading="lazy" />
-            <div>
-              <p class="job-org">Alten</p>
-              <p class="job-dates" data-fr>sept. — déc. 2023 · Toulouse</p>
-              <p class="job-dates" data-en>Sep — Dec 2023 · Toulouse</p>
-            </div>
-          </div>
-          <p data-fr>Mission Airbus : maintenance prédictive d’un outil de perçage avec IA embarquée sur STM32.</p>
-          <p data-en>Airbus mission: predictive maintenance for a drilling tool with embedded AI on STM32.</p>
-          <figure class="job-shot">
-            <a href="./alten.html">
-              <img src="./images/alten/predictive-maintenance.png" width="1600" height="900" alt="Illustration maintenance prédictive Alten" loading="lazy" />
-              <figcaption class="job-shot-hint" data-fr>Aperçu du projet Alten</figcaption>
-              <figcaption class="job-shot-hint" data-en>Alten project preview</figcaption>
-            </a>
-          </figure>
-          <div class="project-actions">
-            <a class="btn btn-solid" href="./alten.html" data-fr>Voir plus</a>
-            <a class="btn btn-solid" href="./alten.html" data-en>See more</a>
-          </div>
-        </article>
-
-        <article class="home-lite-card">
-          <div class="job-org-row">
-            <img class="job-logo" src="./images/companies/stilog.png" width="300" height="300" alt="" loading="lazy" />
-            <div>
-              <p class="job-org">Stilog I.S.T.</p>
-              <p class="job-dates" data-fr>janv. 2024 — aujourd’hui · Arles / Safran</p>
-              <p class="job-dates" data-en>Jan 2024 — present · Arles / Safran</p>
-            </div>
-          </div>
-          <p data-fr>Je développe des outils scientifiques pour Safran : calcul, visualisation et préparation de données.</p>
-          <p data-en>I build scientific tools for Safran: computation, visualization, and data preparation.</p>
-        </article>
-
-        <article class="home-lite-card">
-          <div class="job-org-row">
-            <div>
-              <p class="job-org" data-fr>Freelance</p>
-              <p class="job-org" data-en>Freelance</p>
-              <p class="job-dates" data-fr>2024 — aujourd’hui · 2 j / semaine</p>
-              <p class="job-dates" data-en>2024 — present · 2 days / week</p>
-            </div>
-          </div>
-          <p data-fr>En parallèle, je livre des apps, sites et outils sur mesure pour des besoins ciblés.</p>
-          <p data-en>Alongside that, I deliver custom apps, websites, and tools for focused client needs.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section projects" id="projects">
-      <div class="section-head">
-        <p class="eyebrow" data-fr>Sélection</p>
-        <p class="eyebrow" data-en>Selected</p>
-        <h2 data-fr>Projets</h2>
-        <h2 data-en>Projects</h2>
-      </div>
-
-      <div class="project-list">
-        <article class="project featured">
-          <div class="project-app-head">
-            <img
-              class="project-app-logo"
-              src="./images/beatonstep-logo.png"
-              width="400"
-              height="400"
-              alt="BeatOnStep"
-              loading="lazy"
-            />
-            <div>
-              <p class="project-kicker">Product · Android &amp; iOS</p>
-              <h3>BeatOnStep</h3>
-            </div>
-          </div>
-          <p data-fr>
-            App de course : la musique suit ton allure (PPM ↔ BPM). Mix inclus, fichiers téléphone, YouTube Music, Spotify.
-          </p>
-          <p data-en>
-            Running app: music matches your pace (SPM ↔ BPM). Built-in mix, phone files, YouTube Music, Spotify.
-          </p>
-          <span class="ai-badge ai-badge--with" data-fr>Avec IA</span>
-          <span class="ai-badge ai-badge--with" data-en>With AI</span>
-          <div class="git-badge-row">
-            <a class="git-badge" href="https://github.com/rafa-create/beatonstep-website" rel="noopener noreferrer" target="_blank">
-              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-              <span data-fr>Site (GitHub)</span>
-              <span data-en>Site (GitHub)</span>
-            </a>
-          </div>
-          <a class="project-link" href="./beatonstep.html" data-fr>Voir le projet →</a>
-          <a class="project-link" href="./beatonstep.html" data-en>View project →</a>
-        </article>
-
-        <article class="project project-bike">
-          <div class="project-bike-media" aria-hidden="true">
-            <img
-              src="./images/bike-shelter/hero.jpg"
-              width="700"
-              height="418"
-              alt=""
-              loading="lazy"
-            />
-          </div>
-          <div class="project-bike-copy">
-            <div class="project-app-head">
-              <img
-                class="project-app-logo project-ul-logo"
-                src="./images/bike-shelter/ul-logo.svg"
-                width="112"
-                height="112"
-                alt="Université de Lorraine"
-                loading="lazy"
-              />
-              <div>
-                <p class="project-kicker" data-fr>Université de Lorraine · ENSEM · mai–déc. 2022</p>
-                <p class="project-kicker" data-en>University of Lorraine · ENSEM · May–Dec 2022</p>
-                <h3>Smart Bike Shelter</h3>
-              </div>
-            </div>
-            <p data-fr>
-              Responsable informatique : site HTML/CSS/JS + API PHP, 16 serrures Arduino / XBee / RFID.
-            </p>
-            <p data-en>
-              IT lead: HTML/CSS/JS site + PHP API, 16 Arduino / XBee / RFID locks.
-            </p>
-            <span class="ai-badge ai-badge--without" data-fr>Sans IA</span>
-            <span class="ai-badge ai-badge--without" data-en>Without AI</span>
-            <div class="project-actions">
-              <a class="btn btn-solid" href="./bike-shelter.html" data-fr>Voir le projet</a>
-              <a class="btn btn-solid" href="./bike-shelter.html" data-en>View project</a>
-              <a class="git-badge" href="https://github.com/rafa-create/Bike-Shelter-GITH" rel="noopener noreferrer" target="_blank">
-                <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-                <span data-fr>Code public</span>
-                <span data-en>Public code</span>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <article class="project project-rover">
-          <p class="project-kicker" data-fr>ENSEM · Robot SAMI · mai–déc. 2022</p>
-          <p class="project-kicker" data-en>ENSEM · Robot SAMI · May–Dec 2022</p>
-          <h3 data-fr>Robot SAMI</h3>
-          <h3 data-en>Robot SAMI</h3>
-          <p data-fr>
-            Plus court chemin (voisin + génétique), OptiTrack / NatNet, interface Tkinter et client TCP.
-          </p>
-          <p data-en>
-            Shortest path (nearest neighbor + genetic), OptiTrack / NatNet, Tkinter UI and TCP client.
-          </p>
-          <span class="ai-badge ai-badge--without" data-fr>Sans IA</span>
-          <span class="ai-badge ai-badge--without" data-en>Without AI</span>
-          <div class="project-actions">
-            <a class="btn btn-solid" href="./rover.html" data-fr>Voir le projet</a>
-            <a class="btn btn-solid" href="./rover.html" data-en>View project</a>
-            <a class="git-badge" href="https://github.com/rafa-create/Rover_Project" rel="noopener noreferrer" target="_blank">
-              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-              <span data-fr>Code public</span>
-              <span data-en>Public code</span>
-            </a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" id="education">
-      <div class="section-head">
-        <p class="eyebrow" data-fr>Diplômes</p>
-        <p class="eyebrow" data-en>Degrees</p>
-        <h2 data-fr>Formation</h2>
-        <h2 data-en>Education</h2>
-        <p class="lede tight" data-fr>
-          Vue courte ici ; la page dédiée détaille les lieux, le contexte et les sources des classements.
-        </p>
-        <p class="lede tight" data-en>
-          Short version here; the dedicated page covers locations, context, and ranking sources.
-        </p>
-      </div>
-      <div class="home-lite-grid home-lite-grid-edu">
-        <article class="home-lite-card">
-          <p class="job-org">Lycée Jean Perrin</p>
-          <p class="job-dates">Lyon · 2018 — 2020</p>
-          <p data-fr>CPGE MPSI / PSI · bases scientifiques et méthode de travail.</p>
-          <p data-en>CPGE MPSI / PSI · scientific foundations and work method.</p>
-        </article>
-
-        <article class="home-lite-card">
-          <div class="job-org-row">
-            <img class="edu-ensem-logo" src="./images/ensem-logo.png" width="847" height="268" alt="ENSEM" loading="lazy" />
-          </div>
-          <p class="job-org">ENSEM — Université de Lorraine</p>
-          <p class="job-dates">Vandœuvre-lès-Nancy · 2020 — 2023</p>
-          <p data-fr>Ingénieur systèmes numériques · campus de Brabois.</p>
-          <p data-en>Engineering degree in digital systems · Brabois campus.</p>
-        </article>
-
-        <article class="home-lite-card">
-          <figure class="job-shot">
-            <a href="./education.html">
-              <img src="./images/uc-campus.jpg" width="1400" height="786" alt="University of Cincinnati campus" loading="lazy" />
-            </a>
-          </figure>
-          <p class="job-org">University of Cincinnati</p>
-          <p class="job-dates">Cincinnati, Ohio · 2022 — 2023</p>
-          <p data-fr>MEng Computer Science · GPA 3.8/4.0.</p>
-          <p data-en>MEng Computer Science · GPA 3.8/4.0.</p>
-        </article>
-      </div>
-      <div class="project-actions">
-        <a class="btn btn-solid" href="./education.html" data-fr>Voir la page formation</a>
-        <a class="btn btn-solid" href="./education.html" data-en>See education page</a>
-      </div>
-    </section>
-
-    <section class="section skills" id="skills">
-      <div class="section-head">
-        <p class="eyebrow" data-fr>Stack</p>
-        <p class="eyebrow" data-en>Stack</p>
-        <h2 data-fr>Compétences</h2>
-        <h2 data-en>Skills</h2>
-      </div>
-      <div class="skill-grid">
-        <div>
-          <h3 data-fr>Langages</h3>
-          <h3 data-en>Languages</h3>
-          <p>Python · C / C++ · Java · C# · TypeScript · SQL · MATLAB · Bash</p>
-        </div>
-        <div>
-          <h3 data-fr>Web &amp; data</h3>
-          <h3 data-en>Web &amp; data</h3>
-          <p>HTML / CSS · JavaScript · Flask · REST · PHP · Git · Agile / Scrum</p>
-        </div>
-        <div>
-          <h3 data-fr>Mobile</h3>
-          <h3 data-en>Mobile</h3>
-          <p>Flutter · Dart · Expo Go · TypeScript · iOS · Android</p>
-        </div>
-        <div>
-          <h3 data-fr>Embarqué</h3>
-          <h3 data-en>Embedded</h3>
-          <p>STM32 · ESP32 · UART · I2C · SITL · PicoScope</p>
-        </div>
-        <div>
-          <h3 data-fr>IA</h3>
-          <h3 data-en>AI</h3>
-          <p data-fr>Cursor · NanoEdge AI Studio · matching PPM / BPM</p>
-          <p data-en>Cursor · NanoEdge AI Studio · SPM / BPM matching</p>
-        </div>
-        <div>
-          <h3 data-fr>Langues parlées</h3>
-          <h3 data-en>Spoken languages</h3>
-          <p data-fr>Français (natif) · Anglais C1 · Espagnol B2</p>
-          <p data-en>French (native) · English C1 · Spanish B2</p>
-        </div>
-      </div>
     </section>
 
     <section class="section" id="downloads">
@@ -717,7 +491,7 @@
               <span data-en>JPG</span>
             </summary>
             <div class="doc-card-body">
-              <img src="./images/uc-diploma.jpg" width="480" height="371" alt="Diplôme University of Cincinnati" loading="lazy" />
+              <img src="./images/education/uc-diploma.jpg" width="480" height="371" alt="Diplôme University of Cincinnati" loading="lazy" />
             </div>
           </details>
         </li>
@@ -730,7 +504,7 @@
               <span data-en>JPG</span>
             </summary>
             <div class="doc-card-body">
-              <img src="./images/ensem-diploma.jpg" width="360" height="509" alt="Attestation ENSEM" loading="lazy" />
+              <img src="./images/education/ensem-diploma.jpg" width="360" height="509" alt="Attestation ENSEM" loading="lazy" />
             </div>
           </details>
         </li>
@@ -743,7 +517,7 @@
               <span data-en>JPG</span>
             </summary>
             <div class="doc-card-body">
-              <img src="./images/transcript-uc.jpg" width="900" height="1200" alt="Relevé de notes University of Cincinnati" loading="lazy" />
+              <img src="./images/education/transcript-uc.jpg" width="900" height="1200" alt="Relevé de notes University of Cincinnati" loading="lazy" />
             </div>
           </details>
         </li>
@@ -764,8 +538,14 @@
       </div>
       <div class="contact-row">
         <a class="contact-item" href="mailto:orsetrafael@gmail.com">orsetrafael@gmail.com</a>
-        <a class="contact-item" href="https://www.linkedin.com/in/rafael-orset/" rel="noopener noreferrer" target="_blank">LinkedIn</a>
-        <a class="contact-item" href="https://github.com/rafa-create" rel="noopener noreferrer" target="_blank">GitHub</a>
+        <nav class="social-icons" aria-label="LinkedIn et GitHub">
+          <a class="social-icon" href="https://www.linkedin.com/in/rafael-orset/" rel="noopener noreferrer" target="_blank" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a class="social-icon" href="https://github.com/rafa-create" rel="noopener noreferrer" target="_blank" aria-label="GitHub">
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          </a>
+        </nav>
         <a class="contact-item" href="./cv/CV_Orset.pdf" download data-fr>CV (PDF)</a>
         <a class="contact-item" href="./cv/Resume_orset.pdf" download data-en>Resume (PDF)</a>
       </div>
@@ -774,6 +554,14 @@
 
   <footer class="foot">
     <p>© <span id="y"></span> Rafael Orset</p>
+    <nav class="social-icons" aria-label="LinkedIn et GitHub">
+      <a class="social-icon" href="https://www.linkedin.com/in/rafael-orset/" rel="noopener noreferrer" target="_blank" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+      <a class="social-icon" href="https://github.com/rafa-create" rel="noopener noreferrer" target="_blank" aria-label="GitHub">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+      </a>
+    </nav>
   </footer>
 
   <script>
