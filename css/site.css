@@ -1234,6 +1234,65 @@ main {
   gap: 1rem;
 }
 
+.section-docs {
+  padding: clamp(1.25rem, 3vh, 2rem) 0;
+}
+
+.docs-disclosure {
+  margin: 0;
+}
+
+.docs-disclosure-toggle {
+  list-style: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+  user-select: none;
+}
+
+.docs-disclosure-toggle::-webkit-details-marker {
+  display: none;
+}
+
+.docs-disclosure-toggle::after {
+  content: "+";
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent);
+  transition: transform 0.2s ease;
+}
+
+.docs-disclosure[open] > .docs-disclosure-toggle::after {
+  content: "−";
+}
+
+.docs-disclosure:not([open]) .docs-label-hide {
+  display: none;
+}
+
+.docs-disclosure[open] .docs-label-show {
+  display: none;
+}
+
+.docs-disclosure-toggle:hover,
+.docs-disclosure-toggle:focus-visible {
+  color: var(--ink);
+}
+
+.docs-disclosure-body {
+  margin-top: 1.25rem;
+  max-width: 42rem;
+}
+
+.docs-disclosure-body .lede {
+  margin-bottom: 1rem;
+}
+
 .doc-card {
   margin: 0;
   border: 1px solid var(--line);
@@ -1890,6 +1949,32 @@ main {
 
 .contact .section-head {
   margin-bottom: 1.75rem;
+}
+
+.contact-compact {
+  padding: clamp(1.5rem, 4vh, 2.25rem) 0;
+}
+
+.contact-lead {
+  margin: 0 0 0.35rem;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+}
+
+.contact-email {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(16, 79, 77, 0.35);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.contact-email:hover,
+.contact-email:focus-visible {
+  color: var(--accent-deep);
+  border-bottom-color: var(--accent-deep);
 }
 
 .contact-row {
@@ -3019,6 +3104,22 @@ main {
 
 .hero-stage-alten {
   min-height: min(78vh, 36rem);
+}
+
+.stilog-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  opacity: 0.28;
+}
+
+.hero-stage-stilog {
+  min-height: min(78vh, 36rem);
+}
+
+.stilog-team-shot {
+  max-width: 22rem;
 }
 
 .alten-gallery {

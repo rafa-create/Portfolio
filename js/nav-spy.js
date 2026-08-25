@@ -187,4 +187,24 @@
     window.addEventListener("scroll", progress, { passive: true });
     window.addEventListener("resize", progress);
   })();
+
+  (function docsDisclosure() {
+    var disclosure = document.querySelector(".docs-disclosure");
+    if (!disclosure) return;
+
+    function openFromHash() {
+      if (location.hash === "#downloads") {
+        disclosure.open = true;
+      }
+    }
+
+    document.querySelectorAll('a[href="#downloads"]').forEach(function (a) {
+      a.addEventListener("click", function () {
+        disclosure.open = true;
+      });
+    });
+
+    openFromHash();
+    window.addEventListener("hashchange", openFromHash);
+  })();
 })();
