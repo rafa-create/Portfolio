@@ -2346,6 +2346,21 @@ main {
   max-width: 36rem;
 }
 
+.edu-video-stack {
+  display: grid;
+  gap: 1.75rem;
+  margin-top: 1.75rem;
+}
+
+.edu-video-stack .video-embed {
+  width: 100%;
+  margin: 0.55rem 0 0.35rem;
+}
+
+.edu-video-stack .project-subhead {
+  margin-top: 0;
+}
+
 .edu-photo-grid {
   display: grid;
   gap: 1rem;
