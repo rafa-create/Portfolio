@@ -566,6 +566,16 @@ main {
   background: transparent;
 }
 
+.journey-logo--knockout-black {
+  mix-blend-mode: lighten;
+  background: transparent;
+}
+
+.insolem-hero-brand img.hero-logo-wide.hero-logo--knockout-black {
+  mix-blend-mode: lighten;
+  background: transparent;
+}
+
 .insolem-hero-brand img.hero-logo-wide {
   width: auto;
   max-width: 7.5rem;
@@ -681,9 +691,51 @@ main {
 }
 
 .journey-preview-shot--stilog img {
-  height: 14rem;
+  max-height: 14rem;
   object-fit: cover;
-  object-position: center 12%;
+  object-position: center;
+}
+
+.home-skills-tags {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.home-skills-tags li {
+  padding: 0.35rem 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.42);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.65rem 1.25rem;
+}
+
+.contact-social {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  color: var(--accent-deep);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(16, 79, 77, 0.35);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.contact-social:hover,
+.contact-social:focus-visible {
+  color: var(--ink);
+  border-bottom-color: var(--ink);
 }
 
 .journey-preview-shots {
