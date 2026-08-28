@@ -116,16 +116,16 @@
         </div>
         <p data-fr>
           Chez Stilog I.S.T., je développe des outils de calcul, de visualisation et de préparation
-          de données pour des ingénieurs Safran. Le cœur de la mission est un logiciel scientifique
-          dédié aux phénomènes aérothermiques et au dimensionnement de turbomachines : lancer des
-          calculs, explorer les résultats, préparer les jeux de données et accompagner les analyses
-          métiers sur des maillages d’aubages.
+          de données pour des ingénieurs Safran. Le projet principal est un logiciel de mise en donnée
+          aérodynamique modélisant les phénomènes aérothermiques : les résultats de calcul servent
+          au dimensionnement des nouvelles turbomachines. J’ai aussi livré des modules sur d’autres
+          chantiers — files de calcul, lissage de courbes, édition de coupes et fatigue sur aubages.
         </p>
         <p data-en>
           At Stilog I.S.T. I build computation, visualization, and data-prep tools for Safran
-          engineers. The core mission is scientific software for aerothermal phenomena and
-          turbomachinery sizing: launching calculations, exploring results, preparing datasets,
-          and supporting domain analyses on blade meshes.
+          engineers. The main project is aerodynamic data-prep software modeling aerothermal phenomena:
+          calculation outputs feed sizing of new turbomachinery. I have also shipped modules on
+          other workstreams — job queues, curve smoothing, section editing, and blade fatigue analysis.
         </p>
       </section>
     </div>
@@ -139,16 +139,26 @@
           <h2 data-en>Shipped capabilities</h2>
         </div>
         <ul class="project-bullets" data-fr>
-          <li>Gestionnaire de file pour lancements de calculs</li>
-          <li>Lissage de courbes Savitzky–Golay avec visualisation dynamique</li>
+          <li>Gestionnaire de file pour le lancement de calculs aérodynamiques</li>
+          <li>Lissage de courbes — paramétrage Savitzky–Golay et visualisation dynamique</li>
           <li>Éditeur de coupes d’aubes</li>
-          <li>Outil fatigue LCF, fluage et risque de rupture sur maillages d’aubages</li>
+          <li>
+            Fatigue LCF : durée de vie, marge de sécurité consommée, fluage à 1&nbsp;% et risque
+            de rupture à partir des maillages d’aubages et des données issues de l’IHM
+          </li>
+          <li>Module de récupération de calculs relié au solveur ONERA, bases Oracle et serveurs de stockage</li>
+          <li>APIs pour lancer des recherches SQL par batch sur le supercalculateur</li>
         </ul>
         <ul class="project-bullets" data-en>
-          <li>Queue manager for calculation launches</li>
-          <li>Savitzky–Golay curve smoothing with live visualization</li>
+          <li>Queue manager for aerodynamic calculation launches</li>
+          <li>Curve smoothing — Savitzky–Golay tuning and live visualization</li>
           <li>Blade section editor</li>
-          <li>LCF fatigue, creep and rupture-risk tool on blade meshes</li>
+          <li>
+            LCF fatigue: life estimate, consumed safety margin, 1% creep and rupture risk from
+            blade meshes and UI-supplied data
+          </li>
+          <li>Calculation retrieval module tied to the ONERA solver, Oracle databases and storage servers</li>
+          <li>APIs to run batch SQL queries on the supercomputer</li>
         </ul>
       </section>
     </div>
@@ -183,7 +193,13 @@
           <h2 data-fr>Stack</h2>
           <h2 data-en>Stack</h2>
         </div>
-        <p class="tech">Python · NumPy · SciPy · Matplotlib · SQL · Git · VS Code</p>
+        <p class="tech">Python · NumPy · SciPy · Matplotlib · SQL · Oracle · Linux · Bash · Git · VS Code</p>
+        <p class="muted" data-fr>
+          Environnement Linux · accès supercalculateur pour les campagnes de calcul aérodynamique.
+        </p>
+        <p class="muted" data-en>
+          Linux environment · supercomputer access for aerodynamic calculation campaigns.
+        </p>
         <div class="contact-row">
           <a class="contact-item" href="../#experience" data-fr>← Parcours</a>
           <a class="contact-item" href="../#experience" data-en>← Journey</a>
