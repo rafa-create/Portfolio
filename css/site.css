@@ -138,6 +138,16 @@ html[lang="en"] [data-fr] {
   font-weight: 700;
 }
 
+a.wordmark {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+a.wordmark:hover {
+  color: var(--accent-deep);
+  text-decoration: none;
+}
+
 .nav {
   display: none;
   gap: 1.25rem;
