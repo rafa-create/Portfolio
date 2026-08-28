@@ -539,9 +539,9 @@ main {
 }
 
 .journey-logo--wide {
-  width: 3.5rem;
+  width: min(5.25rem, 30vw);
   height: 2.25rem;
-  padding: 0.1rem 0.2rem;
+  padding: 0.1rem 0.25rem;
   object-fit: contain;
 }
 
@@ -644,6 +644,25 @@ main {
   border-radius: 0.35rem;
   outline: 1px solid var(--line);
   background: #fff;
+}
+
+.journey-preview-shot.optitrack-figure {
+  max-width: 14rem;
+}
+
+.journey-preview-shot.optitrack-figure img {
+  max-width: 14rem;
+  max-height: none;
+  object-fit: contain;
+  object-position: center;
+  background: linear-gradient(180deg, #16202a 0%, #2e343b 100%);
+  outline: none;
+}
+
+.journey-preview-shot--stilog img {
+  height: 14rem;
+  object-fit: cover;
+  object-position: center 12%;
 }
 
 .journey-preview-shots {
@@ -1581,24 +1600,28 @@ main {
 }
 
 .rover-hero-bg {
-  background:
-    radial-gradient(ellipse 80% 60% at 20% 30%, rgba(13, 110, 110, 0.45), transparent 55%),
-    radial-gradient(ellipse 70% 50% at 85% 70%, rgba(26, 74, 138, 0.28), transparent 50%),
-    linear-gradient(155deg, #15202b 0%, #1a2f38 45%, #0f1a22 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #16202a 0%, #1e252d 55%, #2e343b 100%);
 }
 
-.rover-hero-bg img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 40%;
-  opacity: 0.55;
-  mix-blend-mode: normal;
+.hero-stage-media.rover-hero-bg img {
+  position: relative;
+  width: min(72%, 18rem);
+  height: auto;
+  max-height: min(38vh, 14rem);
+  object-fit: contain;
+  object-position: center;
+  opacity: 1;
+}
+
+.optitrack-figure {
+  max-width: 16rem;
 }
 
 .rover-hardware img {
-  max-width: 28rem;
-  background: #0a0a0a;
+  max-width: 16rem;
 }
 
 .rover-diagram {
@@ -1622,6 +1645,15 @@ main {
   margin-top: 0.45rem;
   font-size: 0.88rem;
   color: var(--ink-soft);
+}
+
+.rover-diagram.optitrack-figure img {
+  max-width: 16rem;
+  object-fit: contain;
+  background: linear-gradient(180deg, #16202a 0%, #2e343b 100%);
+  border: none;
+  outline: none;
+  border-radius: 0.35rem;
 }
 
 .hero-stage-rover {
@@ -2236,6 +2268,100 @@ main {
 
   .skill-grid {
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 900px) {
+  .hero {
+    min-height: auto;
+    padding: clamp(4rem, 9vh, 6rem) 0 clamp(4.5rem, 10vh, 6.5rem);
+  }
+
+  .hero-intro {
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-portrait {
+    width: 8.75rem;
+    height: 8.75rem;
+  }
+
+  .hero-brand {
+    font-size: 3.85rem;
+  }
+
+  .hero h1 {
+    font-size: 2.05rem;
+    max-width: 32ch;
+  }
+
+  .hero .lede {
+    max-width: 44rem;
+    font-size: 1.12rem;
+  }
+
+  .section-head {
+    max-width: 44rem;
+  }
+
+  .section-head h2 {
+    font-size: 2.65rem;
+  }
+
+  .journey-step {
+    grid-template-columns: 2.75rem minmax(0, 1fr) 0fr;
+    column-gap: 1.5rem;
+    transition: grid-template-columns 0.28s ease;
+  }
+
+  .journey-step:hover,
+  .journey-step:focus-within,
+  .journey-step.is-open {
+    grid-template-columns: 2.75rem minmax(0, 1fr) min(17rem, 34%);
+  }
+
+  .journey-logo {
+    grid-row: 1 / -1;
+  }
+
+  .journey-step > .journey-preview {
+    grid-column: 3;
+    grid-row: 1 / -1;
+    align-self: start;
+  }
+
+  .journey-step:hover .journey-preview,
+  .journey-step:focus-within .journey-preview,
+  .journey-step.is-open .journey-preview {
+    margin-top: 0;
+  }
+
+  .journey-preview-shot {
+    max-width: none;
+  }
+
+  .journey-preview-shot img {
+    max-height: 16rem;
+  }
+
+  .journey-step h3 {
+    font-size: 1.32rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-portrait {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .hero-brand {
+    font-size: 4.25rem;
+  }
+
+  .doc-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
