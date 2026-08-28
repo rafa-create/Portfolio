@@ -549,6 +549,23 @@ main {
   object-fit: contain;
 }
 
+.journey-logo--round {
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0.12rem;
+  border-radius: 50%;
+  background: transparent;
+  object-fit: contain;
+}
+
+.insolem-hero-brand img.hero-logo-round {
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: 50%;
+  object-fit: contain;
+  background: transparent;
+}
+
 .insolem-hero-brand img.hero-logo-wide {
   width: auto;
   max-width: 7.5rem;
@@ -778,6 +795,22 @@ main {
   margin: 0;
   color: var(--ink-soft);
   font-size: 0.94rem;
+}
+
+.home-project-more {
+  margin: 0.55rem 0 0;
+  padding: 0 0.1rem;
+}
+
+.home-project-more a {
+  font-weight: 600;
+  color: var(--accent-deep);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+
+.home-project-more a:hover {
+  color: var(--ink);
 }
 
 .edu-project-spotlight {
@@ -2624,7 +2657,7 @@ main {
   }
 
   .home-projects-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1.15rem;
   }
 
