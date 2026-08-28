@@ -46,6 +46,10 @@
       <a href="#overview" data-en>Internship</a>
       <a href="#projects" data-fr>Projets</a>
       <a href="#projects" data-en>Projects</a>
+      <a href="#parafoudre" data-fr>Parafoudre</a>
+      <a href="#parafoudre" data-en>Surge arrester</a>
+      <a href="#tracker" data-fr>Tracker</a>
+      <a href="#tracker" data-en>Tracker</a>
       <a href="#hardware" data-fr>Matériel</a>
       <a href="#hardware" data-en>Hardware</a>
     </nav>
@@ -109,10 +113,12 @@
         </div>
         <p data-fr>
           Vous trouverez ci-dessous les projets sur lesquels j’ai eu l’occasion de travailler
-          pendant mon stage de fin d’étude chez Insolem.
+          pendant mon stage de fin d’étude chez Insolem. J’étais <strong>responsable de la partie
+          informatique</strong> sur le tracker solaire.
         </p>
         <p data-en>
-          Below are the projects I worked on during my end-of-studies internship at Insolem.
+          Below are the projects I worked on during my end-of-studies internship at Insolem. I was
+          <strong>lead for the software side</strong> of the solar tracker.
         </p>
       </section>
     </div>
@@ -157,40 +163,112 @@
     </div>
 
     <div class="rail">
+      <section class="section feature-split" id="parafoudre">
+        <div class="feature-split-copy">
+          <p class="eyebrow" data-fr>03 · Parafoudre</p>
+          <p class="eyebrow" data-en>03 · Surge arrester</p>
+          <h2 data-fr>Stratégie de développement</h2>
+          <h2 data-en>Development strategy</h2>
+          <p data-fr>
+            Algorithme d’abord simulé (Python / Octave), puis porté en C, compilé en DLL pour
+            valider les sorties, et enfin déployé sur le MCU cible.
+          </p>
+          <p data-en>
+            Algorithm first simulated (Python / Octave), then ported to C, compiled as a DLL to
+            validate outputs, and finally deployed on the target MCU.
+          </p>
+          <ul class="project-bullets">
+            <li data-fr>Simulation → algo C → critères de validation</li>
+            <li data-en>Simulation → C algo → validation criteria</li>
+            <li data-fr>Interface J-Probe pour tests sur banc HT</li>
+            <li data-en>J-Probe interface for HV bench testing</li>
+          </ul>
+        </div>
+        <figure class="feature-split-media insolem-shot-stack">
+          <img
+            src="../images/insolem/parafoudre-strategy.png"
+            width="800"
+            height="500"
+            alt="Stratégie de développement parafoudre — simulation, C, validation, MCU"
+            loading="lazy"
+          />
+          <img
+            src="../images/insolem/j-probe-interface.png"
+            width="1200"
+            height="800"
+            alt="Interface J-Probe V1.0 — banc parafoudre haute tension"
+            loading="lazy"
+          />
+        </figure>
+      </section>
+    </div>
+
+    <div class="rail">
+      <section class="section feature-split" id="tracker">
+        <div class="feature-split-copy">
+          <p class="eyebrow" data-fr>04 · Tracker solaire</p>
+          <p class="eyebrow" data-en>04 · Solar tracker</p>
+          <h2 data-fr>Drivers, tests et outil EEPROM</h2>
+          <h2 data-en>Drivers, tests and EEPROM tool</h2>
+          <p data-fr>
+            Développement des drivers C, tests Python et outil de configuration
+            <strong>RFX Config Manager</strong> : lecture / écriture EEPROM, pilotage manuel
+            (inclinaison / rotation), debug temps réel (position, vent, courant moteur).
+          </p>
+          <p data-en>
+            C drivers, Python tests and the <strong>RFX Config Manager</strong> configuration tool:
+            EEPROM read/write, manual drive (tilt / rotation), live debug (position, wind, motor current).
+          </p>
+        </div>
+        <figure class="feature-split-media">
+          <img
+            src="../images/insolem/eeprom-config.png"
+            width="1200"
+            height="750"
+            alt="RFX Config Manager — paramètres EEPROM et pilotage manuel du tracker"
+            loading="lazy"
+          />
+        </figure>
+      </section>
+    </div>
+
+    <div class="rail">
       <section class="section" id="hardware">
         <div class="section-head">
-          <p class="eyebrow" data-fr>03 · Matériel</p>
-          <p class="eyebrow" data-en>03 · Hardware</p>
-          <h2 data-fr>Moteur du tracker</h2>
-          <h2 data-en>Tracker motor</h2>
+          <p class="eyebrow" data-fr>05 · Matériel</p>
+          <p class="eyebrow" data-en>05 · Hardware</p>
+          <h2 data-fr>Du banc de test à la carte finale</h2>
+          <h2 data-en>From test bench to final board</h2>
+          <p class="lede tight" data-fr>
+            Hardware et software en parallèle : Nucleo STM32, cartes Insolem, GPS, puis layout PCB final.
+          </p>
+          <p class="lede tight" data-en>
+            Hardware and software in parallel: STM32 Nucleo, Insolem boards, GPS, then final PCB layout.
+          </p>
         </div>
-        <div class="insolem-gallery">
-          <figure>
-            <a href="../images/insolem/tracker-motor.jpg" target="_blank" rel="noopener noreferrer">
-              <img
-                src="../images/insolem/tracker-motor.jpg"
-                width="692"
-                height="390"
-                alt="Moteur du tracker solaire — Insolem"
-                loading="lazy"
-              />
-            </a>
-            <figcaption data-fr>Moteur du tracker</figcaption>
-            <figcaption data-en>Tracker motor</figcaption>
-          </figure>
-          <figure>
-            <a href="../images/insolem/motor-schematic.jpg" target="_blank" rel="noopener noreferrer">
-              <img
-                src="../images/insolem/motor-schematic.jpg"
-                width="827"
-                height="745"
-                alt="Schéma technique du moteur du tracker"
-                loading="lazy"
-              />
-            </a>
-            <figcaption data-fr>Schémas du moteur</figcaption>
-            <figcaption data-en>Motor schematics</figcaption>
-          </figure>
+        <div class="photo-swiper-wrap insolem-hardware-swiper">
+          <div class="photo-swiper" aria-label="Matériel tracker Insolem">
+            <figure class="photo-swiper-slide">
+              <img src="../images/insolem/tracker-motor.jpg" width="692" height="390" alt="Moteur du tracker solaire" loading="lazy" />
+              <figcaption data-fr>Moteur du tracker</figcaption>
+              <figcaption data-en>Tracker motor</figcaption>
+            </figure>
+            <figure class="photo-swiper-slide">
+              <img src="../images/insolem/motor-schematic.jpg" width="827" height="745" alt="Schéma technique du moteur" loading="lazy" />
+              <figcaption data-fr>Schémas du moteur</figcaption>
+              <figcaption data-en>Motor schematics</figcaption>
+            </figure>
+            <figure class="photo-swiper-slide">
+              <img src="../images/insolem/prototype-bench.jpg" width="1200" height="800" alt="Banc de test STM32 Nucleo et cartes Insolem" loading="lazy" />
+              <figcaption data-fr>Banc de test — Nucleo + cartes Insolem + GPS</figcaption>
+              <figcaption data-en>Test bench — Nucleo + Insolem boards + GPS</figcaption>
+            </figure>
+            <figure class="photo-swiper-slide">
+              <img src="../images/insolem/board-layout.png" width="900" height="700" alt="Layout PCB carte finale tracker" loading="lazy" />
+              <figcaption data-fr>Layout carte finale (STM32 + annexe)</figcaption>
+              <figcaption data-en>Final board layout (STM32 + annex)</figcaption>
+            </figure>
+          </div>
         </div>
       </section>
     </div>

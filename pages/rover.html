@@ -46,8 +46,14 @@
       <a href="#overview" data-en>Project</a>
       <a href="#stack" data-fr>Moyens</a>
       <a href="#stack" data-en>Stack</a>
+      <a href="#robot" data-fr>Robot</a>
+      <a href="#robot" data-en>Robot</a>
+      <a href="#optitrack" data-fr>OptiTrack</a>
+      <a href="#optitrack" data-en>OptiTrack</a>
       <a href="#teams" data-fr>Équipes</a>
       <a href="#teams" data-en>Teams</a>
+      <a href="#frames" data-fr>Repères</a>
+      <a href="#frames" data-en>Frames</a>
       <a href="#architecture" data-fr>Architecture</a>
       <a href="#architecture" data-en>Architecture</a>
       <a href="#code" data-fr>Code</a>
@@ -180,6 +186,74 @@
     </div>
 
     <div class="rail">
+      <section class="section feature-split" id="robot">
+        <div class="feature-split-copy">
+          <p class="eyebrow" data-fr>02b · Plateforme</p>
+          <p class="eyebrow" data-en>02b · Platform</p>
+          <h2 data-fr>Robot LEGO EV3</h2>
+          <h2 data-en>LEGO EV3 robot</h2>
+          <p data-fr>
+            Châssis LEGO Mindstorms EV3 avec sphères réfléchissantes disposées en géométrie 3D
+            unique. Motive les reconnaît comme un corps rigide ; on envoie ensuite les consignes
+            de déplacement au serveur embarqué via TCP.
+          </p>
+          <p data-en>
+            LEGO Mindstorms EV3 chassis with reflective spheres in a unique 3D layout. Motive
+            tracks it as a rigid body; we then send motion commands to the onboard server over TCP.
+          </p>
+        </div>
+        <figure class="feature-split-media">
+          <img
+            src="../images/rover/robot-lego.png"
+            width="800"
+            height="600"
+            alt="Robot LEGO EV3 — projet SAMI"
+            loading="lazy"
+          />
+        </figure>
+      </section>
+    </div>
+
+    <div class="rail">
+      <section class="section" id="optitrack">
+        <div class="section-head">
+          <p class="eyebrow" data-fr>02c · OptiTrack</p>
+          <p class="eyebrow" data-en>02c · OptiTrack</p>
+          <h2 data-fr>Motive, calibration et streaming</h2>
+          <h2 data-en>Motive, calibration and streaming</h2>
+        </div>
+        <p data-fr>
+          Salle SAMI · plateau 4 × 3 m. Caméras PrimeX 22 en PoE (Ethernet), logiciel Motive:Tracker
+          et plugin NatNet pour diffuser la position des corps rigides en multicast UDP.
+        </p>
+        <p data-en>
+          SAMI room · 4 × 3 m arena. PrimeX 22 PoE (Ethernet) cameras, Motive:Tracker software
+          and the NatNet plugin to broadcast rigid-body positions over UDP multicast.
+        </p>
+        <ul class="project-bullets rover-task-list" data-fr>
+          <li>Calibration : optiwand, plan de sol (ground plane), masquage des marqueurs parasites.</li>
+          <li>Création d’un corps rigide par robot dans Motive (Layout → Create).</li>
+          <li>Streaming : Broadcast frame data, rigid bodies only, Up Axis = Z, multicast NatNet.</li>
+          <li>Côté client Python : socket UDP + threads <code>receiveNewFrame</code> / <code>receiveRigidBodyFrame</code>.</li>
+        </ul>
+        <ul class="project-bullets rover-task-list" data-en>
+          <li>Calibration: optiwand, ground plane, masking stray markers.</li>
+          <li>Create one rigid body per robot in Motive (Layout → Create).</li>
+          <li>Streaming: Broadcast frame data, rigid bodies only, Up Axis = Z, NatNet multicast.</li>
+          <li>Python client side: UDP socket + <code>receiveNewFrame</code> / <code>receiveRigidBodyFrame</code> threads.</li>
+        </ul>
+        <p class="muted" data-fr>
+          Documentation interne : <a href="https://github.com/rafa-create/SAMI_GITH/blob/Branche-principale/OptiTrack.md" rel="noopener noreferrer" target="_blank">OptiTrack.md</a>
+          · <a href="https://github.com/rafa-create/SAMI_GITH/blob/Branche-principale/doc/NatNet.md" rel="noopener noreferrer" target="_blank">NatNet.md</a>
+        </p>
+        <p class="muted" data-en>
+          Internal docs: <a href="https://github.com/rafa-create/SAMI_GITH/blob/Branche-principale/OptiTrack.md" rel="noopener noreferrer" target="_blank">OptiTrack.md</a>
+          · <a href="https://github.com/rafa-create/SAMI_GITH/blob/Branche-principale/doc/NatNet.md" rel="noopener noreferrer" target="_blank">NatNet.md</a>
+        </p>
+      </section>
+    </div>
+
+    <div class="rail">
       <section class="section" id="teams">
         <div class="section-head">
           <p class="eyebrow" data-fr>03 · Équipes</p>
@@ -229,20 +303,55 @@
     </div>
 
     <div class="rail">
+      <section class="section feature-split" id="frames">
+        <div class="feature-split-copy">
+          <p class="eyebrow" data-fr>04 · Repères</p>
+          <p class="eyebrow" data-en>04 · Frames</p>
+          <h2 data-fr>SAMI ↔ Motive</h2>
+          <h2 data-en>SAMI ↔ Motive</h2>
+          <p data-fr>
+            Motive utilise un repère en mètres (x′ vers la droite, z′ vers le haut). Le robot
+            raisonne dans un repère SAMI en centimètres (x vers le bas, y vers la droite).
+            La conversion se fait avant d’envoyer les consignes au serveur embarqué.
+          </p>
+          <p data-en>
+            Motive uses a metre frame (x′ right, z′ up). The robot works in a SAMI frame in
+            centimetres (x down, y right). We convert before sending commands to the onboard server.
+          </p>
+          <p class="muted" data-fr>Plateau 4 m × 3 m — origine SAMI en haut à gauche.</p>
+          <p class="muted" data-en>4 m × 3 m arena — SAMI origin at top left.</p>
+        </div>
+        <figure class="feature-split-media">
+          <a href="../images/rover/repere-sami.png" target="_blank" rel="noopener noreferrer">
+            <img
+              src="../images/rover/repere-sami.png"
+              width="800"
+              height="600"
+              alt="Repères SAMI et Motive sur le plateau 4 × 3 m"
+              loading="lazy"
+            />
+          </a>
+        </figure>
+      </section>
+    </div>
+
+    <div class="rail">
       <section class="section" id="architecture">
         <div class="section-head">
-          <p class="eyebrow" data-fr>04 · Système</p>
-          <p class="eyebrow" data-en>04 · System</p>
+          <p class="eyebrow" data-fr>05 · Système</p>
+          <p class="eyebrow" data-en>05 · System</p>
           <h2 data-fr>Communication entre composants</h2>
           <h2 data-en>Communication between components</h2>
         </div>
         <p data-fr>
           OptiTrack / NatNet pour la position, winSCP &amp; PuTTY vers le robot, interface
-          utilisateur en Tkinter.
+          utilisateur en Tkinter. Trames NatNet décryptées côté Python (types NAT_FRAMEOFDATA,
+          NAT_MODELDEF) pour récupérer position et orientation du corps rigide.
         </p>
         <p data-en>
           OptiTrack / NatNet for position, winSCP &amp; PuTTY to the robot, user interface in
-          Tkinter.
+          Tkinter. NatNet frames parsed in Python (NAT_FRAMEOFDATA, NAT_MODELDEF) to read rigid-body
+          position and orientation.
         </p>
         <figure class="rover-diagram">
           <a href="../images/rover/architecture-comm.jpg" target="_blank" rel="noopener noreferrer">
@@ -263,26 +372,34 @@
     <div class="rail">
       <section class="section" id="code">
         <div class="section-head">
-          <p class="eyebrow" data-fr>05 · Logiciel</p>
-          <p class="eyebrow" data-en>05 · Software</p>
+          <p class="eyebrow" data-fr>06 · Logiciel</p>
+          <p class="eyebrow" data-en>06 · Software</p>
           <h2 data-fr>Architecture de notre code</h2>
           <h2 data-en>Our code architecture</h2>
         </div>
         <figure class="rover-diagram rover-diagram-wide">
-          <a href="../images/rover/architecture-code.jpg" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/rafa-create/SAMI_GITH/blob/Branche-principale/Organisation_du_programme.png" target="_blank" rel="noopener noreferrer">
             <img
-              src="../images/rover/architecture-code.jpg"
-              width="679"
-              height="608"
-              alt="Architecture logicielle : Robot Manager, Interface, maths, serveur robot"
+              src="../images/rover/organisation-du-programme.png"
+              width="1842"
+              height="952"
+              alt="Organisation du programme SAMI"
               loading="lazy"
             />
           </a>
-          <figcaption data-fr>Architecture de notre code</figcaption>
-          <figcaption data-en>Our code architecture</figcaption>
+          <figcaption data-fr>Organisation du programme — schéma SAMI</figcaption>
+          <figcaption data-en>Program organisation — SAMI diagram</figcaption>
         </figure>
         <p class="rover-stack">
           Git · MATLAB · Python · Tkinter · Postman · JUnit · REST · Bash · Linux · OptiTrack · NatNet · TCP/IP · winSCP · PuTTY
+        </p>
+        <p class="muted" data-fr>
+          Points de passage lus depuis un fichier (ex. <code>fichier_de_points.txt</code>) — le pôle
+          maths calcule le plus court chemin, mon équipe CS intègre le tout dans l’interface.
+        </p>
+        <p class="muted" data-en>
+          Waypoints read from a file (e.g. <code>fichier_de_points.txt</code>) — the maths track
+          computes the shortest path; my CS team integrates everything in the interface.
         </p>
         <span class="ai-badge ai-badge--without" data-fr>Sans IA</span>
         <span class="ai-badge ai-badge--without" data-en>Without AI</span>
