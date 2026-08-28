@@ -106,13 +106,36 @@ html[lang="en"] [data-fr] {
 }
 
 .wordmark {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex-shrink: 0;
+  margin: 0;
   font-family: var(--display);
   font-weight: 700;
   font-size: 1.05rem;
   letter-spacing: -0.02em;
-  color: var(--ink);
+}
+
+.wordmark-home {
+  color: var(--accent-deep);
   text-decoration: none;
-  flex-shrink: 0;
+  font-weight: 600;
+}
+
+.wordmark-home:hover {
+  color: var(--ink);
+  text-decoration: underline;
+}
+
+.wordmark-sep {
+  color: var(--ink-soft);
+  font-weight: 500;
+}
+
+.wordmark-current {
+  color: var(--ink);
+  font-weight: 700;
 }
 
 .nav {
