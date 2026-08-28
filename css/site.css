@@ -1585,6 +1585,51 @@ main {
   margin-bottom: 0.75rem;
 }
 
+.section-head--ensem {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.edu-ensem-brand {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.85rem 1.15rem;
+}
+
+.edu-ensem-brand-copy {
+  display: grid;
+  gap: 0.2rem;
+  min-width: min(100%, 16rem);
+}
+
+.edu-ensem-brand-copy h2 {
+  margin: 0;
+}
+
+.edu-ensem-brand-copy .lede {
+  margin: 0;
+}
+
+.edu-ensem-brand-copy .project-kicker {
+  margin: 0.15rem 0 0;
+}
+
+.home-formation-brand {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1rem;
+}
+
+.home-formation-brand h3 {
+  margin: 0;
+}
+
+.home-formation-brand .home-formation-dates {
+  margin-top: 0.15rem;
+}
+
 .edu-ensem-logo {
   display: block;
   width: auto;
