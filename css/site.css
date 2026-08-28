@@ -864,6 +864,10 @@ main {
 }
 
 /* Logos avec fond blanc/noir baked-in → fusion avec le papier du site */
+.home-formation-logo--site-bg {
+  background: transparent;
+}
+
 .home-formation-logo--knockout-white {
   background: transparent;
   mix-blend-mode: multiply;
@@ -927,6 +931,12 @@ main {
   display: flex;
   align-items: center;
   gap: 0.7rem;
+}
+
+.insolem-hero-brand img.job-logo--alten {
+  width: 2.75rem;
+  height: auto;
+  max-height: 4.6rem;
 }
 
 .job-logo {
