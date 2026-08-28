@@ -246,29 +246,16 @@
             Hardware and software in parallel: STM32 Nucleo, Insolem boards, GPS, then final PCB layout.
           </p>
         </div>
-        <div class="photo-swiper-wrap insolem-hardware-swiper">
-          <div class="photo-swiper" aria-label="Matériel tracker Insolem">
-            <figure class="photo-swiper-slide">
-              <img src="../images/insolem/tracker-motor.jpg" width="692" height="390" alt="Moteur du tracker solaire" loading="lazy" />
-              <figcaption data-fr>Moteur du tracker</figcaption>
-              <figcaption data-en>Tracker motor</figcaption>
+        <div class="slide-show" data-slideshow="hardware">
+          <div class="slide-stage">
+            <button type="button" class="slide-nav slide-prev" data-slide-prev aria-label="Previous">‹</button>
+            <figure class="slide-frame">
+              <img data-slide-img src="../images/insolem/tracker-motor.jpg" width="692" height="390" alt="" />
+              <figcaption><span data-slide-cap></span></figcaption>
             </figure>
-            <figure class="photo-swiper-slide">
-              <img src="../images/insolem/motor-schematic.jpg" width="827" height="745" alt="Schéma technique du moteur" loading="lazy" />
-              <figcaption data-fr>Schémas du moteur</figcaption>
-              <figcaption data-en>Motor schematics</figcaption>
-            </figure>
-            <figure class="photo-swiper-slide">
-              <img src="../images/insolem/prototype-bench.jpg" width="1200" height="800" alt="Banc de test STM32 Nucleo et cartes Insolem" loading="lazy" />
-              <figcaption data-fr>Banc de test — Nucleo + cartes Insolem + GPS</figcaption>
-              <figcaption data-en>Test bench — Nucleo + Insolem boards + GPS</figcaption>
-            </figure>
-            <figure class="photo-swiper-slide">
-              <img src="../images/insolem/board-layout.png" width="900" height="700" alt="Layout PCB carte finale tracker" loading="lazy" />
-              <figcaption data-fr>Layout carte finale (STM32 + annexe)</figcaption>
-              <figcaption data-en>Final board layout (STM32 + annex)</figcaption>
-            </figure>
+            <button type="button" class="slide-nav slide-next" data-slide-next aria-label="Next">›</button>
           </div>
+          <div class="slide-dots" data-slide-dots role="tablist" aria-label="Matériel tracker Insolem"></div>
         </div>
       </section>
     </div>
@@ -297,6 +284,59 @@
 
   <script>
     document.getElementById("y").textContent = String(new Date().getFullYear());
+
+    (function () {
+      var sets = {
+        hardware: [
+          { src: "../images/insolem/tracker-motor.jpg", fr: "Moteur du tracker", en: "Tracker motor" },
+          { src: "../images/insolem/motor-schematic.jpg", fr: "Schémas du moteur", en: "Motor schematics" },
+          { src: "../images/insolem/prototype-bench.jpg", fr: "Banc de test — Nucleo + cartes Insolem + GPS", en: "Test bench — Nucleo + Insolem boards + GPS" },
+          { src: "../images/insolem/board-layout.png", fr: "Layout carte finale (STM32 + annexe)", en: "Final board layout (STM32 + annex)" }
+        ]
+      };
+
+      function bind(root, slides) {
+        var img = root.querySelector("[data-slide-img]");
+        var cap = root.querySelector("[data-slide-cap]");
+        var dots = root.querySelector("[data-slide-dots]");
+        var i = 0;
+
+        function lang() {
+          return document.documentElement.lang === "en" ? "en" : "fr";
+        }
+
+        function show(n) {
+          i = (n + slides.length) % slides.length;
+          var s = slides[i];
+          img.src = s.src;
+          img.alt = s[lang()];
+          cap.textContent = s[lang()];
+          dots.querySelectorAll("button").forEach(function (b, idx) {
+            b.setAttribute("aria-selected", idx === i ? "true" : "false");
+          });
+        }
+
+        slides.forEach(function (_, idx) {
+          var b = document.createElement("button");
+          b.type = "button";
+          b.setAttribute("aria-label", "Slide " + (idx + 1));
+          b.addEventListener("click", function () { show(idx); });
+          dots.appendChild(b);
+        });
+
+        root.querySelector("[data-slide-prev]").addEventListener("click", function () { show(i - 1); });
+        root.querySelector("[data-slide-next]").addEventListener("click", function () { show(i + 1); });
+        document.querySelectorAll(".lang button").forEach(function (b) {
+          b.addEventListener("click", function () { show(i); });
+        });
+        show(0);
+      }
+
+      document.querySelectorAll("[data-slideshow]").forEach(function (root) {
+        var key = root.getAttribute("data-slideshow");
+        if (sets[key]) bind(root, sets[key]);
+      });
+    })();
   </script>
 </body>
 </html>

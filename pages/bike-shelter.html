@@ -292,25 +292,39 @@
         <div class="feature-split-copy">
           <p class="eyebrow" data-fr>05 · Usage</p>
           <p class="eyebrow" data-en>05 · Usage</p>
-          <h2 data-fr>Ce que voit le cycliste</h2>
-          <h2 data-en>What the rider sees</h2>
-          <p data-fr>
-            Trouver un abri sur la carte, vérifier les places libres, verrouiller avec le badge école.
-          </p>
-          <p data-en>
-            Find a shelter on the map, check free spots, lock with the school badge.
-          </p>
-          <p class="muted" data-fr>Sur le téléphone : la carte, l’abri le plus proche, les places libres.</p>
-          <p class="muted" data-en>On the phone: the map, nearest shelter, free spots.</p>
+          <h2 data-fr>Utilisation typique</h2>
+          <h2 data-en>Typical use</h2>
+          <ol class="bos-steps bike-flow-steps">
+            <li>
+              <span data-fr>L’utilisateur se localise sur la carte.</span>
+              <span data-en>The user locates themselves on the map.</span>
+            </li>
+            <li>
+              <span data-fr>Il trouve l’abri vélos le plus proche et vérifie qu’il reste de la place.</span>
+              <span data-en>They find the nearest shelter and check how many spots are free.</span>
+            </li>
+            <li>
+              <span data-fr>Il clique sur le lien qui ouvre la position de l’abri dans Google Maps.</span>
+              <span data-en>They tap the link to open the shelter in Google Maps.</span>
+            </li>
+            <li>
+              <span data-fr>Il trouve l’abri et sécurise son vélo.</span>
+              <span data-en>They reach the shelter and secure their bike.</span>
+            </li>
+          </ol>
         </div>
-        <figure class="feature-split-media">
-          <img
-            src="../images/bike-shelter/slides/slide-11.jpg"
-            width="1400"
-            height="630"
-            alt="Carte des abris vélos avec places libres"
-            loading="lazy"
-          />
+        <figure class="feature-split-media feature-split-media--phone">
+          <a href="../images/bike-shelter/phone-site.jpg" target="_blank" rel="noopener noreferrer">
+            <img
+              src="../images/bike-shelter/phone-site.jpg"
+              width="375"
+              height="537"
+              alt="Site Abri vélos — carte campus Brabois et places libres"
+              loading="lazy"
+            />
+          </a>
+          <figcaption data-fr>Carte Leaflet · places libres actualisées depuis le Raspberry</figcaption>
+          <figcaption data-en>Leaflet map · free spots updated from the Raspberry Pi</figcaption>
         </figure>
       </section>
     </div>
@@ -362,23 +376,51 @@
         <div class="feature-split-copy">
           <p class="eyebrow" data-fr>07 · Technique</p>
           <p class="eyebrow" data-en>07 · Technical</p>
-          <h2 data-fr>Procédure badge</h2>
-          <h2 data-en>Badge procedure</h2>
-          <p data-fr>
-            Après le scan RFID : vérification CSN, ouverture de la serrure, mise à jour des places libres sur le site.
-          </p>
-          <p data-en>
-            After the RFID scan: CSN check, lock release, free-spot count updated on the website.
-          </p>
+          <h2 data-fr>Verrouillage &amp; déverrouillage</h2>
+          <h2 data-en>Lock &amp; unlock</h2>
+          <div class="bike-proc">
+            <article>
+              <h3 data-fr>Verrouillage</h3>
+              <h3 data-en>Locking</h3>
+              <ol class="bos-steps bike-flow-steps">
+                <li>
+                  <span data-fr>L’utilisateur verrouille son vélo.</span>
+                  <span data-en>The user locks their bike.</span>
+                </li>
+                <li>
+                  <span data-fr>Il passe sa carte sur le lecteur pour valider le verrouillage.</span>
+                  <span data-en>They tap their badge on the reader to confirm.</span>
+                </li>
+              </ol>
+            </article>
+            <article>
+              <h3 data-fr>Déverrouillage</h3>
+              <h3 data-en>Unlocking</h3>
+              <ol class="bos-steps bike-flow-steps">
+                <li>
+                  <span data-fr>L’utilisateur passe sa carte.</span>
+                  <span data-en>The user taps their badge.</span>
+                </li>
+                <li>
+                  <span data-fr>Son vélo est déverrouillé.</span>
+                  <span data-en>Their bike is unlocked.</span>
+                </li>
+              </ol>
+            </article>
+          </div>
         </div>
         <figure class="feature-split-media">
-          <img
-            src="../images/bike-shelter/slides/slide-12.jpg"
-            width="1400"
-            height="630"
-            alt="Procédure badge — verrouillage et déverrouillage"
-            loading="lazy"
-          />
+          <a href="../images/bike-shelter/prototype-bench.jpg" target="_blank" rel="noopener noreferrer">
+            <img
+              src="../images/bike-shelter/prototype-bench.jpg"
+              width="708"
+              height="573"
+              alt="Banc de test : Raspberry Pi, Arduino, XBee et lecteur RFID"
+              loading="lazy"
+            />
+          </a>
+          <figcaption data-fr>Prototype sur banc — Pi + XBee, Arduino, PN532, relais</figcaption>
+          <figcaption data-en>Bench prototype — Pi + XBee, Arduino, PN532, relays</figcaption>
         </figure>
       </section>
     </div>
@@ -397,40 +439,18 @@
             Mock-up: Pi + XBee, Arduino, PN532 RFID, relays and solenoid locks.
           </p>
         </div>
+        <div class="slide-show" data-slideshow="hardware">
+          <div class="slide-stage">
+            <button type="button" class="slide-nav slide-prev" data-slide-prev aria-label="Previous">‹</button>
+            <figure class="slide-frame">
+              <img data-slide-img src="../images/bike-shelter/locks-module.jpg" width="593" height="440" alt="" />
+              <figcaption><span data-slide-cap></span></figcaption>
+            </figure>
+            <button type="button" class="slide-nav slide-next" data-slide-next aria-label="Next">›</button>
+          </div>
+          <div class="slide-dots" data-slide-dots role="tablist" aria-label="Banc de test matériel"></div>
+        </div>
       </section>
-    </div>
-
-    <div class="gallery photo-swiper-wrap">
-      <div class="photo-swiper" aria-label="Banc de test matériel">
-        <figure class="photo-swiper-slide">
-          <img src="../images/bike-shelter/locks-module.jpg" width="593" height="440" alt="Montage test pour un module de quatre verrous" loading="lazy" />
-          <figcaption>
-            <span data-fr>Montage test : module de quatre verrous</span>
-            <span data-en>Test setup: four-lock module</span>
-          </figcaption>
-        </figure>
-        <figure class="photo-swiper-slide">
-          <img src="../images/bike-shelter/locks.jpg" width="1400" height="1244" alt="Arduino with XBee, relay and solenoid locks" loading="lazy" />
-          <figcaption>
-            <span data-fr>Module : Arduino + XBee, relais, 4 serrures</span>
-            <span data-en>Module: Arduino + XBee, relay, four locks</span>
-          </figcaption>
-        </figure>
-        <figure class="photo-swiper-slide">
-          <img src="../images/bike-shelter/rfid.jpg" width="1200" height="900" alt="Adafruit PN532 RFID shield" loading="lazy" />
-          <figcaption>
-            <span data-fr>Lecteur RFID/NFC PN532</span>
-            <span data-en>PN532 RFID/NFC reader</span>
-          </figcaption>
-        </figure>
-        <figure class="photo-swiper-slide">
-          <img src="../images/bike-shelter/pi-xbee.jpg" width="1200" height="793" alt="Raspberry Pi 4 with Digi XBee S2C" loading="lazy" />
-          <figcaption>
-            <span data-fr>Raspberry Pi 4 + XBee Digi S2C</span>
-            <span data-en>Raspberry Pi 4 + Digi XBee S2C</span>
-          </figcaption>
-        </figure>
-      </div>
     </div>
 
     <div class="rail">
@@ -516,6 +536,12 @@
           { src: "../images/bike-shelter/slides/slide-05.jpg", fr: "Racks double niveau", en: "Two-tier racks" },
           { src: "../images/bike-shelter/slides/slide-06.jpg", fr: "Mécanisme de verrouillage", en: "Locking mechanism" },
           { src: "../images/bike-shelter/slides/slide-07.jpg", fr: "Emprise · 16 places · 594 × 390 cm", en: "Footprint · 16 spots · 594 × 390 cm" }
+        ],
+        hardware: [
+          { src: "../images/bike-shelter/locks-module.jpg", fr: "Montage test : module de quatre verrous", en: "Test setup: four-lock module" },
+          { src: "../images/bike-shelter/locks.jpg", fr: "Module : Arduino + XBee, relais, 4 serrures", en: "Module: Arduino + XBee, relay, four locks" },
+          { src: "../images/bike-shelter/rfid.jpg", fr: "Lecteur RFID/NFC PN532", en: "PN532 RFID/NFC reader" },
+          { src: "../images/bike-shelter/pi-xbee.jpg", fr: "Raspberry Pi 4 + XBee Digi S2C", en: "Raspberry Pi 4 + Digi XBee S2C" }
         ]
       };
 
@@ -577,7 +603,7 @@
           if (e.isIntersecting) e.target.classList.add("in");
         });
       }, { threshold: 0.08 });
-      document.querySelectorAll(".section, .media-band, .gallery, .slides-section, .video-section, .more-docs, .arch-feature, .feature-split, .photo-swiper-wrap").forEach(function (el) {
+      document.querySelectorAll(".section, .media-band, .gallery, .slides-section, .video-section, .more-docs, .arch-feature, .feature-split, .slide-show").forEach(function (el) {
         el.classList.add("reveal");
         io.observe(el);
       });

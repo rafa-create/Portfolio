@@ -538,6 +538,20 @@ main {
   margin-top: 0.1rem;
 }
 
+.journey-logo--wide {
+  width: 3.5rem;
+  height: 2.25rem;
+  padding: 0.1rem 0.2rem;
+  object-fit: contain;
+}
+
+.insolem-hero-brand img.hero-logo-wide {
+  width: auto;
+  max-width: 7.5rem;
+  height: 2.35rem;
+  padding: 0.25rem 0.5rem;
+}
+
 .journey-step > .journey-dates,
 .journey-step > h3,
 .journey-step > p[data-fr],
@@ -1142,6 +1156,29 @@ main {
   margin: 0.65rem 0 0;
   font-size: 0.82rem;
   line-height: 1.4;
+  color: var(--ink-soft);
+  max-width: 42rem;
+}
+
+.edu-uc-program {
+  margin: 1.25rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+
+.edu-uc-program-title {
+  margin: 0 0 0.35rem;
+  font-family: var(--display);
+  font-size: 1.2rem;
+}
+
+.edu-uc-grade {
+  margin: 0 0 0.65rem;
+  font-size: 0.95rem;
+}
+
+.edu-uc-grade strong {
+  color: var(--ink);
 }
 
 .edu-dl {
@@ -1710,9 +1747,10 @@ main {
   background: #fff;
 }
 
-.insolem-hardware-swiper {
+.section .slide-show {
   padding: 0;
-  margin-top: 0.5rem;
+  max-width: none;
+  margin-top: 1rem;
 }
 
 @media (min-width: 720px) {
@@ -2702,6 +2740,52 @@ main {
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--ink-soft);
+}
+
+.bike-flow-steps {
+  margin-top: 0.35rem;
+}
+
+.bike-flow-steps li {
+  padding-top: 0.85rem;
+  padding-bottom: 0.85rem;
+}
+
+.bike-flow-steps li::before {
+  top: 0.85rem;
+}
+
+.bike-flow-steps span {
+  color: var(--ink);
+  line-height: 1.45;
+}
+
+.bike-proc {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 0.25rem;
+}
+
+.bike-proc article h3 {
+  margin: 0 0 0.15rem;
+  font-family: var(--display);
+  font-size: 1.15rem;
+}
+
+.bike-proc .bike-flow-steps {
+  counter-reset: bos;
+}
+
+.feature-split-media--phone img {
+  max-width: min(100%, 15.5rem);
+  margin-inline: auto;
+}
+
+.feature-split-media figcaption {
+  margin-top: 0.45rem;
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  text-align: center;
 }
 
 .bike-tasks {
