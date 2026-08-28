@@ -373,11 +373,11 @@ main {
 }
 
 .hero {
-  min-height: min(88vh, 52rem);
+  min-height: min(72vh, 44rem);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: clamp(3rem, 10vh, 6rem) 0 clamp(4rem, 12vh, 7rem);
+  padding: clamp(2.5rem, 7vh, 4rem) 0 clamp(2.5rem, 7vh, 4.5rem);
   animation: rise 0.9s ease both;
 }
 
@@ -431,7 +431,7 @@ main {
 }
 
 .lede {
-  margin: 0 0 1.75rem;
+  margin: 0 0 1.25rem;
   max-width: 38rem;
   font-size: 1.08rem;
   color: var(--ink-soft);
@@ -445,7 +445,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.1rem;
 }
 
 .hero-meta {
@@ -466,12 +466,12 @@ main {
 }
 
 .section {
-  padding: clamp(3rem, 8vh, 5rem) 0;
+  padding: clamp(2rem, 5vh, 3.25rem) 0;
   border-top: 1px solid var(--line);
 }
 
 .section-head {
-  margin-bottom: 2rem;
+  margin-bottom: 1.35rem;
   max-width: 36rem;
 }
 
@@ -495,7 +495,7 @@ main {
 
 .about-grid {
   display: grid;
-  gap: 1.75rem;
+  gap: 1.25rem;
 }
 
 .about-grid > p {
@@ -1046,6 +1046,10 @@ main {
   margin: 0;
   color: var(--ink-soft);
   font-size: 0.94rem;
+}
+
+.about .home-formation-more {
+  margin-top: 0.85rem;
 }
 
 .home-formation-more {
@@ -2689,11 +2693,11 @@ main {
   }
 
   .about .section-head {
-    margin-bottom: 1.35rem;
+    margin-bottom: 1rem;
   }
 
   .about-grid {
-    gap: 2rem;
+    gap: 1.15rem;
   }
 
   .about-grid > p {
@@ -2747,12 +2751,12 @@ main {
 @media (min-width: 900px) {
   .hero {
     min-height: auto;
-    padding: clamp(4rem, 9vh, 6rem) 0 clamp(4.5rem, 10vh, 6.5rem);
+    padding: clamp(2.25rem, 4vh, 3.25rem) 0 clamp(2rem, 3.5vh, 2.75rem);
   }
 
   .hero-intro {
-    gap: 2rem;
-    margin-bottom: 1.5rem;
+    gap: 1.5rem;
+    margin-bottom: 1.15rem;
   }
 
   .hero-portrait {
@@ -2772,10 +2776,24 @@ main {
   .hero .lede {
     max-width: 44rem;
     font-size: 1.12rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero .cta-row {
+    margin-bottom: 0.85rem;
+  }
+
+  main > .hero + .section {
+    padding-top: clamp(1.5rem, 2.5vh, 2rem);
+  }
+
+  main > .section {
+    padding-bottom: clamp(1.75rem, 3vh, 2.5rem);
   }
 
   .section-head {
     max-width: 44rem;
+    margin-bottom: 1.1rem;
   }
 
   .section-head h2 {
