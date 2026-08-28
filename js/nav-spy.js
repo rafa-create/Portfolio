@@ -152,7 +152,6 @@
   }
 
   initStepList(".journey-step", { trackActive: true });
-  initStepList(".home-project-step");
 
   (function navToggle() {
     var top = document.querySelector(".top");
