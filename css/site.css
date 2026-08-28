@@ -713,45 +713,22 @@ main {
   margin: 0;
   padding: 0;
   display: grid;
-  gap: 1.25rem;
+  gap: 1rem;
 }
 
 .home-project-card {
-  display: grid;
-  gap: 0;
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.38);
-  overflow: hidden;
+  transition: border-color 0.2s ease, background 0.2s ease;
 }
 
-.home-project-shot {
-  margin: 0;
-  aspect-ratio: 16 / 10;
-  overflow: hidden;
-  background: var(--paper-2);
-}
-
-.home-project-shot img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.home-project-shot--optitrack {
-  aspect-ratio: 16 / 10;
-  background: linear-gradient(180deg, #16202a 0%, #2e343b 100%);
-}
-
-.home-project-shot--optitrack img {
-  object-fit: contain;
-  object-position: center;
-  padding: 0.75rem;
+.home-project-card:hover {
+  border-color: rgba(16, 79, 77, 0.35);
+  background: rgba(255, 255, 255, 0.55);
 }
 
 .home-project-body {
-  padding: 1rem 1.1rem 1.15rem;
+  padding: 1.15rem 1.1rem 1.2rem;
   display: grid;
   gap: 0.35rem;
 }
@@ -768,6 +745,9 @@ main {
   width: min(5.25rem, 40vw);
   height: 2.25rem;
   padding: 0.1rem 0.2rem;
+  object-fit: contain;
+  object-position: left center;
+  background: transparent;
 }
 
 .home-project-dates {
@@ -782,13 +762,13 @@ main {
 .home-project-body h3 {
   margin: 0;
   font-family: var(--display);
-  font-size: 1.15rem;
+  font-size: 1.12rem;
 }
 
 .home-project-body p:not(.home-project-dates) {
   margin: 0;
   color: var(--ink-soft);
-  font-size: 0.96rem;
+  font-size: 0.94rem;
 }
 
 .home-project-body .btn {
@@ -820,23 +800,8 @@ main {
   background: rgba(255, 255, 255, 0.55);
 }
 
-.home-formation-shot {
-  margin: 0;
-  aspect-ratio: 16 / 10;
-  overflow: hidden;
-  background: var(--paper-2);
-}
-
-.home-formation-shot img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
 .home-formation-body {
-  padding: 1rem 1.1rem 1.15rem;
+  padding: 1.15rem 1.1rem 1.2rem;
   display: grid;
   gap: 0.35rem;
 }
@@ -856,6 +821,17 @@ main {
   object-fit: contain;
   object-position: left center;
   background: transparent;
+}
+
+/* Logos avec fond blanc/noir baked-in → fusion avec le papier du site */
+.home-formation-logo--knockout-white {
+  background: transparent;
+  mix-blend-mode: multiply;
+}
+
+.home-formation-logo--knockout-black {
+  background: transparent;
+  mix-blend-mode: lighten;
 }
 
 .home-formation-body h3 {
@@ -2578,7 +2554,7 @@ main {
 
   .home-projects-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.35rem;
+    gap: 1.15rem;
   }
 
   .home-formation-grid {
