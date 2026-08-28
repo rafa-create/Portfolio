@@ -732,33 +732,8 @@ main {
   background: rgba(255, 255, 255, 0.55);
 }
 
-.home-project-shot {
-  margin: 0;
-  aspect-ratio: 16 / 10;
-  overflow: hidden;
-  background: var(--paper-2);
-}
-
-.home-project-shot img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.home-project-shot--optitrack {
-  background: linear-gradient(180deg, #16202a 0%, #2e343b 100%);
-}
-
-.home-project-shot--optitrack img {
-  object-fit: contain;
-  object-position: center;
-  padding: 0.75rem;
-}
-
 .home-project-body {
-  padding: 1rem 1.1rem 1.15rem;
+  padding: 1.15rem 1.1rem 1.2rem;
   display: grid;
   gap: 0.35rem;
 }
@@ -792,24 +767,19 @@ main {
 .home-project-body h3 {
   margin: 0;
   font-family: var(--display);
-  font-size: 1.15rem;
+  font-size: 1.12rem;
 }
 
 .home-project-body p:not(.home-project-dates) {
   margin: 0;
   color: var(--ink-soft);
-  font-size: 0.96rem;
+  font-size: 0.94rem;
 }
 
-.home-formation-stack {
-  display: grid;
-  gap: 0.65rem;
-  min-width: 0;
-}
-
-.home-formation-spotlight {
+.edu-project-spotlight {
   display: grid;
   gap: 0.2rem;
+  margin: 1.25rem 0 0;
   padding: 0.85rem 1rem;
   border: 1px solid rgba(16, 79, 77, 0.22);
   border-left: 3px solid var(--accent-deep);
@@ -819,12 +789,12 @@ main {
   transition: border-color 0.2s ease, background 0.2s ease;
 }
 
-.home-formation-spotlight:hover {
+.edu-project-spotlight:hover {
   border-color: rgba(16, 79, 77, 0.4);
   background: rgba(255, 255, 255, 0.62);
 }
 
-.home-formation-spotlight-kicker {
+.edu-project-spotlight-kicker {
   margin: 0;
   font-size: 0.72rem;
   font-weight: 700;
@@ -833,14 +803,14 @@ main {
   color: var(--accent-deep);
 }
 
-.home-formation-spotlight-title {
+.edu-project-spotlight-title {
   margin: 0;
   font-family: var(--display);
   font-size: 1rem;
   font-weight: 600;
 }
 
-.home-formation-spotlight p:not(.home-formation-spotlight-kicker):not(.home-formation-spotlight-title) {
+.edu-project-spotlight p:not(.edu-project-spotlight-kicker):not(.edu-project-spotlight-title) {
   margin: 0;
   font-size: 0.9rem;
   color: var(--ink-soft);
