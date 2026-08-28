@@ -105,8 +105,8 @@ Référence : audit contenu orienté chasseur de têtes. Le site vise la **visib
 | Item | Décision |
 |------|----------|
 | **À propos** absent du menu | Optionnel |
-| **LinkedIn dans `#contact`** | ✅ **À faire** — bouton LinkedIn à côté de l’email (LinkedIn déjà en footer) |
-| **BeatOnStep « Actuellement »** | ✅ **À clarifier** — libellé **side project** (FR/EN), pas un poste ou une startup |
+| **LinkedIn dans `#contact`** | ✅ **Fait** |
+| **BeatOnStep « Actuellement »** | ✅ **Fait** — libellé **side project** |
 | **Robot SAMI** hors accueil projets | OK — reste sur page formation (#ensem) |
 | **Page `/recruiter` ou PDF 1 page** | Backlog long terme, non prioritaire |
 
