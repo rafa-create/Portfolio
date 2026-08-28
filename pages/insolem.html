@@ -194,22 +194,19 @@
             <li data-en>J-Probe interface for HV bench testing</li>
           </ul>
         </div>
-        <figure class="feature-split-media insolem-shot-stack">
-          <img
-            src="../images/insolem/parafoudre-strategy.png"
-            width="800"
-            height="500"
-            alt="Stratégie de développement parafoudre — simulation, C, validation, MCU"
-            loading="lazy"
-          />
-          <img
-            src="../images/insolem/j-probe-interface.png"
-            width="1200"
-            height="800"
-            alt="Interface J-Probe V1.0 — banc parafoudre haute tension"
-            loading="lazy"
-          />
-        </figure>
+        <div class="feature-split-media">
+          <div class="slide-show slide-show--compact" data-slideshow="parafoudre">
+            <div class="slide-stage">
+              <button type="button" class="slide-nav slide-prev" data-slide-prev aria-label="Previous">‹</button>
+              <figure class="slide-frame">
+                <img data-slide-img src="../images/insolem/parafoudre-strategy.png" width="800" height="500" alt="" />
+                <figcaption><span data-slide-cap></span></figcaption>
+              </figure>
+              <button type="button" class="slide-nav slide-next" data-slide-next aria-label="Next">›</button>
+            </div>
+            <div class="slide-dots" data-slide-dots role="tablist" aria-label="Stratégie parafoudre"></div>
+          </div>
+        </div>
       </section>
     </div>
 
@@ -308,6 +305,18 @@
 
     (function () {
       var sets = {
+        parafoudre: [
+          {
+            src: "../images/insolem/parafoudre-strategy.png",
+            fr: "Stratégie — simulation Python/Octave → algo C → validation → MCU",
+            en: "Strategy — Python/Octave simulation → C algo → validation → MCU"
+          },
+          {
+            src: "../images/insolem/j-probe-interface.png",
+            fr: "Interface J-Probe V1.0 — banc parafoudre haute tension",
+            en: "J-Probe V1.0 interface — HV surge arrester bench"
+          }
+        ],
         hardware: [
           { src: "../images/insolem/tracker-motor.jpg", fr: "Moteur du tracker", en: "Tracker motor" },
           { src: "../images/insolem/motor-schematic.jpg", fr: "Schémas du moteur", en: "Motor schematics" },

@@ -977,11 +977,27 @@ main {
   mix-blend-mode: lighten;
 }
 
+.home-formation-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem 1rem;
+}
+
+.home-formation-brand .home-formation-logo {
+  flex-shrink: 0;
+}
+
+.home-formation-brand h3 {
+  margin: 0;
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+}
+
 .home-formation-body h3 {
   margin: 0;
   font-family: var(--display);
   font-size: 1.12rem;
-  min-height: 2.65rem;
 }
 
 .home-formation-dates {
@@ -1441,6 +1457,69 @@ main {
   color: var(--ink);
 }
 
+.edu-uc-cred-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  margin: 0;
+}
+
+.edu-uc-cred-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent-deep);
+}
+
+.edu-uc-cred-row .edu-uc-cred {
+  font-size: 0.95rem;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.5);
+  padding: 0.2rem 0.45rem;
+  border-radius: 0.25rem;
+  border: 1px solid var(--line);
+}
+
+.btn-copy {
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.25rem 0.55rem;
+  border: 1px solid var(--line);
+  border-radius: 0.25rem;
+  background: rgba(255, 255, 255, 0.45);
+  color: var(--accent-deep);
+  cursor: pointer;
+}
+
+.btn-copy:hover {
+  border-color: rgba(16, 79, 77, 0.35);
+  color: var(--ink);
+}
+
+.btn-copy.is-copied {
+  color: var(--ink);
+  border-color: rgba(16, 79, 77, 0.45);
+}
+
+.btn-copy.is-copied .btn-copy-label {
+  display: none;
+}
+
+.btn-copy.is-copied .btn-copy-done {
+  display: inline;
+}
+
+.btn-copy-done {
+  display: none;
+}
+
+.doc-card-body .edu-uc-verify {
+  margin-top: 0.85rem;
+}
+
 .course-list {
   list-style: none;
   margin: 1rem 0 0;
@@ -1614,21 +1693,6 @@ main {
 
 .edu-ensem-brand-copy .project-kicker {
   margin: 0.15rem 0 0;
-}
-
-.home-formation-brand {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.75rem 1rem;
-}
-
-.home-formation-brand h3 {
-  margin: 0;
-}
-
-.home-formation-brand .home-formation-dates {
-  margin-top: 0.15rem;
 }
 
 .edu-ensem-logo {
@@ -2232,63 +2296,6 @@ main {
   text-transform: uppercase;
 }
 
-.ai-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0;
-  margin: 0.75rem 0 1rem;
-  padding: 0.32rem 0.85rem;
-  font-family: var(--display);
-  font-size: 0.68rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  line-height: 1.2;
-  border-radius: 999px;
-  border: 1px solid transparent;
-  box-shadow: none;
-  vertical-align: middle;
-}
-
-.ai-badge::before {
-  display: none;
-}
-
-/* Solid accent chip — BeatOnStep .tag energy */
-.ai-badge--with {
-  color: #f3efe6;
-  background: var(--accent-deep);
-  border-color: var(--accent-deep);
-  box-shadow: 0 0 0 1px rgba(13, 110, 110, 0.12), 0 8px 22px rgba(13, 110, 110, 0.22);
-}
-
-.ai-badge--without {
-  color: var(--accent-deep);
-  background: rgba(255, 255, 255, 0.72);
-  border-color: rgba(13, 110, 110, 0.35);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4);
-}
-
-.ai-badge--on-dark.ai-badge--with {
-  color: #15202b;
-  background: #f3efe6;
-  border-color: #f3efe6;
-  box-shadow: 0 0 24px rgba(243, 239, 230, 0.28);
-}
-
-.ai-badge--on-dark.ai-badge--without {
-  color: #f3efe6;
-  background: rgba(15, 22, 32, 0.35);
-  border-color: rgba(243, 239, 230, 0.45);
-  backdrop-filter: blur(8px);
-  box-shadow: inset 0 0 0 1px rgba(243, 239, 230, 0.08);
-}
-
-.ai-badge--on-dark.ai-badge--without::before,
-.ai-badge--on-dark.ai-badge--with::before {
-  display: none;
-}
-
 .git-badge {
   display: inline-flex;
   align-items: center;
@@ -2347,7 +2354,6 @@ main {
   margin: 0.65rem 0 1rem;
 }
 
-.git-badge-row .ai-badge,
 .git-badge-row .git-badge {
   margin: 0;
 }
@@ -3911,6 +3917,17 @@ main {
 
 .feature-split-media {
   margin: 0;
+}
+
+.feature-split-media .slide-show--compact {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+.feature-split-media .slide-frame img {
+  aspect-ratio: auto;
+  max-height: 22rem;
 }
 
 .feature-split-media img {

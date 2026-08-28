@@ -4,11 +4,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>BeatOnStep — Rafael Orset</title>
-  <meta name="description" content="BeatOnStep : app de course où la musique suit ton allure (PPM ↔ BPM). Android &amp; iOS." />
+  <meta name="description" content="Side project BeatOnStep : app mobile Expo / TypeScript, matching PPM ↔ BPM, capteurs et intégrations audio." />
   <link rel="canonical" href="https://rafa-create.github.io/Portfolio/pages/beatonstep.html" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="BeatOnStep — Rafael Orset" />
-  <meta property="og:description" content="Running app: music matches your pace (SPM ↔ BPM). Android &amp; iOS." />
+  <meta property="og:description" content="BeatOnStep side project: Expo / TypeScript mobile app, SPM ↔ BPM matching, sensors and audio integrations." />
   <meta property="og:url" content="https://rafa-create.github.io/Portfolio/pages/beatonstep.html" />
   <meta property="og:image" content="https://rafa-create.github.io/Portfolio/images/beatonstep/hero-runner.webp" />
   <meta name="theme-color" content="#1a2332" />
@@ -26,8 +26,8 @@
       en: "BeatOnStep — Rafael Orset"
     };
     window.PORT_DESC = {
-      fr: "BeatOnStep : app de course où la musique suit ton allure (PPM ↔ BPM). Android & iOS.",
-      en: "BeatOnStep: running app where music matches your pace (SPM ↔ BPM). Android & iOS."
+      fr: "Side project BeatOnStep : app mobile Expo / TypeScript, matching PPM ↔ BPM, capteurs et intégrations audio.",
+      en: "BeatOnStep side project: Expo / TypeScript mobile app, SPM ↔ BPM matching, sensors and audio integrations."
     };
   </script>
   <script src="../js/i18n.js"></script>
@@ -42,18 +42,16 @@
   <header class="top">
     <a class="wordmark" href="../#experience">BeatOnStep</a>
     <nav class="nav" id="site-nav" aria-label="Sections">
-      <a href="#overview" data-fr>Idée</a>
-      <a href="#overview" data-en>Idea</a>
-      <a href="#run" data-fr>Première sortie</a>
-      <a href="#run" data-en>First run</a>
-      <a href="#modes" data-fr>Allure</a>
-      <a href="#modes" data-en>Pace</a>
-      <a href="#sources" data-fr>Musique</a>
-      <a href="#sources" data-en>Music</a>
-      <a href="#shots" data-fr>App</a>
-      <a href="#shots" data-en>App</a>
-      <a href="#try" data-fr>Site</a>
-      <a href="#try" data-en>Site</a>
+      <a href="#overview" data-fr>Contexte</a>
+      <a href="#overview" data-en>Context</a>
+      <a href="#product" data-fr>Produit</a>
+      <a href="#product" data-en>Product</a>
+      <a href="#build" data-fr>Réalisation</a>
+      <a href="#build" data-en>Build</a>
+      <a href="#shots" data-fr>Captures</a>
+      <a href="#shots" data-en>Screenshots</a>
+      <a href="#tech" data-fr>Stack</a>
+      <a href="#tech" data-en>Stack</a>
     </nav>
     <div class="top-actions">
       <button type="button" class="nav-toggle" aria-controls="site-nav" aria-expanded="false">
@@ -84,26 +82,24 @@
         <div class="bos-hero-brand">
           <img src="../images/beatonstep/logo.png" width="400" height="400" alt="" />
           <p class="hero-brand">BeatOnStep</p>
-          <p class="project-kicker" data-fr>Side project</p>
-          <p class="project-kicker" data-en>Side project</p>
+          <p class="project-kicker" data-fr>Side project · app mobile</p>
+          <p class="project-kicker" data-en>Side project · mobile app</p>
         </div>
-        <h1 data-fr>Ta musique<br /><em>suit tes pas</em></h1>
-        <h1 data-en>Your music<br /><em>follows your stride</em></h1>
+        <h1 data-fr>Expo &amp; capteurs,<br /><em>PPM ↔ BPM</em></h1>
+        <h1 data-en>Expo &amp; sensors,<br /><em>SPM ↔ BPM</em></h1>
         <p class="lede" data-fr>
-          Tu cours. L’app lit ton allure et met un titre au même rythme.
-          Téléphone dans la poche — Android &amp; iOS.
+          Projet perso pendant ma césure. App iOS / Android qui aligne le tempo musical
+          sur l’allure de course, à partir des capteurs du téléphone.
         </p>
         <p class="lede" data-en>
-          You run. The app reads your pace and queues a track that matches.
-          Phone in your pocket — Android &amp; iOS.
+          Personal project during my gap year. iOS / Android app that aligns music tempo
+          with running cadence from the phone’s sensors.
         </p>
-        <div class="git-badge-row">
-          <span class="ai-badge ai-badge--with ai-badge--on-dark" data-fr>Avec IA</span>
-          <span class="ai-badge ai-badge--with ai-badge--on-dark" data-en>With AI</span>
-        </div>
         <div class="cta-row">
-          <a class="btn btn-solid btn-on-dark" href="https://rafa-create.github.io/beatonstep-website/" rel="noopener noreferrer" target="_blank" data-fr>Site produit →</a>
-          <a class="btn btn-solid btn-on-dark" href="https://rafa-create.github.io/beatonstep-website/" rel="noopener noreferrer" target="_blank" data-en>Product site →</a>
+          <a class="btn btn-solid btn-on-dark" href="#build" data-fr>Voir la réalisation</a>
+          <a class="btn btn-solid btn-on-dark" href="#build" data-en>See the build</a>
+          <a class="btn btn-line btn-on-dark" href="#shots" data-fr>Captures</a>
+          <a class="btn btn-line btn-on-dark" href="#shots" data-en>Screenshots</a>
         </div>
       </div>
     </section>
@@ -111,38 +107,69 @@
     <div class="rail">
       <section class="section" id="overview">
         <div class="section-head">
-          <p class="eyebrow" data-fr>01 · Idée</p>
-          <p class="eyebrow" data-en>01 · Idea</p>
-          <h2 data-fr>Playlist trop lente ? Trop rapide ?</h2>
-          <h2 data-en>Playlist too slow? Too fast?</h2>
+          <p class="eyebrow" data-fr>01 · Contexte</p>
+          <p class="eyebrow" data-en>01 · Context</p>
+          <h2 data-fr>Né de la course à pied</h2>
+          <h2 data-en>Born from running</h2>
+        </div>
+        <p data-fr>
+          L’idée est venue en courant : une playlist trop lente ou trop rapide casse la cadence.
+          J’ai voulu tester une app qui choisit un morceau au bon tempo — sans montre connectée,
+          juste le téléphone en poche.
+        </p>
+        <p data-en>
+          The idea came while running: a playlist that’s too slow or too fast breaks your cadence.
+          I wanted to build an app that picks a track at the right tempo — no smartwatch,
+          just the phone in your pocket.
+        </p>
+        <p data-fr>
+          Side project mené seul pendant ma césure : conception, développement mobile,
+          logique de matching, intégrations audio et mise en store Android / iOS.
+        </p>
+        <p data-en>
+          Solo side project during my gap year: mobile design and development, matching logic,
+          audio integrations, and Android / iOS store releases.
+        </p>
+      </section>
+    </div>
+
+    <div class="rail">
+      <section class="section" id="product">
+        <div class="section-head">
+          <p class="eyebrow" data-fr>02 · Produit</p>
+          <p class="eyebrow" data-en>02 · Product</p>
+          <h2 data-fr>Matching allure ↔ tempo</h2>
+          <h2 data-en>Pace ↔ tempo matching</h2>
         </div>
         <div class="about-grid">
           <div>
             <p data-fr>
-              Une musique hors rythme casse la cadence. BeatOnStep envoie un titre dont le BPM
-              colle au rythme de tes pas (PPM).
+              BeatOnStep lit l’allure (PPM) et sélectionne un titre dont le BPM correspond.
+              Deux modes : adaptatif (capteur live) ou fixe (cible réglée). Plusieurs sources
+              audio — mix embarqué, fichiers locaux, deep links vers YouTube Music et Spotify.
             </p>
             <p data-en>
-              Music off the beat breaks your cadence. BeatOnStep queues a track whose BPM
-              matches your step rate (SPM).
+              BeatOnStep reads pace (SPM) and selects a track whose BPM matches.
+              Two modes: adaptive (live sensor) or fixed (set target). Multiple audio sources —
+              bundled mix, local files, deep links to YouTube Music and Spotify.
             </p>
           </div>
           <ul class="pillars">
             <li>
               <strong data-fr>Problème</strong>
               <strong data-en>Problem</strong>
-              <span data-fr>Musique trop lente ou trop rapide pendant l’effort</span>
-              <span data-en>Music too slow or too fast during the effort</span>
+              <span data-fr>Décalage musique / cadence pendant l’effort</span>
+              <span data-en>Music / cadence mismatch during effort</span>
             </li>
             <li>
-              <strong data-fr>Réponse</strong>
-              <strong data-en>Answer</strong>
-              <span data-fr>Matching PPM ↔ BPM, téléphone dans la poche</span>
-              <span data-en>SPM ↔ BPM matching, phone in your pocket</span>
+              <strong data-fr>Principe</strong>
+              <strong data-en>Principle</strong>
+              <span data-fr>Matching PPM ↔ BPM depuis le téléphone</span>
+              <span data-en>SPM ↔ BPM matching from the phone</span>
             </li>
             <li>
-              <strong data-fr>Produit</strong>
-              <strong data-en>Product</strong>
+              <strong data-fr>Plateformes</strong>
+              <strong data-en>Platforms</strong>
               <span>Android · iOS · Expo</span>
             </li>
           </ul>
@@ -151,137 +178,97 @@
     </div>
 
     <div class="rail">
-      <section class="section" id="run">
+      <section class="section" id="build">
         <div class="section-head">
-          <p class="eyebrow" data-fr>02 · Première sortie</p>
-          <p class="eyebrow" data-en>02 · First run</p>
-          <h2 data-fr>Tu peux courir tout de suite</h2>
-          <h2 data-en>You can run right away</h2>
-          <p class="lede tight" data-fr>Le mix inclus suffit pour tester. Tes playlists, plus tard.</p>
-          <p class="lede tight" data-en>The included mix is enough to try it. Your playlists can wait.</p>
-        </div>
-        <ol class="bos-steps">
-          <li>
-            <strong data-fr>Ouvre l’app</strong>
-            <strong data-en>Open the app</strong>
-            <span data-fr>Le mix inclus est déjà là.</span>
-            <span data-en>The included mix is already there.</span>
-          </li>
-          <li>
-            <strong data-fr>Choisis le mode</strong>
-            <strong data-en>Pick a mode</strong>
-            <span data-fr>Adaptatif (allure live) ou Fixe (tu règles).</span>
-            <span data-en>Adaptive (live pace) or Fixed (you set it).</span>
-          </li>
-          <li>
-            <strong data-fr>Démarre</strong>
-            <strong data-en>Start</strong>
-            <span data-fr>Téléphone dans la poche. Un titre part au rythme de tes pas.</span>
-            <span data-en>Phone in your pocket. A track kicks in with your stride.</span>
-          </li>
-        </ol>
-      </section>
-    </div>
-
-    <div class="rail">
-      <section class="section" id="modes">
-        <div class="section-head">
-          <p class="eyebrow" data-fr>03 · Allure</p>
-          <p class="eyebrow" data-en>03 · Pace</p>
-          <h2 data-fr>Adaptatif, ou tu fixes l’allure</h2>
-          <h2 data-en>Adaptive, or you lock the pace</h2>
+          <p class="eyebrow" data-fr>03 · Réalisation</p>
+          <p class="eyebrow" data-en>03 · Build</p>
+          <h2 data-fr>Ce que j’ai développé</h2>
+          <h2 data-en>What I built</h2>
         </div>
         <div class="bos-modes">
           <article>
-            <p class="project-kicker" data-fr>Adaptatif</p>
-            <p class="project-kicker" data-en>Adaptive</p>
-            <h3 data-fr>Il s’adapte à toi</h3>
-            <h3 data-en>It follows you</h3>
-            <p data-fr>Le capteur tourne. L’allure live change ? L’app bascule sur le bon tempo.</p>
-            <p data-en>The sensor runs. Live pace shifts? The app switches to the right tempo.</p>
+            <p class="project-kicker" data-fr>Capteurs</p>
+            <p class="project-kicker" data-en>Sensors</p>
+            <h3 data-fr>Détection d’allure</h3>
+            <h3 data-en>Pace detection</h3>
+            <p data-fr>
+              Lecture de l’allure en temps réel via les capteurs du téléphone (poche).
+              Conversion PPM / min·km et lissage pour éviter les bascules intempestives.
+            </p>
+            <p data-en>
+              Real-time pace from phone sensors (pocket use).
+              SPM / min·km conversion and smoothing to avoid spurious track switches.
+            </p>
           </article>
           <article>
-            <p class="project-kicker" data-fr>Fixe</p>
-            <p class="project-kicker" data-en>Fixed</p>
-            <h3 data-fr>Tu règles l’allure</h3>
-            <h3 data-en>You set the pace</h3>
-            <p data-fr>Tu bloques PPM ou min/km. Le matching suit ta cible, pas le capteur.</p>
-            <p data-en>You lock SPM or min/km. Matching follows your target, not the sensor.</p>
+            <p class="project-kicker" data-fr>Matching</p>
+            <p class="project-kicker" data-en>Matching</p>
+            <h3 data-fr>Sélection de titres</h3>
+            <h3 data-en>Track selection</h3>
+            <p data-fr>
+              Moteur PPM ↔ BPM avec tolérance réglable. Politique de changement configurable
+              (délai, fin de morceau, immédiat).
+            </p>
+            <p data-en>
+              SPM ↔ BPM engine with adjustable tolerance. Configurable switch policy
+              (delay, end of track, immediate).
+            </p>
+          </article>
+          <article>
+            <p class="project-kicker" data-fr>Modes</p>
+            <p class="project-kicker" data-en>Modes</p>
+            <h3 data-fr>Adaptatif &amp; fixe</h3>
+            <h3 data-en>Adaptive &amp; fixed</h3>
+            <p data-fr>
+              Mode adaptatif : le matching suit le capteur live. Mode fixe : cible PPM ou
+              min·km verrouillée, indépendamment du capteur.
+            </p>
+            <p data-en>
+              Adaptive mode: matching follows the live sensor. Fixed mode: SPM or min·km
+              target locked, independent of the sensor.
+            </p>
+          </article>
+          <article>
+            <p class="project-kicker" data-fr>Audio</p>
+            <p class="project-kicker" data-en>Audio</p>
+            <h3 data-fr>Sources multiples</h3>
+            <h3 data-en>Multiple sources</h3>
+            <p data-fr>
+              Mix démo BPM-tagué, import local avec analyse BPM, deep links YouTube Music
+              et Spotify (BPM saisi côté Spotify).
+            </p>
+            <p data-en>
+              BPM-tagged demo mix, local import with BPM analysis, YouTube Music and
+              Spotify deep links (BPM entered for Spotify).
+            </p>
           </article>
         </div>
-        <p class="muted bos-note" data-fr>
-          Quand changer de titre : après quelques secondes (défaut 5 s), à la fin du morceau, ou tout de suite.
-        </p>
-        <p class="muted bos-note" data-en>
-          When to switch tracks: after a few seconds (default 5 s), at the end of the song, or right away.
-        </p>
-      </section>
-    </div>
-
-    <div class="rail">
-      <section class="section" id="sources">
-        <div class="section-head">
-          <p class="eyebrow" data-fr>04 · Musique</p>
-          <p class="eyebrow" data-en>04 · Music</p>
-          <h2 data-fr>Tes fichiers, tes playlists</h2>
-          <h2 data-en>Your files, your playlists</h2>
-          <p class="lede tight" data-fr>
-            Mix inclus et musiques téléphone : lecture dans BeatOnStep. YouTube Music et Spotify s’ouvrent dans leur app.
-          </p>
-          <p class="lede tight" data-en>
-            Included mix and phone music play in BeatOnStep. YouTube Music and Spotify open in their apps.
-          </p>
-        </div>
-        <ul class="pillars bos-sources">
-          <li>
-            <strong data-fr>Mix inclus</strong>
-            <strong data-en>Included mix</strong>
-            <span data-fr>Pack livré avec l’app, BPM déjà tagué, sans compte.</span>
-            <span data-en>Ships with the app, BPM pre-tagged, no account.</span>
-          </li>
-          <li>
-            <strong data-fr>Musiques téléphone</strong>
-            <strong data-en>Phone music</strong>
-            <span data-fr>Import + analyse BPM, lecture dans BeatOnStep.</span>
-            <span data-en>Import + BPM analysis, plays in BeatOnStep.</span>
-          </li>
-          <li>
-            <strong>YouTube Music</strong>
-            <span data-fr>S’ouvre dans YouTube.</span>
-            <span data-en>Opens in YouTube.</span>
-          </li>
-          <li>
-            <strong>Spotify</strong>
-            <span data-fr>S’ouvre dans Spotify. BPM à renseigner. Bêta invitation.</span>
-            <span data-en>Opens in Spotify. BPM required. Invite-only beta.</span>
-          </li>
-        </ul>
       </section>
     </div>
 
     <div class="rail">
       <section class="section" id="shots">
         <div class="section-head">
-          <p class="eyebrow" data-fr>05 · App</p>
-          <p class="eyebrow" data-en>05 · App</p>
-          <h2 data-fr>À l’écran</h2>
-          <h2 data-en>On screen</h2>
+          <p class="eyebrow" data-fr>04 · Captures</p>
+          <p class="eyebrow" data-en>04 · Screenshots</p>
+          <h2 data-fr>Interface</h2>
+          <h2 data-en>Interface</h2>
         </div>
         <div class="bos-shots">
           <figure>
             <img src="../images/beatonstep/site-screenshot-adaptive.png" width="390" height="844" alt="BeatOnStep — mode adaptatif" loading="lazy" />
-            <figcaption data-fr>Mode adaptatif — la musique suit l’allure</figcaption>
-            <figcaption data-en>Adaptive mode — music follows your pace</figcaption>
+            <figcaption data-fr>Mode adaptatif — allure live et matching</figcaption>
+            <figcaption data-en>Adaptive mode — live pace and matching</figcaption>
           </figure>
           <figure>
             <img src="../images/beatonstep/site-screenshot-fixed.png" width="390" height="844" alt="BeatOnStep — mode fixe" loading="lazy" />
-            <figcaption data-fr>Mode fixe — tu règles la cible</figcaption>
-            <figcaption data-en>Fixed mode — you set the target</figcaption>
+            <figcaption data-fr>Mode fixe — cible PPM / min·km</figcaption>
+            <figcaption data-en>Fixed mode — SPM / min·km target</figcaption>
           </figure>
           <figure>
             <img src="../images/beatonstep/site-screenshot-library.png" width="390" height="844" alt="BeatOnStep — bibliothèque" loading="lazy" />
-            <figcaption data-fr>Bibliothèque — mix démo et fichiers</figcaption>
-            <figcaption data-en>Library — demo mix and files</figcaption>
+            <figcaption data-fr>Bibliothèque — mix embarqué et imports</figcaption>
+            <figcaption data-en>Library — bundled mix and imports</figcaption>
           </figure>
           <figure>
             <img src="../images/beatonstep/site-screenshot-settings.png" width="390" height="844" alt="BeatOnStep — réglages" loading="lazy" />
@@ -289,30 +276,50 @@
             <figcaption data-en>Settings — stride, sources, tolerance</figcaption>
           </figure>
         </div>
-        <p class="job-link" style="margin-top: 1.25rem">
-          <a href="https://rafa-create.github.io/beatonstep-website/" rel="noopener noreferrer" target="_blank" data-fr>Explications complètes sur le site BeatOnStep →</a>
-          <a href="https://rafa-create.github.io/beatonstep-website/" rel="noopener noreferrer" target="_blank" data-en>Full walkthrough on the BeatOnStep site →</a>
-        </p>
       </section>
     </div>
 
     <div class="rail">
-      <section class="section contact" id="try">
+      <section class="section" id="tech">
         <div class="section-head">
-          <p class="eyebrow" data-fr>En savoir plus</p>
-          <p class="eyebrow" data-en>Learn more</p>
-          <h2 data-fr>Téléchargement et détails</h2>
-          <h2 data-en>Download and details</h2>
-          <p class="lede tight" data-fr>
-            Android, iOS, captures et mode d’emploi — tout est sur le site BeatOnStep.
-          </p>
-          <p class="lede tight" data-en>
-            Android, iOS, screenshots and how-to — all on the BeatOnStep site.
-          </p>
+          <p class="eyebrow" data-fr>05 · Stack</p>
+          <p class="eyebrow" data-en>05 · Stack</p>
+          <h2 data-fr>Technologies</h2>
+          <h2 data-en>Technologies</h2>
         </div>
-        <div class="cta-row">
-          <a class="btn btn-solid" href="https://rafa-create.github.io/beatonstep-website/" rel="noopener noreferrer" target="_blank" data-fr>Site BeatOnStep →</a>
-          <a class="btn btn-solid" href="https://rafa-create.github.io/beatonstep-website/" rel="noopener noreferrer" target="_blank" data-en>BeatOnStep site →</a>
+        <p class="rover-stack">
+          Expo · React Native · TypeScript · Android · iOS · capteurs · analyse BPM · deep links
+        </p>
+        <p data-fr>
+          Développement solo de bout en bout : UI mobile, pipeline capteurs → matching,
+          gestion des sources audio et publication sur les stores.
+        </p>
+        <p data-en>
+          End-to-end solo development: mobile UI, sensor → matching pipeline,
+          audio source handling, and store releases.
+        </p>
+        <ul class="project-bullets">
+          <li data-fr>App cross-platform Expo (Android &amp; iOS)</li>
+          <li data-en>Cross-platform Expo app (Android &amp; iOS)</li>
+          <li data-fr>Matching PPM ↔ BPM avec modes adaptatif et fixe</li>
+          <li data-en>SPM ↔ BPM matching with adaptive and fixed modes</li>
+          <li data-fr>Analyse BPM des fichiers locaux importés</li>
+          <li data-en>BPM analysis for imported local files</li>
+          <li data-fr>Mix démo embarqué, crédits musique et politique de confidentialité</li>
+          <li data-en>Bundled demo mix, music credits and privacy policy</li>
+          <li data-fr>Site produit public séparé (GitHub Pages)</li>
+          <li data-en>Separate public product site (GitHub Pages)</li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="rail">
+      <section class="section">
+        <div class="contact-row">
+          <a class="contact-item" href="../#projects" data-fr>← Accueil</a>
+          <a class="contact-item" href="../#projects" data-en>← Home</a>
+          <a class="contact-item" href="https://rafa-create.github.io/beatonstep-website/" rel="noopener noreferrer" target="_blank" data-fr>Site produit →</a>
+          <a class="contact-item" href="https://rafa-create.github.io/beatonstep-website/" rel="noopener noreferrer" target="_blank" data-en>Product site →</a>
         </div>
       </section>
     </div>
