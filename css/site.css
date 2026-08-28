@@ -737,6 +737,15 @@ main {
   gap: 1rem;
 }
 
+.home-projects-grid > li {
+  display: flex;
+  min-width: 0;
+}
+
+.home-projects-grid .home-project-card {
+  flex: 1;
+}
+
 .home-project-card {
   display: grid;
   gap: 0;
@@ -795,22 +804,6 @@ main {
   margin: 0;
   color: var(--ink-soft);
   font-size: 0.94rem;
-}
-
-.home-project-more {
-  margin: 0.55rem 0 0;
-  padding: 0 0.1rem;
-}
-
-.home-project-more a {
-  font-weight: 600;
-  color: var(--accent-deep);
-  text-decoration: none;
-  border-bottom: 1px solid currentColor;
-}
-
-.home-project-more a:hover {
-  color: var(--ink);
 }
 
 .edu-project-spotlight {
@@ -2578,6 +2571,13 @@ main {
   }
 }
 
+@media (min-width: 720px) {
+  .home-projects-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.15rem;
+  }
+}
+
 @media (min-width: 900px) {
   .hero {
     min-height: auto;
@@ -2654,11 +2654,6 @@ main {
 
   .journey-step h3 {
     font-size: 1.32rem;
-  }
-
-  .home-projects-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1.15rem;
   }
 
   .home-formation-grid {
