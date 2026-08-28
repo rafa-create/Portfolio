@@ -18,6 +18,7 @@
 # Local export scratch
 images/bike-shelter/slides/_raw/
 assets-src/
+docs/dc-media/
 
 # OS / editor
 .DS_Store
