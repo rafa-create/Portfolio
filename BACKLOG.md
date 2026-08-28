@@ -65,7 +65,7 @@ Référence : audit contenu orienté chasseur de têtes. Le site vise la **visib
 
 **Constat :** passages trop perso / informels pour un lecteur corporate.
 
-**Décision :** ✅ **À faire**
+**Décision :** ✅ **Fait**
 
 **Actions ciblées :**
 | Zone | Problème | Correction |
