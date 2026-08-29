@@ -339,73 +339,30 @@
     </div>
   </footer>
 
+  <script src="../js/slideshow.js"></script>
   <script>
     document.getElementById("y").textContent = String(new Date().getFullYear());
 
-    (function () {
-      var sets = {
-        parafoudre: [
-          {
-            src: "../images/insolem/parafoudre-strategy.png",
-            fr: "Stratégie — simulation Python/Octave → algo C → validation → MCU",
-            en: "Strategy — Python/Octave simulation → C algo → validation → MCU"
-          },
-          {
-            src: "../images/insolem/j-probe-interface.png",
-            fr: "Interface J-Probe V1.0 — banc parafoudre haute tension",
-            en: "J-Probe V1.0 interface — HV surge arrester bench"
-          }
-        ],
-        hardware: [
-          { src: "../images/insolem/tracker-motor.jpg", fr: "Moteur du tracker", en: "Tracker motor" },
-          { src: "../images/insolem/motor-schematic.jpg", fr: "Schémas du moteur", en: "Motor schematics" },
-          { src: "../images/insolem/prototype-bench.jpg", fr: "Banc de test — Nucleo + cartes Insolem + GPS", en: "Test bench — Nucleo + Insolem boards + GPS" },
-          { src: "../images/insolem/board-layout.png", fr: "Layout carte finale (STM32 + annexe)", en: "Final board layout (STM32 + annex)" }
-        ]
-      };
-
-      function bind(root, slides) {
-        var img = root.querySelector("[data-slide-img]");
-        var cap = root.querySelector("[data-slide-cap]");
-        var dots = root.querySelector("[data-slide-dots]");
-        var i = 0;
-
-        function lang() {
-          return document.documentElement.lang === "en" ? "en" : "fr";
+    initSlideshows({
+      parafoudre: [
+        {
+          src: "../images/insolem/parafoudre-strategy.png",
+          fr: "Stratégie — simulation Python/Octave → algo C → validation → MCU",
+          en: "Strategy — Python/Octave simulation → C algo → validation → MCU"
+        },
+        {
+          src: "../images/insolem/j-probe-interface.png",
+          fr: "Interface J-Probe V1.0 — banc parafoudre haute tension",
+          en: "J-Probe V1.0 interface — HV surge arrester bench"
         }
-
-        function show(n) {
-          i = (n + slides.length) % slides.length;
-          var s = slides[i];
-          img.src = s.src;
-          img.alt = s[lang()];
-          cap.textContent = s[lang()];
-          dots.querySelectorAll("button").forEach(function (b, idx) {
-            b.setAttribute("aria-selected", idx === i ? "true" : "false");
-          });
-        }
-
-        slides.forEach(function (_, idx) {
-          var b = document.createElement("button");
-          b.type = "button";
-          b.setAttribute("aria-label", "Slide " + (idx + 1));
-          b.addEventListener("click", function () { show(idx); });
-          dots.appendChild(b);
-        });
-
-        root.querySelector("[data-slide-prev]").addEventListener("click", function () { show(i - 1); });
-        root.querySelector("[data-slide-next]").addEventListener("click", function () { show(i + 1); });
-        document.querySelectorAll(".lang button").forEach(function (b) {
-          b.addEventListener("click", function () { show(i); });
-        });
-        show(0);
-      }
-
-      document.querySelectorAll("[data-slideshow]").forEach(function (root) {
-        var key = root.getAttribute("data-slideshow");
-        if (sets[key]) bind(root, sets[key]);
-      });
-    })();
+      ],
+      hardware: [
+        { src: "../images/insolem/tracker-motor.jpg", fr: "Moteur du tracker", en: "Tracker motor" },
+        { src: "../images/insolem/motor-schematic.jpg", fr: "Schémas du moteur", en: "Motor schematics" },
+        { src: "../images/insolem/prototype-bench.jpg", fr: "Banc de test — Nucleo + cartes Insolem + GPS", en: "Test bench — Nucleo + Insolem boards + GPS" },
+        { src: "../images/insolem/board-layout.png", fr: "Layout carte finale (STM32 + annexe)", en: "Final board layout (STM32 + annex)" }
+      ]
+    });
   </script>
 </body>
 </html>

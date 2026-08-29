@@ -524,68 +524,25 @@
     </div>
   </footer>
 
+  <script src="../js/slideshow.js"></script>
   <script>
     document.getElementById("y").textContent = String(new Date().getFullYear());
 
-    (function () {
-      var sets = {
-        design: [
-          { src: "../images/bike-shelter/slides/slide-03.jpg", fr: "L’abri Brabois — structure bois et panneaux solaires", en: "Brabois shelter — timber structure and solar panels" },
-          { src: "../images/bike-shelter/slides/slide-04.jpg", fr: "Implanté sur le campus", en: "Sited on campus" },
-          { src: "../images/bike-shelter/slides/slide-05.jpg", fr: "Racks double niveau", en: "Two-tier racks" },
-          { src: "../images/bike-shelter/slides/slide-06.jpg", fr: "Mécanisme de verrouillage", en: "Locking mechanism" },
-          { src: "../images/bike-shelter/slides/slide-07.jpg", fr: "Emprise · 16 places · 594 × 390 cm", en: "Footprint · 16 spots · 594 × 390 cm" }
-        ],
-        hardware: [
-          { src: "../images/bike-shelter/locks-module.jpg", fr: "Montage test : module de quatre verrous", en: "Test setup: four-lock module" },
-          { src: "../images/bike-shelter/locks.jpg", fr: "Module : Arduino + XBee, relais, 4 serrures", en: "Module: Arduino + XBee, relay, four locks" },
-          { src: "../images/bike-shelter/rfid.jpg", fr: "Lecteur RFID/NFC PN532", en: "PN532 RFID/NFC reader" },
-          { src: "../images/bike-shelter/pi-xbee.jpg", fr: "Raspberry Pi 4 + XBee Digi S2C", en: "Raspberry Pi 4 + Digi XBee S2C" }
-        ]
-      };
-
-      function bind(root, slides) {
-        var img = root.querySelector("[data-slide-img]");
-        var cap = root.querySelector("[data-slide-cap]");
-        var dots = root.querySelector("[data-slide-dots]");
-        var i = 0;
-
-        function lang() {
-          return document.documentElement.lang === "en" ? "en" : "fr";
-        }
-
-        function show(n) {
-          i = (n + slides.length) % slides.length;
-          var s = slides[i];
-          img.src = s.src;
-          img.alt = s[lang()];
-          cap.textContent = s[lang()];
-          dots.querySelectorAll("button").forEach(function (b, idx) {
-            b.setAttribute("aria-selected", idx === i ? "true" : "false");
-          });
-        }
-
-        slides.forEach(function (_, idx) {
-          var b = document.createElement("button");
-          b.type = "button";
-          b.setAttribute("aria-label", "Slide " + (idx + 1));
-          b.addEventListener("click", function () { show(idx); });
-          dots.appendChild(b);
-        });
-
-        root.querySelector("[data-slide-prev]").addEventListener("click", function () { show(i - 1); });
-        root.querySelector("[data-slide-next]").addEventListener("click", function () { show(i + 1); });
-        document.querySelectorAll(".lang button").forEach(function (b) {
-          b.addEventListener("click", function () { show(i); });
-        });
-        show(0);
-      }
-
-      document.querySelectorAll("[data-slideshow]").forEach(function (root) {
-        var key = root.getAttribute("data-slideshow");
-        if (sets[key]) bind(root, sets[key]);
-      });
-    })();
+    initSlideshows({
+      design: [
+        { src: "../images/bike-shelter/slides/slide-03.jpg", fr: "L’abri Brabois — structure bois et panneaux solaires", en: "Brabois shelter — timber structure and solar panels" },
+        { src: "../images/bike-shelter/slides/slide-04.jpg", fr: "Implanté sur le campus", en: "Sited on campus" },
+        { src: "../images/bike-shelter/slides/slide-05.jpg", fr: "Racks double niveau", en: "Two-tier racks" },
+        { src: "../images/bike-shelter/slides/slide-06.jpg", fr: "Mécanisme de verrouillage", en: "Locking mechanism" },
+        { src: "../images/bike-shelter/slides/slide-07.jpg", fr: "Emprise · 16 places · 594 × 390 cm", en: "Footprint · 16 spots · 594 × 390 cm" }
+      ],
+      hardware: [
+        { src: "../images/bike-shelter/locks-module.jpg", fr: "Montage test : module de quatre verrous", en: "Test setup: four-lock module" },
+        { src: "../images/bike-shelter/locks.jpg", fr: "Module : Arduino + XBee, relais, 4 serrures", en: "Module: Arduino + XBee, relay, four locks" },
+        { src: "../images/bike-shelter/rfid.jpg", fr: "Lecteur RFID/NFC PN532", en: "PN532 RFID/NFC reader" },
+        { src: "../images/bike-shelter/pi-xbee.jpg", fr: "Raspberry Pi 4 + XBee Digi S2C", en: "Raspberry Pi 4 + Digi XBee S2C" }
+      ]
+    });
 
     (function bikeDemoSelect() {
       var select = document.getElementById("bike-demo-select");

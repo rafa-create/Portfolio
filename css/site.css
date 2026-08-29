@@ -3250,6 +3250,7 @@ main :is(p, li) a:not([class]):hover {
   grid-template-columns: auto 1fr auto;
   gap: 0.5rem;
   align-items: center;
+  touch-action: pan-y pinch-zoom;
 }
 
 .slide-frame {
@@ -3321,6 +3322,11 @@ main :is(p, li) a:not([class]):hover {
 @media (max-width: 640px) {
   .slide-stage {
     grid-template-columns: 1fr;
+    cursor: grab;
+  }
+
+  .slide-stage:active {
+    cursor: grabbing;
   }
 
   .slide-nav {
