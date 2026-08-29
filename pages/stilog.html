@@ -90,7 +90,13 @@
             height="300"
             alt=""
           />
-          <p class="hero-brand">Stilog I.S.T. · Safran</p>
+          <p class="hero-brand">
+            <a class="hero-brand-link" href="https://stilog.com/fr/" rel="noopener noreferrer" target="_blank" data-fr>Stilog I.S.T.</a>
+            <a class="hero-brand-link" href="https://stilog.com/en/" rel="noopener noreferrer" target="_blank" data-en>Stilog I.S.T.</a>
+            ·
+            <a class="hero-brand-link" href="https://stilog.com/fr/stilog-i-s-t-honoree-pour-ses-prestations-exceptionnelles/" rel="noopener noreferrer" target="_blank" data-fr>Safran</a>
+            <a class="hero-brand-link" href="https://stilog.com/en/stilog-honoured-for-outstanding-performance/" rel="noopener noreferrer" target="_blank" data-en>Safran</a>
+          </p>
         </div>
         <h1 data-fr>Ingénieur développement<br /><em>logiciel scientifique</em></h1>
         <h1 data-en>Software engineer<br /><em>scientific computing</em></h1>
@@ -132,6 +138,10 @@
           calculation outputs feed sizing of new turbomachinery. I also shipped modules on
           other workstreams — job queues, curve smoothing, section editing, and blade fatigue analysis.
         </p>
+        <p class="job-link">
+          <a href="https://stilog.com/fr/stilog-i-s-t-honoree-pour-ses-prestations-exceptionnelles/" rel="noopener noreferrer" target="_blank" data-fr>Supplier Performance 2023 — Safran Aircraft Engines →</a>
+          <a href="https://stilog.com/en/stilog-honoured-for-outstanding-performance/" rel="noopener noreferrer" target="_blank" data-en>Supplier Performance 2023 — Safran Aircraft Engines →</a>
+        </p>
         <p class="muted" data-fr>
           Je ne peux pas entrer davantage dans le détail sur cette page : la confidentialité client m’y oblige.
         </p>
@@ -157,7 +167,11 @@
             Fatigue LCF : durée de vie, marge de sécurité consommée, fluage à 1&nbsp;% et risque
             de rupture à partir des maillages d’aubages et des données issues de l’IHM
           </li>
-          <li>Module de récupération de calculs relié au solveur ONERA, bases Oracle et serveurs de stockage</li>
+          <li>
+            Récupération et mise en données des résultats du solveur
+            <a href="https://www.onera.fr/fr/pepites/la-plateforme-logicielle-de-simulation-aerodynamique-de-reference" rel="noopener noreferrer" target="_blank">elsA</a>
+            (ONERA) — Oracle, stockage
+          </li>
           <li>APIs pour lancer des recherches SQL par batch sur le supercalculateur</li>
         </ul>
         <ul class="project-bullets" data-en>
@@ -168,7 +182,11 @@
             LCF fatigue: life estimate, consumed safety margin, 1% creep and rupture risk from
             blade meshes and UI-supplied data
           </li>
-          <li>Calculation retrieval module tied to the ONERA solver, Oracle databases and storage servers</li>
+          <li>
+            Retrieval and data prep of
+            <a href="https://www.onera.fr/fr/pepites/la-plateforme-logicielle-de-simulation-aerodynamique-de-reference" rel="noopener noreferrer" target="_blank">elsA</a>
+            (ONERA) solver outputs — Oracle, storage
+          </li>
           <li>APIs to run batch SQL queries on the supercomputer</li>
         </ul>
       </section>
@@ -190,8 +208,8 @@
             alt="Équipe Stilog lors d’une sortie escape game"
             loading="lazy"
           />
-          <figcaption data-fr>Équipe Stilog — Immersion, La Ciotat</figcaption>
-          <figcaption data-en>Stilog team — Immersion, La Ciotat</figcaption>
+          <figcaption data-fr>Équipe Stilog — escape game Immersion · La Ciotat</figcaption>
+          <figcaption data-en>Stilog team — Immersion escape game · La Ciotat</figcaption>
         </figure>
       </section>
     </div>
@@ -204,12 +222,42 @@
           <h2 data-fr>Stack</h2>
           <h2 data-en>Stack</h2>
         </div>
-        <p class="tech">Python · NumPy · SciPy · Matplotlib · SQL · Oracle · Linux · Bash · Git · VS Code</p>
+        <div class="stack-groups">
+          <div class="stack-group">
+            <p class="stack-group-label" data-fr>Projet principal</p>
+            <p class="stack-group-label" data-en>Main project</p>
+            <ul class="home-skills-tags">
+              <li>Python</li>
+              <li>PyQt</li>
+              <li>NumPy</li>
+              <li>SciPy</li>
+              <li>Matplotlib</li>
+            </ul>
+          </div>
+          <div class="stack-group">
+            <p class="stack-group-label" data-fr>Données &amp; serveur</p>
+            <p class="stack-group-label" data-en>Data &amp; server</p>
+            <ul class="home-skills-tags">
+              <li>SQL</li>
+              <li>Oracle</li>
+              <li>Linux</li>
+              <li>Bash</li>
+            </ul>
+          </div>
+          <div class="stack-group">
+            <p class="stack-group-label" data-fr>Outils</p>
+            <p class="stack-group-label" data-en>Tools</p>
+            <ul class="home-skills-tags">
+              <li>Git</li>
+              <li>VS Code</li>
+            </ul>
+          </div>
+        </div>
         <p class="muted" data-fr>
-          Environnement Linux · accès supercalculateur pour les campagnes de calcul aérodynamique.
+          Client lourd PyQt · Linux pour l’accès serveur.
         </p>
         <p class="muted" data-en>
-          Linux environment · supercomputer access for aerodynamic calculation campaigns.
+          PyQt thick client · Linux for server access.
         </p>
         <div class="contact-row">
           <a class="contact-item" href="../#experience" data-fr>← Parcours</a>

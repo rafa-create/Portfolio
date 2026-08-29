@@ -2237,6 +2237,27 @@ main {
   max-width: 40rem;
 }
 
+.stack-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0 0 1rem;
+  max-width: 44rem;
+}
+
+.stack-group-label {
+  margin: 0 0 0.45rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent-deep);
+}
+
+.stack-group .home-skills-tags {
+  margin: 0;
+}
+
 .insolem-tech {
   margin-top: 1.25rem;
 }
@@ -2934,6 +2955,18 @@ main {
 
 .hero-stage .hero-brand {
   color: #f3efe6;
+}
+
+.hero-brand-link {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: rgba(243, 239, 230, 0.45);
+  text-underline-offset: 0.15em;
+}
+
+.hero-brand-link:hover {
+  color: #fff;
+  text-decoration-color: currentColor;
 }
 
 .hero-stage h1 {
