@@ -2237,6 +2237,27 @@ main {
   max-width: 40rem;
 }
 
+.stack-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0 0 1rem;
+  max-width: 44rem;
+}
+
+.stack-group-label {
+  margin: 0 0 0.45rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent-deep);
+}
+
+.stack-group .home-skills-tags {
+  margin: 0;
+}
+
 .insolem-tech {
   margin-top: 1.25rem;
 }
