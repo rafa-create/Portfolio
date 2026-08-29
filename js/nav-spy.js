@@ -1,4 +1,20 @@
 (function () {
+  (function homeScrollTop() {
+    if ("scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
+
+    function scrollToTopIfNeeded() {
+      if (!document.body.classList.contains("is-home") || location.hash) return;
+      window.scrollTo(0, 0);
+    }
+
+    scrollToTopIfNeeded();
+    window.addEventListener("pageshow", function (e) {
+      if (e.persisted) scrollToTopIfNeeded();
+    });
+  })();
+
   function sectionIdsFromNav() {
     var ids = [];
     var seen = {};

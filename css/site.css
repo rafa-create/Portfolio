@@ -515,17 +515,19 @@ main {
 }
 
 .pillars li {
-  padding: 1rem 1.05rem;
-  border: 1px solid var(--line);
-  border-left: 3px solid var(--accent-deep);
-  background: rgba(255, 255, 255, 0.38);
+  padding: 0;
+  border: none;
+  background: none;
   display: grid;
   gap: 0.3rem;
+  cursor: default;
 }
 
 .pillars strong {
   font-family: var(--display);
-  font-size: 1.08rem;
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--accent-deep);
 }
 
 .pillars span {
@@ -1186,16 +1188,22 @@ main {
   user-select: none;
 }
 
+.text-link,
 .job-link a,
-.project-link {
+.project-link,
+.edu-uc-verify > a,
+main :is(p, li) a:not([class]) {
   color: var(--accent-deep);
   font-weight: 600;
   text-decoration: none;
   border-bottom: 1px solid currentColor;
 }
 
+.text-link:hover,
 .job-link a:hover,
-.project-link:hover {
+.project-link:hover,
+.edu-uc-verify > a:hover,
+main :is(p, li) a:not([class]):hover {
   color: var(--ink);
 }
 
@@ -1483,15 +1491,7 @@ main {
 
 .edu-uc-verify > a {
   font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--accent-deep);
-  text-decoration: none;
-  border-bottom: 1px solid currentColor;
   width: fit-content;
-}
-
-.edu-uc-verify > a:hover {
-  color: var(--ink);
 }
 
 .edu-uc-cred-row {
@@ -2728,15 +2728,11 @@ main {
 
   .pillars {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1rem;
-  }
-
-  .pillars li {
-    padding: 1.15rem 1.1rem 1.2rem;
+    gap: 1.5rem;
   }
 
   .pillars strong {
-    font-size: 1.12rem;
+    font-size: 1.06rem;
   }
 
   .job {
