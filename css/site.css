@@ -1186,16 +1186,22 @@ main {
   user-select: none;
 }
 
+.text-link,
 .job-link a,
-.project-link {
+.project-link,
+.edu-uc-verify > a,
+main :is(p, li) a:not([class]) {
   color: var(--accent-deep);
   font-weight: 600;
   text-decoration: none;
   border-bottom: 1px solid currentColor;
 }
 
+.text-link:hover,
 .job-link a:hover,
-.project-link:hover {
+.project-link:hover,
+.edu-uc-verify > a:hover,
+main :is(p, li) a:not([class]):hover {
   color: var(--ink);
 }
 
@@ -1483,15 +1489,7 @@ main {
 
 .edu-uc-verify > a {
   font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--accent-deep);
-  text-decoration: none;
-  border-bottom: 1px solid currentColor;
   width: fit-content;
-}
-
-.edu-uc-verify > a:hover {
-  color: var(--ink);
 }
 
 .edu-uc-cred-row {
