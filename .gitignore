@@ -19,6 +19,13 @@
 images/bike-shelter/slides/_raw/
 assets-src/
 docs/dc-media/
+docs/*-extract.txt
+docs/stage_TI_2014/_extract.txt
+docs/stage_TI_2014/_media/
+images/insolem/_extract/
+# Raw docx exports (curated copies are ti-logo.png, organigramme-eti.png, etc.)
+images/stage-ti/image*.png
+images/stage-ti/image*.gif
 
 # OS / editor
 .DS_Store
