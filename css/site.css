@@ -4134,3 +4134,79 @@ main :is(p, li) a:not([class]):hover {
     align-items: start;
   }
 }
+
+/* ── Interactive orbital simulation on the More page ── */
+.sim3d-figure {
+  min-width: 0;
+  margin: 1.2rem 0 0.85rem;
+}
+
+.sim3d-figure canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--line);
+  border-radius: 0.8rem;
+  background: #0d1826;
+  cursor: grab;
+  touch-action: none;
+}
+
+.sim3d-figure canvas:active {
+  cursor: grabbing;
+}
+
+.sim3d-figure canvas:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.sim3d-figure figcaption {
+  margin-top: 0.55rem;
+  font-size: 0.86rem;
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+
+.sim3d-controls {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.65rem 1rem;
+}
+
+.interests-content .sim3d-controls .btn {
+  margin: 0;
+}
+
+.sim3d-speed {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+
+.sim3d-speed input {
+  width: clamp(7rem, 24vw, 12rem);
+  accent-color: var(--accent-deep);
+  cursor: pointer;
+}
+
+.sim3d-speed output {
+  min-width: 2.7rem;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 480px) {
+  .sim3d-controls {
+    align-items: flex-start;
+  }
+
+  .sim3d-speed {
+    flex-basis: 100%;
+  }
+}
