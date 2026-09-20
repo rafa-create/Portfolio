@@ -277,6 +277,56 @@
         </div>
       </section>
 
+      <!-- Interactive 3D orbital demonstration -->
+      <section class="section interests-block" id="simulation-3d">
+        <div class="interests-icon" aria-hidden="true">🪐</div>
+        <div class="interests-content">
+          <div class="section-head interests-head">
+            <p class="eyebrow" data-fr>Explorer &amp; expérimenter</p>
+            <p class="eyebrow" data-en>Explore &amp; experiment</p>
+            <h2 data-fr>Simulation 3D</h2>
+            <h2 data-en>3D simulation</h2>
+          </div>
+          <p data-fr>
+            Une petite scène interactive de trajectoires orbitales en trois dimensions.
+            Faites pivoter la vue, ajustez la vitesse ou mettez le mouvement en pause.
+            Les orbites sont volontairement simplifiées : ce n’est pas un modèle astronomique à l’échelle.
+          </p>
+          <p data-en>
+            An interactive scene of orbital paths in three dimensions.
+            Rotate the view, adjust the speed, or pause the movement.
+            The orbits are deliberately simplified: this is not a scale-accurate astronomical model.
+          </p>
+          <figure class="sim3d-figure">
+            <canvas id="sim3d-canvas" width="960" height="540" tabindex="0"
+              aria-label="Simulation orbitale 3D interactive / Interactive 3D orbital simulation">
+              <span data-fr>Votre navigateur ne prend pas en charge cette simulation sur canvas.</span>
+              <span data-en>Your browser does not support this canvas simulation.</span>
+            </canvas>
+            <figcaption data-fr>Glissez pour orienter la caméra · au clavier, utilisez les flèches après avoir sélectionné la scène.</figcaption>
+            <figcaption data-en>Drag to rotate the camera · with a keyboard, focus the scene and use the arrow keys.</figcaption>
+          </figure>
+          <div class="sim3d-controls">
+            <button class="btn btn-line" id="sim3d-toggle" type="button">
+              <span data-fr>Pause</span><span data-en>Pause</span>
+            </button>
+            <button class="btn btn-line" id="sim3d-reset" type="button">
+              <span data-fr>Réinitialiser</span><span data-en>Reset</span>
+            </button>
+            <div class="sim3d-speed">
+              <label for="sim3d-speed" data-fr>Vitesse</label>
+              <label for="sim3d-speed" data-en>Speed</label>
+              <input id="sim3d-speed" type="range" min="0.25" max="3" step="0.25" value="1" />
+              <output id="sim3d-speed-value" for="sim3d-speed">1×</output>
+            </div>
+          </div>
+          <noscript>
+            <p data-fr>Activez JavaScript pour afficher la simulation interactive.</p>
+            <p data-en>Enable JavaScript to view the interactive simulation.</p>
+          </noscript>
+        </div>
+      </section>
+
       <section class="section interests-more" aria-label="Autres activités">
         <p class="eyebrow" data-fr>Aussi</p>
         <p class="eyebrow" data-en>Also</p>
@@ -319,6 +369,7 @@
     </div>
   </footer>
 
+  <script src="../js/orbit-simulation.js" defer></script>
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
     document.querySelectorAll(".edu-video-disclosure").forEach(function (details) {
