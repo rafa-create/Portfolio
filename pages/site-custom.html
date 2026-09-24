@@ -4,11 +4,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Site Custom — Rafael Orset</title>
-  <meta name="description" content="Site Custom : création de démonstrations de sites vitrines pour restaurants indépendants, avec trois ambiances et un configurateur de tarifs." />
+  <meta name="description" content="Site Custom : génération de démos non officielles de sites restaurants via GitHub Actions, quatre styles visuels, configurateur de tarifs et architecture Cloudflare." />
   <link rel="canonical" href="https://rafa-create.github.io/Portfolio/pages/site-custom.html" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Site Custom — Rafael Orset" />
-  <meta property="og:description" content="Site Custom: a project for restaurant website demos, with three design directions and a pricing configurator." />
+  <meta property="og:description" content="Site Custom: generation of unofficial restaurant website demos through GitHub Actions, four visual styles, pricing configurator and Cloudflare architecture." />
   <meta property="og:url" content="https://rafa-create.github.io/Portfolio/pages/site-custom.html" />
   <meta property="og:image" content="https://rafa-create.github.io/Portfolio/images/site-custom/preview.svg" />
   <meta name="theme-color" content="#1a2332" />
@@ -26,8 +26,8 @@
       en: "Site Custom — Rafael Orset"
     };
     window.PORT_DESC = {
-      fr: "Site Custom : création de démonstrations de sites vitrines pour restaurants indépendants, avec trois ambiances et un configurateur de tarifs.",
-      en: "Site Custom: a project for restaurant website demos, with three design directions and a pricing configurator."
+      fr: "Site Custom : génération de démos non officielles de sites restaurants via GitHub Actions, quatre styles visuels, configurateur de tarifs et architecture Cloudflare.",
+      en: "Site Custom: generation of unofficial restaurant website demos through GitHub Actions, four visual styles, pricing configurator and Cloudflare architecture."
     };
   </script>
   <script src="../js/i18n.js"></script>
@@ -80,130 +80,174 @@
         <img src="../images/site-custom/preview.svg" width="1200" height="720" alt="" />
       </div>
       <div class="hero-stage-copy rail">
-        <p class="hero-brand">Site Custom · Web</p>
-        <h1 data-fr>Des sites vitrines<br /><em>pour restaurants indépendants</em></h1>
-        <h1 data-en>Custom websites<br /><em>for independent restaurants</em></h1>
-        <p class="lede" data-fr>Un projet de génération de démonstrations de sites restaurants, avec une vitrine bilingue, plusieurs ambiances graphiques et un parcours de demande de démo.</p>
-        <p class="lede" data-en>A project for generating restaurant website demos, with a bilingual showcase, several visual styles and a demo request journey.</p>
+        <p class="hero-brand">Site Custom · Génération web</p>
+        <h1 data-fr>Un lien restaurant,<br /><em>une démo prête à montrer</em></h1>
+        <h1 data-en>A restaurant link,<br /><em>a demo ready to review</em></h1>
+        <p class="lede" data-fr>Un workflow pour générer et publier une démo non officielle de site restaurant à partir d’un site public ou d’un lien Google Maps, puis préparer le suivi commercial.</p>
+        <p class="lede" data-en>A workflow that generates and publishes an unofficial restaurant website demo from a public website or Google Maps link, then prepares the commercial follow-up.</p>
         <div class="cta-row">
-          <a class="btn btn-solid btn-on-dark" href="#examples" data-fr>Voir les démonstrations</a>
-          <a class="btn btn-solid btn-on-dark" href="#examples" data-en>Explore the demos</a>
-          <a class="btn btn-line btn-on-dark" href="https://site-custom.orsetrafael.workers.dev/" target="_blank" rel="noopener noreferrer" data-fr>Voir Site Custom ↗</a>
-          <a class="btn btn-line btn-on-dark" href="https://site-custom.orsetrafael.workers.dev/" target="_blank" rel="noopener noreferrer" data-en>View Site Custom ↗</a>
+          <a class="btn btn-solid btn-on-dark" href="#workflow" data-fr>Voir le workflow</a>
+          <a class="btn btn-solid btn-on-dark" href="#workflow" data-en>See the workflow</a>
+          <a class="btn btn-line btn-on-dark" href="https://site-custom.orsetrafael.workers.dev/" target="_blank" rel="noopener noreferrer">Site Custom ↗</a>
         </div>
       </div>
     </section>
+
     <div class="rail">
       <section class="section" id="overview">
         <div class="section-head">
           <p class="eyebrow" data-fr>01 · Concept</p>
           <p class="eyebrow" data-en>01 · Concept</p>
-          <h2 data-fr>Une vitrine à personnaliser</h2>
-          <h2 data-en>A customizable showcase</h2>
+          <h2 data-fr>Créer une proposition sans copier le restaurant</h2>
+          <h2 data-en>Create a proposal without copying the restaurant</h2>
         </div>
-        <p data-fr>Site Custom vise les petits restaurants indépendants : sa vitrine présente des sites adaptés aux téléphones et un processus qui part d’un aperçu fictif avant de travailler sur des informations et des visuels validés par le restaurateur.</p>
-        <p data-en>Site Custom targets small independent restaurants: its showcase presents mobile-friendly websites and a process that starts with a fictional demo before using information and visuals approved by the restaurant owner.</p>
+        <p data-fr>Site Custom fabrique des démonstrations clairement non officielles. Depuis Google Maps, l’automatisation ne réutilise que le nom de l’établissement : avis, notes, photos, horaires, adresse, téléphone, services et type de cuisine ne sont pas copiés automatiquement.</p>
+        <p data-en>Site Custom creates clearly unofficial demos. From Google Maps, the automation only reuses the establishment name: reviews, ratings, photos, opening hours, address, phone number, services and cuisine type are not automatically copied.</p>
+        <p data-fr>Les contenus illustratifs restent identifiés comme fictifs, les démos sont en <code>noindex, nofollow</code> et les visuels réels doivent être fournis ou autorisés avant une mise en ligne officielle.</p>
+        <p data-en>Illustrative content remains identified as fictional, demos use <code>noindex, nofollow</code>, and real visuals must be supplied or authorized before any official launch.</p>
         <figure class="project-source-visual">
-          <img src="../images/site-custom/preview.svg" width="1200" height="720" alt="Illustration de la vitrine Site Custom avec aperçu fictif du restaurant La petite table." loading="lazy" />
-          <figcaption data-fr>Reconstitution visuelle de la vitrine du dépôt Site_custom et de son aperçu de restaurant fictif « La petite table ».</figcaption>
-          <figcaption data-en>Visual reconstruction of the Site_custom repository showcase and its fictional restaurant preview, “La petite table.”</figcaption>
+          <img src="../images/site-custom/preview.svg" width="1200" height="720" alt="Aperçu illustratif de Site Custom et d’une maquette de restaurant fictive." loading="lazy" />
+          <figcaption data-fr>Aperçu reconstitué à partir de la vitrine et du système de démonstration versionnés dans le dépôt.</figcaption>
+          <figcaption data-en>Preview reconstructed from the showcase and demo system versioned in the repository.</figcaption>
         </figure>
-        <div class="project-actions">
-          <a class="btn btn-solid" href="https://site-custom.orsetrafael.workers.dev/" target="_blank" rel="noopener noreferrer" data-fr>Site Custom ↗</a>
-          <a class="btn btn-solid" href="https://site-custom.orsetrafael.workers.dev/" target="_blank" rel="noopener noreferrer" data-en>Site Custom ↗</a>
-          <a class="btn btn-line" href="https://github.com/rafa-create/Site_custom" target="_blank" rel="noopener noreferrer" data-fr>Code du projet ↗</a>
-          <a class="btn btn-line" href="https://github.com/rafa-create/Site_custom" target="_blank" rel="noopener noreferrer" data-en>Project code ↗</a>
+      </section>
+    </div>
+
+    <div class="rail">
+      <section class="section" id="workflow">
+        <div class="section-head">
+          <p class="eyebrow" data-fr>02 · Workflow</p>
+          <p class="eyebrow" data-en>02 · Workflow</p>
+          <h2 data-fr>Un workflow GitHub Actions pour générer les démos</h2>
+          <h2 data-en>A GitHub Actions workflow to generate demos</h2>
+        </div>
+        <div class="ensem-conseil-points">
+          <article>
+            <h3 data-fr>Mode automatique</h3><h3 data-en>Automatic mode</h3>
+            <p data-fr>Le workflow « Site Custom — URL » reçoit le lien du restaurant et tente les API configurées. Si elles ne répondent pas, une maquette illustrative peut tout de même être créée.</p>
+            <p data-en>The “Site Custom — URL” workflow receives the restaurant link and tries configured APIs. If they are unavailable, it can still create an illustrative mockup.</p>
+          </article>
+          <article>
+            <h3 data-fr>Assistant externe</h3><h3 data-en>External assistant</h3>
+            <p data-fr>Un mode en deux étapes prépare un texte à copier dans un assistant externe, puis importe sa réponse JSON après validation.</p>
+            <p data-en>A two-step mode prepares text for an external assistant, then imports its validated JSON response.</p>
+          </article>
+          <article>
+            <h3 data-fr>Publication &amp; suivi</h3><h3 data-en>Publishing &amp; tracking</h3>
+            <p data-fr>La démo est construite par <code>scripts/build.py</code>, publiée sur le Worker Cloudflare, puis une issue GitHub sert de fiche prospect.</p>
+            <p data-en>The demo is built by <code>scripts/build.py</code>, published on the Cloudflare Worker, and a GitHub issue becomes the prospect record.</p>
+          </article>
+          <article>
+            <h3 data-fr>E-mail prêt à transférer</h3><h3 data-en>Email ready to forward</h3>
+            <p data-fr>Après publication, le système envoie seulement à ma propre boîte Gmail un message déjà rédigé avec le lien de démo. Aucun e-mail n’est envoyé automatiquement au restaurant.</p>
+            <p data-en>After publishing, the system sends only my own Gmail inbox a prepared message containing the demo link. No email is automatically sent to the restaurant.</p>
+          </article>
         </div>
       </section>
     </div>
+
     <div class="rail">
-      <section class="section" id="examples">
+      <section class="section" id="experience">
         <div class="section-head">
-          <p class="eyebrow" data-fr>02 · Démonstrations</p>
-          <p class="eyebrow" data-en>02 · Demos</p>
-          <h2 data-fr>Trois ambiances de restaurant</h2>
-          <h2 data-en>Three restaurant styles</h2>
-          <p class="lede tight" data-fr>Les exemples sont fictifs : ils présentent des directions graphiques, pas des sites clients officiels.</p>
-          <p class="lede tight" data-en>These examples are fictional: they showcase design directions, not official client websites.</p>
+          <p class="eyebrow" data-fr>03 · Expérience</p>
+          <p class="eyebrow" data-en>03 · Experience</p>
+          <h2 data-fr>Vitrine, tarifs et styles testables</h2>
+          <h2 data-en>Showcase, pricing and testable styles</h2>
         </div>
+        <ul class="project-bullets">
+          <li data-fr>Accueil et page tarifs bilingues FR / EN, avec langue mémorisée et partageable dans l’URL.</li>
+          <li data-en>Bilingual FR / EN home and pricing pages, with language persistence and shareable URL state.</li>
+          <li data-fr>Comparatif entre « Site Vitrine » et « Site Autonome », avec durées indicatives de 12, 24 ou 36 mois et récapitulatif copiable.</li>
+          <li data-en>Comparison between “Site Vitrine” and “Site Autonome”, with indicative 12, 24 or 36 month durations and a copyable summary.</li>
+          <li data-fr>Quatre directions visuelles testables sur une même démo : chaleureux, élégant, dynamique et naturel.</li>
+          <li data-en>Four visual directions can be tried on the same demo: warm, elegant, dynamic and natural.</li>
+          <li data-fr>Le mode « Site Autonome » déverrouille une simulation locale permettant de modifier un plat, une suggestion ou des horaires exceptionnels dans le navigateur uniquement.</li>
+          <li data-en>“Site Autonome” unlocks a local simulation for changing a dish, a daily special or exceptional hours in the browser only.</li>
+          <li data-fr>Chaque démo reçoit un favicon SVG original basé sur les initiales, sans reprendre le logo du restaurant.</li>
+          <li data-en>Each demo receives an original SVG favicon based on initials, without copying the restaurant logo.</li>
+        </ul>
         <div class="project-demo-grid">
           <article class="project-demo-card project-demo-card--bistrot">
             <span class="project-demo-symbol" aria-hidden="true">✦</span>
-            <p class="project-kicker" data-fr>Démo fictive · Bistrot</p><p class="project-kicker" data-en>Fictional demo · Bistro</p>
+            <p class="project-kicker" data-fr>Démo fictive</p><p class="project-kicker" data-en>Fictional demo</p>
             <h3>Bistrot Exemple</h3>
-            <p data-fr>Une table de quartier · convivial &amp; éditorial.</p>
-            <p data-en>A neighborhood restaurant · warm &amp; editorial.</p>
+            <p data-fr>Une table de quartier avec une direction chaleureuse.</p>
+            <p data-en>A neighborhood restaurant with a warm direction.</p>
             <a href="https://site-custom.orsetrafael.workers.dev/demos/bistrot/" target="_blank" rel="noopener noreferrer" data-fr>Voir la démo ↗</a>
             <a href="https://site-custom.orsetrafael.workers.dev/demos/bistrot/" target="_blank" rel="noopener noreferrer" data-en>View demo ↗</a>
           </article>
           <article class="project-demo-card project-demo-card--pizzeria">
             <span class="project-demo-symbol" aria-hidden="true">◉</span>
-            <p class="project-kicker" data-fr>Démo fictive · Pizzeria</p><p class="project-kicker" data-en>Fictional demo · Pizzeria</p>
+            <p class="project-kicker" data-fr>Démo fictive</p><p class="project-kicker" data-en>Fictional demo</p>
             <h3>Pizzeria Démo</h3>
-            <p data-fr>Une ambiance directe &amp; généreuse.</p>
-            <p data-en>A bold &amp; generous atmosphere.</p>
+            <p data-fr>Une direction plus directe et expressive.</p>
+            <p data-en>A more direct and expressive direction.</p>
             <a href="https://site-custom.orsetrafael.workers.dev/demos/pizzeria/" target="_blank" rel="noopener noreferrer" data-fr>Voir la démo ↗</a>
             <a href="https://site-custom.orsetrafael.workers.dev/demos/pizzeria/" target="_blank" rel="noopener noreferrer" data-en>View demo ↗</a>
           </article>
           <article class="project-demo-card project-demo-card--gastro">
             <span class="project-demo-symbol" aria-hidden="true">❋</span>
-            <p class="project-kicker" data-fr>Démo fictive · Gastronomique</p><p class="project-kicker" data-en>Fictional demo · Fine dining</p>
+            <p class="project-kicker" data-fr>Démo fictive</p><p class="project-kicker" data-en>Fictional demo</p>
             <h3>Table Démonstration</h3>
-            <p data-fr>Une direction sobre &amp; raffinée.</p>
-            <p data-en>An understated &amp; refined direction.</p>
+            <p data-fr>Une direction plus sobre et raffinée.</p>
+            <p data-en>A more understated and refined direction.</p>
             <a href="https://site-custom.orsetrafael.workers.dev/demos/gastronomique/" target="_blank" rel="noopener noreferrer" data-fr>Voir la démo ↗</a>
             <a href="https://site-custom.orsetrafael.workers.dev/demos/gastronomique/" target="_blank" rel="noopener noreferrer" data-en>View demo ↗</a>
           </article>
         </div>
       </section>
     </div>
+
     <div class="rail">
-      <section class="section" id="build">
+      <section class="section" id="architecture">
         <div class="section-head">
-          <p class="eyebrow" data-fr>03 · Réalisation</p>
-          <p class="eyebrow" data-en>03 · Build</p>
-          <h2 data-fr>Du modèle à la démo</h2>
-          <h2 data-en>From template to demo</h2>
+          <p class="eyebrow" data-fr>04 · Architecture</p>
+          <p class="eyebrow" data-en>04 · Architecture</p>
+          <h2 data-fr>Génération statique + Worker Cloudflare</h2>
+          <h2 data-en>Static generation + Cloudflare Worker</h2>
         </div>
-        <div class="ensem-conseil-points">
-          <article>
-            <h3 data-fr>Génération de pages</h3><h3 data-en>Page generation</h3>
-            <p data-fr>Templates de restaurant et fiches de démonstration, assemblés par un script Python.</p>
-            <p data-en>Restaurant templates and demo data assembled by a Python build script.</p>
-          </article>
-          <article>
-            <h3 data-fr>Personnalisation visuelle</h3><h3 data-en>Visual customization</h3>
-            <p data-fr>Plusieurs directions graphiques testables sur les démos, sans modifier un site officiel.</p>
-            <p data-en>Multiple design directions to try on demos, without changing any official website.</p>
-          </article>
-          <article>
-            <h3 data-fr>Parcours commercial</h3><h3 data-en>Commercial journey</h3>
-            <p data-fr>Vitrine bilingue, comparateur de formules et configurateur de tarifs sans paiement déclenché.</p>
-            <p data-en>Bilingual showcase, plan comparison and a pricing configurator that does not trigger payments.</p>
-          </article>
-        </div>
+        <p class="rover-stack">Python · HTML · CSS · JavaScript · GitHub Actions · Cloudflare Workers · D1</p>
+        <ul class="project-bullets">
+          <li data-fr>Un template principal de restaurant est assemblé avec des données JSON par le build Python.</li>
+          <li data-en>A main restaurant template is assembled with JSON data by the Python build.</li>
+          <li data-fr>GitHub Actions reconstruit et publie automatiquement la vitrine, les tarifs et les démos existantes à chaque push sur <code>main</code>.</li>
+          <li data-en>GitHub Actions rebuilds and publishes the showcase, pricing page and existing demos on every push to <code>main</code>.</li>
+          <li data-fr>Une base D1 multi-restaurants a été créée et déclarée dans <code>wrangler.toml</code> ; le schéma sépare comptes, restaurants, démos, plats, horaires et contrats.</li>
+          <li data-en>A multi-restaurant D1 database has been created and declared in <code>wrangler.toml</code>; the schema separates accounts, restaurants, demos, dishes, schedules and contracts.</li>
+          <li data-fr>Le Worker réserve <code>/api/*</code> aux contrôles D1 et aux futures fonctions sécurisées.</li>
+          <li data-en>The Worker reserves <code>/api/*</code> for D1 checks and future secured functions.</li>
+        </ul>
       </section>
     </div>
+
     <div class="rail">
       <section class="section" id="status">
         <div class="section-head">
-          <p class="eyebrow" data-fr>04 · Technique et statut</p>
-          <p class="eyebrow" data-en>04 · Tech and status</p>
-          <h2 data-fr>Un projet en développement</h2>
-          <h2 data-en>A project in development</h2>
+          <p class="eyebrow" data-fr>05 · État actuel</p>
+          <p class="eyebrow" data-en>05 · Current status</p>
+          <h2 data-fr>Automatisation en place, parcours client encore contrôlé</h2>
+          <h2 data-en>Automation in place, customer journey still controlled</h2>
         </div>
-        <p class="rover-stack">HTML · CSS · JavaScript · Python · GitHub Actions · Cloudflare Workers · D1 (en préparation)</p>
-        <p data-fr>Le dépôt comprend les modèles de pages, le script de génération et les workflows de publication. Les démonstrations restent non officielles ; les comptes restaurateurs, l’administration persistante et les paiements ne sont pas encore ouverts.</p>
-        <p data-en>The repository includes page templates, a generation script and publishing workflows. The demos remain unofficial; restaurant accounts, persistent administration and payments are not yet available.</p>
+        <p data-fr>Les démos et leur publication sont opérationnelles via les workflows du dépôt. En revanche, aucun compte client, administration persistante ou paiement Stripe n’est ouvert pour le moment.</p>
+        <p data-en>Demo generation and publishing are operational through repository workflows. However, no client account, persistent administration or Stripe payment flow is currently open.</p>
+        <p data-fr>Le dépôt prépare aussi un formulaire public avec Turnstile, une vérification d’e-mail et un workflow de traitement des demandes vérifiées. Ces éléments restent désactivés par défaut tant que les protections anti-abus, les migrations D1 et les obligations de confidentialité ne sont pas validées.</p>
+        <p data-en>The repository also prepares a public form with Turnstile, email verification and a workflow for verified requests. These remain disabled by default until anti-abuse protections, D1 migrations and privacy requirements are validated.</p>
+        <div class="project-actions">
+          <a class="btn btn-solid" href="https://site-custom.orsetrafael.workers.dev/" target="_blank" rel="noopener noreferrer">Site Custom ↗</a>
+          <a class="btn btn-line" href="https://site-custom.orsetrafael.workers.dev/tarifs/" target="_blank" rel="noopener noreferrer" data-fr>Tarifs ↗</a>
+          <a class="btn btn-line" href="https://site-custom.orsetrafael.workers.dev/tarifs/" target="_blank" rel="noopener noreferrer" data-en>Pricing ↗</a>
+          <a class="btn btn-line" href="https://github.com/rafa-create/Site_custom" target="_blank" rel="noopener noreferrer" data-fr>Voir le dépôt ↗</a>
+          <a class="btn btn-line" href="https://github.com/rafa-create/Site_custom" target="_blank" rel="noopener noreferrer" data-en>View repository ↗</a>
+        </div>
       </section>
     </div>
+
     <div class="rail">
       <section class="section">
         <div class="contact-row">
           <a class="contact-item" href="../" data-fr>← Accueil</a>
           <a class="contact-item" href="../" data-en>← Home</a>
-          <a class="contact-item" href="./saas.html" data-fr>RelancePilot →</a>
-          <a class="contact-item" href="./saas.html" data-en>RelancePilot →</a>
+          <a class="contact-item" href="./saas.html">RelancePilot →</a>
         </div>
       </section>
     </div>
