@@ -4,11 +4,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>RelancePilot — projet SaaS — Rafael Orset</title>
-  <meta name="description" content="RelancePilot : projet SaaS de suivi des devis et relances pour les indépendants, avec tableau de bord et quotas." />
+  <meta name="description" content="RelancePilot : MVP SaaS de suivi de devis et relances pour indépendants, avec authentification, quotas, export CSV et architecture Cloudflare Workers / D1." />
   <link rel="canonical" href="https://rafa-create.github.io/Portfolio/pages/saas.html" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="RelancePilot — projet SaaS — Rafael Orset" />
-  <meta property="og:description" content="RelancePilot: an independent-business SaaS project for tracking quotes and follow-ups, with a dashboard and usage tiers." />
+  <meta property="og:description" content="RelancePilot: an experimental SaaS MVP for quote tracking and follow-ups, with authentication, quotas, CSV export and a Cloudflare Workers / D1 architecture." />
   <meta property="og:url" content="https://rafa-create.github.io/Portfolio/pages/saas.html" />
   <meta property="og:image" content="https://rafa-create.github.io/Portfolio/images/saas/preview.svg" />
   <meta name="theme-color" content="#1a2332" />
@@ -26,8 +26,8 @@
       en: "RelancePilot — SaaS project — Rafael Orset"
     };
     window.PORT_DESC = {
-      fr: "RelancePilot : projet SaaS de suivi des devis et relances pour les indépendants, avec tableau de bord et quotas.",
-      en: "RelancePilot: an independent-business SaaS project for tracking quotes and follow-ups, with a dashboard and usage tiers."
+      fr: "RelancePilot : MVP SaaS de suivi de devis et relances pour indépendants, avec authentification, quotas, export CSV et architecture Cloudflare Workers / D1.",
+      en: "RelancePilot: an experimental SaaS MVP for quote tracking and follow-ups, with authentication, quotas, CSV export and a Cloudflare Workers / D1 architecture."
     };
   </script>
   <script src="../js/i18n.js"></script>
@@ -81,80 +81,125 @@
       </div>
       <div class="hero-stage-copy rail">
         <p class="hero-brand">RelancePilot · SaaS</p>
-        <h1 data-fr>Des devis suivis,<br /><em>des relances anticipées</em></h1>
-        <h1 data-en>Track every quote,<br /><em>plan every follow-up</em></h1>
-        <p class="lede" data-fr>Projet SaaS pour les indépendants : centraliser les devis, repérer les relances à prévoir et garder une vue claire sur les opportunités commerciales.</p>
-        <p class="lede" data-en>A SaaS project for independent businesses: organize quotes, spot upcoming follow-ups and keep a clear view of sales opportunities.</p>
+        <h1 data-fr>Suivre les devis,<br /><em>ne plus oublier les relances</em></h1>
+        <h1 data-en>Track quotes,<br /><em>never miss a follow-up</em></h1>
+        <p class="lede" data-fr>Un MVP expérimental pour les indépendants : centraliser les devis, repérer les échéances et préparer les relances sans remplacer le logiciel de facturation existant.</p>
+        <p class="lede" data-en>An experimental MVP for independent businesses: centralize quotes, spot deadlines and prepare follow-ups without replacing the existing invoicing tool.</p>
         <div class="cta-row">
-          <a class="btn btn-solid btn-on-dark" href="#product" data-fr>Découvrir le projet</a>
-          <a class="btn btn-solid btn-on-dark" href="#product" data-en>Explore the project</a>
-          <a class="btn btn-line btn-on-dark" href="https://saas.orsetrafael.workers.dev/" target="_blank" rel="noopener noreferrer" data-fr>Voir le site ↗</a>
-          <a class="btn btn-line btn-on-dark" href="https://saas.orsetrafael.workers.dev/" target="_blank" rel="noopener noreferrer" data-en>View website ↗</a>
+          <a class="btn btn-solid btn-on-dark" href="#features" data-fr>Voir ce qui est développé</a>
+          <a class="btn btn-solid btn-on-dark" href="#features" data-en>See what is built</a>
+          <a class="btn btn-line btn-on-dark" href="https://saas.orsetrafael.workers.dev/" target="_blank" rel="noopener noreferrer" data-fr>Voir la vitrine ↗</a>
+          <a class="btn btn-line btn-on-dark" href="https://saas.orsetrafael.workers.dev/" target="_blank" rel="noopener noreferrer" data-en>View showcase ↗</a>
         </div>
       </div>
     </section>
+
     <div class="rail">
-      <section class="section" id="product">
+      <section class="section" id="overview">
         <div class="section-head">
           <p class="eyebrow" data-fr>01 · Produit</p>
           <p class="eyebrow" data-en>01 · Product</p>
-          <h2>RelancePilot</h2>
+          <h2 data-fr>RelancePilot</h2>
+          <h2 data-en>RelancePilot</h2>
         </div>
-        <p data-fr>RelancePilot est un projet de suivi commercial pour les indépendants. L’interface rassemble les devis, les coordonnées des prospects, les montants, les statuts et les échéances afin de faciliter les relances manuelles.</p>
-        <p data-en>RelancePilot is a sales follow-up project for independent businesses. The interface brings together quotes, prospect details, amounts, statuses and due dates to make manual follow-ups easier.</p>
+        <p data-fr>Le projet aide à suivre les opportunités commerciales : chaque devis peut être retrouvé avec son client, son montant, son statut, ses notes et sa date de relance. Le tableau de bord met en avant les devis en cours, les échéances atteintes, les montants en attente et les devis gagnés.</p>
+        <p data-en>The project helps track sales opportunities: each quote can be found with its customer, amount, status, notes and follow-up date. The dashboard highlights open quotes, due follow-ups, pending amounts and won quotes.</p>
+        <p data-fr>Les relances restent volontaires : l’outil prépare le suivi, mais l’utilisateur envoie ses messages manuellement avec sa messagerie habituelle.</p>
+        <p data-en>Follow-ups remain intentional: the tool organizes the work, while the user sends messages manually through their usual email client.</p>
         <figure class="project-source-visual">
-          <img src="../images/saas/preview.svg" width="1200" height="720" alt="Aperçu illustratif de RelancePilot : page produit et tableau de bord de démonstration avec devis en cours, devis à relancer et liste de prospects." loading="lazy" />
-          <figcaption data-fr>Reconstitution visuelle de l’interface du dépôt SaaS : le tableau de bord et ses données sont illustratifs, pas des résultats clients.</figcaption>
-          <figcaption data-en>Visual reconstruction of the SaaS repository interface: dashboard figures are illustrative, not actual customer results.</figcaption>
+          <img src="../images/saas/preview.svg" width="1200" height="720" alt="Aperçu illustratif de RelancePilot avec tableau de bord de devis et relances." loading="lazy" />
+          <figcaption data-fr>Aperçu reconstitué depuis l’interface versionnée dans le dépôt ; les données affichées sont fictives.</figcaption>
+          <figcaption data-en>Preview reconstructed from the versioned interface; displayed data is fictional.</figcaption>
         </figure>
-        <div class="project-actions">
-          <a class="btn btn-solid" href="https://saas.orsetrafael.workers.dev/" target="_blank" rel="noopener noreferrer" data-fr>Site RelancePilot ↗</a>
-          <a class="btn btn-solid" href="https://saas.orsetrafael.workers.dev/" target="_blank" rel="noopener noreferrer" data-en>RelancePilot website ↗</a>
-          <a class="btn btn-line" href="https://github.com/rafa-create/saas" target="_blank" rel="noopener noreferrer" data-fr>Code du projet ↗</a>
-          <a class="btn btn-line" href="https://github.com/rafa-create/saas" target="_blank" rel="noopener noreferrer" data-en>Project code ↗</a>
-        </div>
       </section>
     </div>
+
     <div class="rail">
-      <section class="section" id="build">
+      <section class="section" id="features">
         <div class="section-head">
-          <p class="eyebrow" data-fr>02 · Fonctionnalités</p>
-          <p class="eyebrow" data-en>02 · Features</p>
-          <h2 data-fr>Du devis au suivi</h2>
-          <h2 data-en>From quote to follow-up</h2>
+          <p class="eyebrow" data-fr>02 · Développé</p>
+          <p class="eyebrow" data-en>02 · Built</p>
+          <h2 data-fr>Fonctionnalités déjà écrites</h2>
+          <h2 data-en>Features already implemented</h2>
         </div>
         <div class="ensem-conseil-points">
           <article>
-            <h3 data-fr>Vue d’ensemble</h3><h3 data-en>Overview</h3>
-            <p data-fr>Tableau de bord avec devis en cours, montants en attente, relances à prévoir et devis gagnés.</p>
-            <p data-en>Dashboard covering open quotes, pending amounts, follow-up dates and won quotes.</p>
+            <h3 data-fr>Comptes &amp; sessions</h3><h3 data-en>Accounts &amp; sessions</h3>
+            <p data-fr>Inscription et connexion avec mots de passe dérivés via PBKDF2 et cookie de session HttpOnly.</p>
+            <p data-en>Registration and login with PBKDF2-derived passwords and an HttpOnly session cookie.</p>
           </article>
           <article>
-            <h3 data-fr>Gestion des opportunités</h3><h3 data-en>Opportunity management</h3>
-            <p data-fr>Création, recherche et suivi des devis, avec contacts, notes et statuts.</p>
-            <p data-en>Create, search and track quotes, including contacts, notes and statuses.</p>
+            <h3 data-fr>Devis &amp; recherche</h3><h3 data-en>Quotes &amp; search</h3>
+            <p data-fr>Liste, recherche et suivi des devis avec quotas prévus de 15 devis en gratuit et 1 000 en Pro.</p>
+            <p data-en>Quote listing, search and tracking with planned quotas of 15 quotes on Free and 1,000 on Pro.</p>
           </article>
           <article>
-            <h3 data-fr>Relances et export</h3><h3 data-en>Follow-ups and export</h3>
-            <p data-fr>Messages de relance à personnaliser et envoyer manuellement ; export CSV prévu pour l’offre Pro.</p>
-            <p data-en>Follow-up drafts for users to personalize and send manually; CSV export is planned for Pro.</p>
+            <h3 data-fr>Tableau de bord</h3><h3 data-en>Dashboard</h3>
+            <p data-fr>Indicateurs synthétiques pour les opportunités en cours, les relances dues, les montants ouverts et les devis gagnés.</p>
+            <p data-en>Summary indicators for open opportunities, due follow-ups, pending amounts and won quotes.</p>
+          </article>
+          <article>
+            <h3 data-fr>Relances manuelles</h3><h3 data-en>Manual follow-ups</h3>
+            <p data-fr>Préparation de messages de relance à personnaliser, puis envoi depuis l’outil e-mail de l’utilisateur.</p>
+            <p data-en>Follow-up drafts to personalize, then send through the user’s own email tool.</p>
+          </article>
+          <article>
+            <h3 data-fr>Export Pro</h3><h3 data-en>Pro export</h3>
+            <p data-fr>Export CSV prévu dans la formule Pro.</p>
+            <p data-en>CSV export implemented for the planned Pro tier.</p>
+          </article>
+          <article>
+            <h3>Stripe</h3>
+            <p data-fr>Code présent pour Stripe Checkout et un webhook signé, mais aucun paiement réel n’est activé ou validé en production.</p>
+            <p data-en>Code exists for Stripe Checkout and a signed webhook, but no real payment flow is enabled or production-validated.</p>
           </article>
         </div>
       </section>
     </div>
+
     <div class="rail">
-      <section class="section" id="tech">
+      <section class="section" id="architecture">
         <div class="section-head">
-          <p class="eyebrow" data-fr>03 · Technique et statut</p>
-          <p class="eyebrow" data-en>03 · Tech and status</p>
-          <h2 data-fr>Un MVP en validation</h2>
-          <h2 data-en>An MVP under validation</h2>
+          <p class="eyebrow" data-fr>03 · Architecture</p>
+          <p class="eyebrow" data-en>03 · Architecture</p>
+          <h2 data-fr>Cloudflare, sans serveur dédié</h2>
+          <h2 data-en>Cloudflare, without a dedicated server</h2>
         </div>
-        <p class="rover-stack">HTML · CSS · JavaScript · Cloudflare Workers · D1 (prévu) · Stripe (prévu)</p>
-        <p data-fr>Le dépôt contient une interface publique, un point d’entrée Worker, des routes API, un schéma de base de données et des tests. L’inscription, les données en production et les paiements réels ne sont pas encore validés : il s’agit d’un MVP expérimental, et non d’un service commercial ouvert.</p>
-        <p data-en>The repository contains a public interface, a Worker entry point, API routes, a database schema and tests. Registration, production data and real payments have not yet been validated: this is an experimental MVP, not a commercially launched service.</p>
+        <p class="rover-stack">HTML · CSS · JavaScript · Cloudflare Workers · D1 · Stripe · GitHub Actions</p>
+        <ul class="project-bullets">
+          <li data-fr>Un Worker Cloudflare sert l’interface statique et route <code>/api/*</code> vers le contrôleur serveur.</li>
+          <li data-en>A Cloudflare Worker serves static assets and routes <code>/api/*</code> to the server controller.</li>
+          <li data-fr>Le schéma D1 prévoit les comptes, sessions, devis, tentatives d’authentification et événements Stripe.</li>
+          <li data-en>The D1 schema covers users, sessions, quotes, authentication attempts and Stripe events.</li>
+          <li data-fr>GitHub Actions vérifie la syntaxe, les tests unitaires JavaScript et les migrations SQLite.</li>
+          <li data-en>GitHub Actions checks syntax, JavaScript unit tests and SQLite migrations.</li>
+          <li data-fr>Le projet est volontairement conçu pour rester sur des offres techniques gratuites tant qu’elles suffisent.</li>
+          <li data-en>The project is intentionally designed to stay on free technical tiers while they are sufficient.</li>
+        </ul>
       </section>
     </div>
+
+    <div class="rail">
+      <section class="section" id="status">
+        <div class="section-head">
+          <p class="eyebrow" data-fr>04 · État actuel</p>
+          <p class="eyebrow" data-en>04 · Current status</p>
+          <h2 data-fr>Vitrine visible, production à valider</h2>
+          <h2 data-en>Showcase live, production still to validate</h2>
+        </div>
+        <p data-fr>La vitrine est accessible publiquement, mais le README indique que l’API, la base D1 et les abonnements ne sont pas encore validés en conditions réelles. Les inscriptions restent fermées par défaut.</p>
+        <p data-en>The public showcase is live, but the README states that the API, D1 database and subscriptions are not yet validated under real production conditions. Sign-ups remain closed by default.</p>
+        <p data-fr>Avant des utilisateurs ou paiements réels, il reste notamment à finaliser la vérification d’e-mail, la récupération de mot de passe, la suppression complète du compte, les textes légaux, les essais de bout en bout et les contrôles de sécurité.</p>
+        <p data-en>Before real users or payments, remaining work includes email verification, password recovery, full account deletion, legal texts, end-to-end testing and security checks.</p>
+        <div class="project-actions">
+          <a class="btn btn-solid" href="https://saas.orsetrafael.workers.dev/" target="_blank" rel="noopener noreferrer" data-fr>Vitrine RelancePilot ↗</a>
+          <a class="btn btn-solid" href="https://saas.orsetrafael.workers.dev/" target="_blank" rel="noopener noreferrer" data-en>RelancePilot showcase ↗</a>
+          <a class="btn btn-line" href="https://github.com/rafa-create/saas" target="_blank" rel="noopener noreferrer" data-fr>Voir le dépôt ↗</a>
+          <a class="btn btn-line" href="https://github.com/rafa-create/saas" target="_blank" rel="noopener noreferrer" data-en>View repository ↗</a>
+        </div>
+      </section>
+    </div>
+
     <div class="rail">
       <section class="section">
         <div class="contact-row">
