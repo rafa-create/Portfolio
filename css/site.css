@@ -4134,3 +4134,105 @@ main :is(p, li) a:not([class]):hover {
     align-items: start;
   }
 }
+
+
+/* Source-based project visuals: RelancePilot and Site Custom */
+.home-project-visual {
+  display: block;
+  width: 100%;
+  aspect-ratio: 5 / 3;
+  object-fit: cover;
+  background: var(--ink);
+  border-bottom: 1px solid var(--line);
+}
+
+.project-source-visual {
+  margin: 1.5rem 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 0.65rem;
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.project-source-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.project-source-visual figcaption {
+  padding: 0.65rem 0.85rem;
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+
+.project-demo-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+}
+
+.project-demo-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.65rem;
+  min-width: 0;
+  padding: 1.4rem;
+  border: 1px solid var(--line);
+  border-radius: 0.65rem;
+}
+
+.project-demo-card--bistrot {
+  background: #f5ece0;
+  color: #563a2f;
+}
+
+.project-demo-card--pizzeria {
+  background: #f4e4d6;
+  color: #7b3427;
+}
+
+.project-demo-card--gastro {
+  background: #e8e7e1;
+  color: #323d39;
+}
+
+.project-demo-symbol {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  font-size: 1.6rem;
+}
+
+.project-demo-card h3,
+.project-demo-card p {
+  margin: 0;
+}
+
+.project-demo-card h3 {
+  font-family: var(--display);
+  font-size: 1.4rem;
+}
+
+.project-demo-card p:not(.project-kicker) {
+  color: inherit;
+  opacity: 0.85;
+}
+
+.project-demo-card a {
+  margin-top: auto;
+  color: inherit;
+  font-weight: 700;
+  text-underline-offset: 0.2em;
+}
+
+@media (min-width: 720px) {
+  .project-demo-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
