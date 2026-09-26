@@ -1,39 +1,26 @@
-name: Assemble BeatOnStep architecture image
+name: Clean BeatOnStep architecture staging
 
 on:
   push:
     paths:
       - ".github/workflows/assemble-beatonstep-architecture.yml"
-  workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  assemble:
+  cleanup:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - name: Assemble WebP
+      - name: Remove temporary staging files
         shell: bash
         run: |
           set -euo pipefail
-          cat .tmp-architecture/part-*.txt > /tmp/architecture.b64
-          test "$(wc -c < /tmp/architecture.b64)" -eq 97264
-          mkdir -p images/beatonstep
-          base64 --decode /tmp/architecture.b64 > images/beatonstep/architecture-workflow.webp
-          test "$(wc -c < images/beatonstep/architecture-workflow.webp)" -eq 72946
-
-      - name: Commit image
-        shell: bash
-        run: |
-          set -euo pipefail
+          rm -rf .tmp-architecture
+          rm -f .github/workflows/assemble-beatonstep-architecture.yml
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add images/beatonstep/architecture-workflow.webp
-          if git diff --cached --quiet; then
-            exit 0
-          fi
-          git commit -m "Add BeatOnStep architecture diagram"
+          git add -A
+          git commit -m "Clean BeatOnStep architecture staging"
           git push
