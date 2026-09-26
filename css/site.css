@@ -3767,6 +3767,29 @@ main :is(p, li) a:not([class]):hover {
   grid-template-columns: 1fr;
 }
 
+.bos-architecture {
+  margin: 0;
+}
+
+.bos-architecture-link {
+  display: block;
+}
+
+.bos-architecture img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  outline: 1px solid var(--line);
+  background: #0f1110;
+}
+
+.bos-architecture figcaption {
+  margin-top: 0.65rem;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
 .bos-shots {
   display: grid;
   gap: 1.25rem;
