@@ -373,11 +373,11 @@ main {
 }
 
 .hero {
-  min-height: min(72vh, 44rem);
+  min-height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: clamp(2.5rem, 7vh, 4rem) 0 clamp(2.5rem, 7vh, 4.5rem);
+  padding: clamp(2rem, 5vh, 3rem) 0 clamp(1.25rem, 3vh, 2rem);
   animation: rise 0.9s ease both;
 }
 
@@ -445,7 +445,11 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-  margin-bottom: 1.1rem;
+  margin-bottom: 0;
+}
+
+main > .hero + .section {
+  padding-top: clamp(1.25rem, 2.75vh, 1.75rem);
 }
 
 .hero-meta {
